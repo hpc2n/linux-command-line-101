@@ -5,7 +5,8 @@ site_dir: site.build
 theme:
   name: readthedocs
   locale: en
-  logo: images/hpc2n-blue-text-intro-linux.png
+  logo: images/logo-cli.png
+    #  logo: images/hpc2n-blue-text-intro-linux.png
     #  static_templates:
     #- sitemap.html
   include_sidebar: true
