@@ -20,7 +20,6 @@
 
    - This NAISS course aims to give a brief, but comprehensive introduction to the Linux operating system.
    - You will learn about
-      - Linux terminology
       - the command line
       - navigating the file system
       - editors on the Linux system 
