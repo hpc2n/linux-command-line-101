@@ -1,20 +1,21 @@
-# Welcome to the course: Command Line 101
+# Welcome to the course: Introduction to Linux
 
 !!! note "This material"
    
-    Here you will find the content of the workshop "Command Line 101". 
+    Here you will find the content of the workshop "Introduction to Linux". 
    
     - Documentation about Linux at some of the Swedish HPC centres 
         - HPC2N: <a href="https://docs.hpc2n.umu.se/tutorials/linuxguide/" target="_blank">https://docs.hpc2n.umu.se/tutorials/linuxguide/</a>
         - UPPMAX: <a href="https://docs.uppmax.uu.se/getting_started/linux/" target="_blank">https://docs.uppmax.uu.se/getting_started/linux/</a>
         - LUNARC: <a href="https://lunarc-documentation.readthedocs.io/en/latest/guides/linux/linux_basics_intro/" target="_blank">https://lunarc-documentation.readthedocs.io/en/latest/guides/linux/linux_basics_intro/</a>
-        - PDC: <a href="https://www.pdc.kth.se/support/documents/basics/introduction.html#basic-linux-for-new-hpc-users" target="_blank">https://www.pdc.kth.se/support/documents/basics/introduction.html#basic-linux-for-new-hpc-users</a> 
+        - PDC: <a href="https://support.pdc.kth.se/doc/support-docs/basics/introduction/#basic-linux-for-new-hpc-users" target="_blank">https://support.pdc.kth.se/doc/support-docs/basics/introduction/#basic-linux-for-new-hpc-users</a> 
+    - Documentation from Software Carpentry: <a href="https://swcarpentry.github.io/shell-novice/" target="_blank">https://swcarpentry.github.io/shell-novice/</a> 
 
 !!! note "Prerequisites"
 
     - You need access to a Linux system. 
-    - You will use your own computer or any other computer (including computing access at computing centers) you have access to and that runs Linux.
-    - The course project will be on Tetralith, for those that do not have other access to a computer that runs Linux. 
+    - You will use your own computer or any other computer (including computing access at computing centers) you have access to and that runs Linux. 
+    - The course project will be on Tetralith, for those that do not have other access to a computer that runs Linux.  
         - For those using Tetralith, there is a <a href="https://www.nsc.liu.se/support/getting-started/" target="_blank">Get started guide for NSC here</a>. 
 
 !!! note "Content"
@@ -29,11 +30,11 @@
       - data handling
       - some handy hints and tricks 
    - This course will consist of lectures and type-alongs, as well as a few exercises where you get to try out what you have just learned.    
-   - It is the second instance of this course, so we will be grateful if you will fill the evaluation survey so we can improve the course: <a href="https://forms.office.com/e/0a97qf9A3t" target="_blank">https://forms.office.com/e/0a97qf9A3t</a>
+   - It is the second instance of this course, and it has been somewhat reworked based on previous participant input. We would be grateful if you will fill the evaluation survey so we can further improve the course: <a href="https://forms.office.com/e/0a97qf9A3t" target="_blank">https://forms.office.com/e/0a97qf9A3t</a> 
 
 !!! admonition "Cluster-specific approaches"
 
-    The course is given by HPC2N (Kebnekaise) and LUNARC (Cosmos), but will be done under NAISS on the NAISS system "Tetralith". There is a <a href="https://www.nsc.liu.se/support/getting-started/" target="_blank">Get started guide for NSC here</a>.   
+    The course is given by HPC2N (Kebnekaise), but will be done under NAISS on the NAISS system "Tetralith". There is a <a href="https://www.nsc.liu.se/support/getting-started/" target="_blank">Get started guide for NSC here</a>.   
 
     - The login node for Tetralith is ``tetralith.nsc.liu.se``.
     - It looks like this when I (``x_birbr`` on "Tetralith") login the first time from my computer "defiant":
@@ -46,8 +47,8 @@
     Password:
     Verification code:
     ```
-    - The verification code it askes about is a 2FA that you need to set. See here: <a href="https://www.nsc.liu.se/support/2fa/" target="_blank">https://www.nsc.liu.se/support/2fa/</a>.
-    - You will probably not need it for the course, but the compute project ID is: naiss2024-22-1676
+    - The verification code it asks about is a 2FA that you need to set. See here: <a href="https://www.nsc.liu.se/support/2fa/" target="_blank">https://www.nsc.liu.se/support/2fa/</a>.
+    - You will probably not need it for the course, but the compute project ID is: naiss2024-22-1676 
     - The project storage for the course project is in ``/proj/linux-intro/users/YOUR-USERNAME`` 
         - Example, for the user ``x_birbr``, this would be: ``/proj/linux-intro/users/x_birbr``
 
@@ -64,21 +65,22 @@
 | 9:10 | Introduction to Linux, motivation | Lecture | 
 | 9:25 | The command line (CLI) | Lecture+code along | 
 | 9:45 | The file system | Lecture+code along+exercise |
-| 10:15 | BREAK | |
-| 10:30 | Editors | Lecture+code along |
-| 10:50 | Data handling | Lecture+code along |
-| 11:20 | Hints and tricks | Lecture+code along |
-| 11:35 | More time for exercises | |
-| 11:55 | Summary   | |
-| 12:00 | END | |
+| 10:00 | Pipes and filters | Lecture+code along+exercise | 
+| 10:25 | BREAK | | 
+| 10:40 | Editors | Lecture+code along |  
+| 10:55 | Patterns and scripting | Lecture+code along+exercises | 
+| 11:30 | Hints and tricks | Lecture+code along | 
+| 11:45 | More time for exercises | | 
+| 11:55 | Summary   | | 
+| 12:00 | END | |  
 
 ## Preparations 
 
-In order to type along and do the exercises, please prepare your course environment now:
+In order to type along and do the exercises, please prepare your course environment now: 
 
 1. Login to the system you are using (Tetralith, your own computer, other system)
-2. Create a directory to work in (``mkdir intro-linux``) and then switch to it (``cd intro-linux``)
+2. Create a directory to work in (``mkdir intro-linux``) and then switch to it (``cd intro-linux``)  
     - **NOTE** If you are working on Tetralith, first switch to your working directory: ``cd /proj/linux-intro/users/YOUR-USERNAME``
-3. Download the exercises with ``wget https://github.com/hpc2n/intro-linux/raw/refs/heads/main/exercises.tar.gz``
+3. Download the exercises with ``wget https://github.com/hpc2n/intro-linux/raw/refs/heads/main/exercises.tar.gz`` 
 4. Extract the exercises with ``tar zxvf exercises.tar.gz``
 5. Enter the directory that was created: ``cd exercises``
