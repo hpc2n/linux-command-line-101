@@ -41,7 +41,6 @@ nav:
   - The File System: filesystem.md
   - Editors: editors.md
   - Patterns and scripting: patterns.md
-    #  - Data Handling: data.md
   - Hints and tricks: hints.md
   - Summary: summary.md
   - Extras: 
