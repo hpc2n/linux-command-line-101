@@ -129,7 +129,7 @@ On Tetralith, user ``x_birbr``:
 
 ## cd - changing directory 
 
-The command ``cd```is used to change directory. 
+The command ``cd`` is used to change directory. 
 
 - **cd**: Go to your home directory ($HOME)
 - **cd DIR**: Change directory to DIR
@@ -143,7 +143,9 @@ The command ``cd```is used to change directory.
     ![folders of exercises directory structure](images/exercises-folders.png){: style="width: 500px;float: left"}
     <br><br style="clear: both;">
 
-    Remember, $HOME is an ``environment variable`` which gives a shortcut to your home directory. 
+    Remember, $HOME is an ``environment variable`` which gives a shortcut to your home directory.
+
+    **NOTE** if you are on Tetralith and placed the exercises under ``/proj/linux-intro/users/USERNAME`` then ``$HOME`` would be replaced by that path. 
 
     To change to the directory ``exercises`` when you are in your home directory, you do
     ```bash
@@ -344,25 +346,71 @@ The following group of 3 bits are for the owner, then the next 3 for the group, 
 
 ## Create and remove directories/files 
 
-This section contains a few examples of how to work with files and directories through command line interface. 
+This section will show how to work with files and directories through command line interface. 
+
+### Directories 
 
 - **mkdir DIR**: Create a directory DIR
-- **rm -rf DIR**: Remove a directory DIR. The flag "-r" means recursively and "-f" means do so without asking for each file and subdirectory. Useful, but dangerous. Be careful! 
+    - **mkdir -p DIR/SUBDIR**: create a directory DIR with the subdirectory SUBDIR
+- **rm -r DIR**: Remove a directory DIR. The flag "-r" means recursively 
+    - You can also add "-f". This means do so without asking for each file and subdirectory. Useful, but dangerous. Be careful! 
+
+!!! note "Examples"
+
+    Create a directory called ``mynewdir`` 
+
+    ```bash
+    mkdir mynewdir
+    ```
+
+    Create a directory called ``cooldir`` which has a subdirectory called ``fancydir``
+
+    ```bash
+    mkdir -p cooldir/fancydir
+    ```
+
+    Remove the directory ``mynewdir``
+
+    ```bash
+    rm -r mynewdir
+    ```
+
+### Files 
+
+To create files, you would normally use an editor (``nano``, ``vim``, ``emacs``, etc.), but it is also possible to create an empty file with the command ``touch``. 
+
+```bash 
+touch FILE
+```
+
+You can remove files with ``rm``. Again, you can use the flag/option ``-f`` to force-remove a file (without asking). 
+
+!!! note "Examples"
+
+    Create a file called ``file.txt``
+
+    ```bash
+    touch file.txt
+    ```
+
+    Remove the file ``file.txt`` 
+
+    ```bash
+    rm file.txt
+    ```
+### Examples
+
+**Reminder** 
+
+- **mkdir DIR**: Create a directory DIR
+- **rm -rf DIR**: Remove a directory DIR. The flag “-r” means recursively and “-f” means do so without asking for each file and subdirectory. Useful, but dangerous. Be careful! 
 - **cd**: Go to your home directory ($HOME)
 - **cd DIR**: Change directory to DIR
 - **cd ..**: Change directory to the parent directory of the current directory
 - **cd -**: go back to the previous directory 
 - **touch FILE**: create an empty file with the name FILE 
-
-You also user "rm" to remove files; 
-
-<div>
-```bash
-rm file.txt
-```
-</div>
-
-The command <code>pwd</code> tells you the current directory path. 
+- **rm FILE**: remove the file with the name FILE 
+- The command <code>pwd</code> tells you the current directory path. 
 
 !!! Example "Creating directories, changing directories, removing directory and file"
 
@@ -536,18 +584,18 @@ ln -s real-file-or-lib link-name
 ```
 </div>
 
-!!! Example
+!!! Example (on Tetralith) 
 
     ```bash
-    ln -s /proj/intro-linux/users/MYUSERNAME $HOME/myproj
+    ln -s /proj/linux-intro/users/MYUSERNAME $HOME/myproj
     ```
 
-    This creates a symbolic link named "myproj" in your home directory, pointing to the location /proj/intro-linux/users/MYUSERNAME. The directory "intro-linux" is the project storage directory for this course project. For me, this would look like this: 
+    This creates a symbolic link named "myproj" in your home directory, pointing to the location /proj/linux-intro/users/MYUSERNAME. The directory "linux-intro" is the project storage directory for this course project. For me, this would look like this: 
 
     ```bash
     [x_birbr@tetralith1 ~]$ ls -l
     total 2
-    lrwxrwxrwx 1 x_birbr x_birbr   31 Sep 11 12:01 myproj -> /proj/intro-linux/users/x_birbr
+    lrwxrwxrwx 1 x_birbr x_birbr   31 Sep 11 12:01 myproj -> /proj/linux-intro/users/x_birbr
     drwxrwxr-x 4 x_birbr x_birbr 4096 Sep 11 11:43 mytestdir
     ```
 
