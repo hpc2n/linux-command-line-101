@@ -3,35 +3,33 @@
 - Welcome page and syllabus: <a href="https://hpc2n.github.io/intro-linux/index.html">https://hpc2n.github.io/intro-linux/index.html</a>
     - Also link at the House symbol at the top of the page. 
 
-!!! Admonition "Learning outcomes"
+!!! Admonition "Learning outcomes for this course"
 
-    - What is Linux?
+    - What is Linux and why should I use it?
     - Learn about the command line interface (CLI)
     - Navigate the file system 
-        - **ls** list files
-        - **mkdir** create directory
-        - **cd** change directory
-        - **rm** remove/delete a file (or directory, with the right flags)
-        - **cp** copy a file or directory
-        - **mv** rename or move a file or directory
-        - **redirection** send output/input to specific files
-        - **pipes** take the output of one command and use it as input for another command 
-        - **and more**  
-    - Data handling - compressing, archiving, file transfer, patterns, etc.  
+        - ls
+        - mkdir
+        - cd
+        - rm
+        - cp
+        - mv
+        - redirection
+        - pipes
+        - etc.  
+    - Data handling 
+        - compressing
+        - archiving
+        - file transfer
+        - patterns
+        - etc.  
     - Hints and tricks of Linux
 
-## Why Linux 
-
-- Most HPC centers supercomputers run some flavour of Linux. 
-- It is stable and reliable
-- Customizable
-- Runs on any hardware
-- Strong community
-- Many flavours are open source and free
-- Lots of applications
-- Lightweight
-
 ## What is Linux
+
+!!! note 
+
+    Most of the commands you learn in this course is agnostic and works on any Linux/Unix like system. MacOS is also a Unix-like OS, and the majority of the commands are the same. 
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds.
 
@@ -47,9 +45,52 @@ Linux is typically packaged as a Linux distribution, which includes the kernel a
 
 In addition, a windowing system of some sort (X11, Wayland) interfaces directly with the underlying operating system and libraries, providing support for graphical hardware, pointing devices, and keyboards. The window manager generally runs on top of this windowing system.
 
-![how-os-diagram](images/how-os-diagram.png){: style="width: 400px;float: right;padding: 3px;}
+## Shell 
+
+The shell is a special user program. It is an interface between the keyboard and the operating system (OS) I.e. it takes commands input the user give from the keyboard and sends it to the OS which then performs the actions requested. 
+
+The shell we are looking at in this course is the Linux/Unix shell, which is a command-line interpreter providing a Command Line Interface (CLI) for Unix-like systems. More about that in the next part. 
+
+!!! Note
+
+    There are several shells, which has somewhat different properties: 
+
+    - The Bourne Shell (sh)
+    - The GNU Bourne-Again shell (bash)
+    - The C shell (csh)
+    - The Korn Shell (ksh) 
+    - The Z Shell (zsh) 
+
+!!! Important 
+
+    Most centers has ``bash`` as default as that is what is compatible with SLURM - the batch scheduler used at most centers in Sweden. 
+
+    For the majority of the material in this course, it does not matter which shell you are using, but there are some commands where it is relevant. We will therefore be using ``bash`` for this course. 
+
+## Why Linux/Unix (shell) 
+
+The Linux/Unix shell has existed for a very long time (Thompson shell, 1971; Bourne shell, 1979). 
+
+- The reason it keeps being used is that it is a very powerful tool which lets users perform complex and powerful tasks. 
+- These tasks can often be done using a few keystrokes or maybe a few lines of code. 
+- It can be used to automate repetitive tasks or to combine smaller tasks into **scripts**, which helps the user work faster are more effective. 
+
+Using the Linux/Unix shell is fundamental for a large number of advanced computing tasks, including in HPC (high-performance computing). 
+
+In addition: 
+
+- Most HPC centers supercomputers run some flavour of Linux.
+- It is stable and reliable
+- Customizable
+- Runs on any hardware
+- Strong community
+- Many flavours are open source and free
+- Lots of applications
+- Lightweight
 
 While the use of Linux on desktop is only 2-3%, the vast majority of web servers (>96%), most mobile devices (Android is based on the Linux kernel), and all supercomputers on the <a href="https://en.wikipedia.org/wiki/TOP500" target="_blank">Top500</a> list run Linux.
+
+For all of these reasons, and many more, it is a good idea to be more proficient in Linux. This course aims to help you with that. 
 
 ## More information 
 
