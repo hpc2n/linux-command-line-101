@@ -41,7 +41,7 @@ nav:
   - The File System: filesystem.md
   - Editors: editors.md
   - Patterns and scripting: patterns.md
-  - Data Handling: data.md
+    #  - Data Handling: data.md
   - Hints and tricks: hints.md
   - Summary: summary.md
   - Extras: 
@@ -50,6 +50,7 @@ nav:
       #    - More Linux terms: linux-terms.md
     - Linux terminology: linux-terminology.md
     - More commands: more-commands.md
+    - Data handling: data.md
     - Linux cheat sheet: cheat.md
 plugins:
   - search
