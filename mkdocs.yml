@@ -46,6 +46,7 @@ nav:
   - Summary: summary.md
   - Extras: 
     - Install tree: tree.md
+    - Linux system overview: connections.md
       #    - More Linux terms: linux-terms.md
     - Linux terminology: linux-terminology.md
     - More commands: more-commands.md

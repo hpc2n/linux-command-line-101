@@ -1,8 +1,6 @@
 # tree
 
-## Without being root
-
-Install and run ``tree`` as not-root on an Ubuntu Linux system where it is not installed. If you have an account on the Swedish HPC centers, you will not have root-access and so have to install tree this way if it is missing.  
+Install and run tree as not-root on an Ubuntu Linux system where it is not installed. 
 
 1. Create a directory to work in:
 ```bash
@@ -38,8 +36,3 @@ source ~/.bashrc
 ```
 
 You can now run tree by just giving the command <code>tree</code>. 
-
-## As root
-
-- ``sudo apt install tree``
-
