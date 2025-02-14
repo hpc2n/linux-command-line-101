@@ -1,4 +1,4 @@
-# Command Line 101 - spring 2025
+# Linux Command Line 101 - spring 2025
 
 ## Course description
 
@@ -14,7 +14,7 @@ Lecture recordings from a previous instance: https://www.youtube.com/watch?v=ScM
 
 **Lecture recordings from the current course will be posted to HPC2N's YouTube page:** https://www.youtube.com/user/HPC2N
 
-Date: 21 January 2025 
+Date: 3 April 2025 
 
 Time: 09:00-12:00
 
