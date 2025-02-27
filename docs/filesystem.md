@@ -176,7 +176,6 @@ The command ``cd`` is used to change directory.
     cd $HOME/exercises/testdir2
     ```
 
-
 !!! info
 
     You can use **full paths** (also know as **absolute paths**) or **relative paths** to give the location. 
