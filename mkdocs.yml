@@ -76,9 +76,13 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.caret
   - pymdownx.tilde
-  - pymdownx.blocks.tab
-    #  - pymdownx.tabbed:
-    # alternate_style: true
+  - BSCodeTabExtension:
+      default_lang: 'bash'
+      show_all_code_as_folders: False
+      animate_tab_transitions: False
+    #  - pymdownx.blocks.tab
+  - pymdownx.tabbed:
+      alternate_style: true
   - attr_list
   - md_in_html
   - tables
