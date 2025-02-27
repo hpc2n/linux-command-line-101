@@ -76,8 +76,9 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.caret
   - pymdownx.tilde
-  - pymdownx.tabbed:
-      alternate_style: true
+  - pymdownx.blocks.tab
+    #  - pymdownx.tabbed:
+    # alternate_style: true
   - attr_list
   - md_in_html
   - tables
