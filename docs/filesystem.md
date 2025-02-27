@@ -91,21 +91,25 @@ You can use this to find out which directory you are in.
 
 ### Example, in your home directory 
 
-On Tetralith, user ``x_birbr``: 
+=== "On Tetralith"
 
-```bash
-[x_birbr@tetralith3 ~]$ pwd
-/home/x_birbr
-[x_birbr@tetralith3 ~]$ 
-```
+     user ``x_birbr``: 
 
-On Kebnekaise, user ``bbrydsoe``: 
+     ```bash
+     [x_birbr@tetralith3 ~]$ pwd
+     /home/x_birbr
+     [x_birbr@tetralith3 ~]$ 
+     ```
 
-```bash
-b-an01 [~]$ pwd
-/home/b/bbrydsoe
-b-an01 [~]$ 
-```
+=== "On Kebnekaise"
+
+     user ``bbrydsoe``: 
+
+     ```bash
+     b-an01 [~]$ pwd
+     /home/b/bbrydsoe
+     b-an01 [~]$ 
+     ```
 
 ### Example, in a directory named ``testdir``
 
