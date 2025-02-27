@@ -99,6 +99,19 @@ You can use this to find out which directory you are in.
 
     content
 
+
+Skumle
+
+
+=== "Tab 1"
+    content
+
+=== "Tab 2"
+    content
+
+
+
+
 ### Example, in your home directory 
 
 === "On Tetralith"
