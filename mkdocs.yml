@@ -63,8 +63,6 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - markdown_fenced_code_tabs:
-      template: 'default'
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition
