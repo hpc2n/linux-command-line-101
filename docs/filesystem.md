@@ -111,6 +111,24 @@ Skumle
 
 Skumle
 
+## Tabs 
+
+```curl
+$ curl -O wget http://example.com/pk.zip
+```
+
+```wget
+$ wget http://example.com/pk.zip
+```
+
+## Single block
+
+```
+$ ls -lisa
+```
+
+Skumle 
+
 /// tab | Tab 1 title
 Tab 1 content
 ///
@@ -118,6 +136,8 @@ Tab 1 content
 /// tab | Tab 2 title
 Tab 2 content
 ///
+
+
 
 
 ### Example, in your home directory 
