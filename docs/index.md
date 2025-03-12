@@ -1,4 +1,4 @@
-# Welcome to the course: Command line 101
+# Welcome to the course: Linux command line 101
 
 !!! note "This material"
    
@@ -25,24 +25,23 @@
     - What is Linux and why should I use it?
     - You will learn about
        - the command line interface (CLI)
+       - navigating and modifying the file tree 
            - ls
            - mkdir
            - cd
-           - rm
-           - cp
            - mv
-           - redirection
-           - pipes
-           - etc.
-       - navigating the file system
        - editors on the Linux system 
        - pipes, sorting, filters
-       - patterns, scripting
+           - redirection
+           - pipes
+           - etc. 
+       - patterns
+       - scripting
        - some handy hints and tricks 
 
     - This course will consist of lectures and type-alongs, as well as a few exercises where you get to try out what you have just learned.    
 
-- This is the second instance of this course, and it has been somewhat reworked based on previous participant input. We would be grateful if you will fill the evaluation survey so we can further improve the course: <a href="https://forms.office.com/e/0a97qf9A3t" target="_blank">https://forms.office.com/e/0a97qf9A3t</a> 
+- This is the third instance of this course, and it has been somewhat reworked based on previous participant input. We would be grateful if you will fill the evaluation survey so we can further improve the course: <a href="https://forms.office.com/e/0a97qf9A3t" target="_blank">https://forms.office.com/e/0a97qf9A3t</a> 
 
 !!! admonition "Cluster-specific approaches"
 
@@ -76,11 +75,13 @@
 | 9:00 | Welcome+Syllabus | |
 | 9:10 | Introduction to Linux, motivation | Lecture | 
 | 9:25 | The command line (CLI) | Lecture+code along | 
-| 9:45 | The file system | Lecture+code along+exercise |
-| 10:00 | Pipes and filters | Lecture+code along+exercise | 
-| 10:25 | BREAK | | 
-| 10:40 | Editors | Lecture+code along |  
-| 10:55 | Patterns and scripting | Lecture+code along+exercises | 
+| 9:45 | Navigating the File System | Lecture+code along+exercise |
+| 9:55 | Modifying the file tree | Lecture+code along+exercise | 
+| 10:05 | Editors | Lecture+code along | 
+| 10:20 | BREAK | | 
+| 10:35 | Piping | Lecture+code along+exercise |  
+| 10:55 | Finding patterns | Lecture+code along+exercises | 
+| 11:15 | Scripting | Lecture+code along | 
 | 11:30 | Hints and tricks | Lecture+code along | 
 | 11:45 | More time for exercises | | 
 | 11:55 | Summary   | | 
@@ -93,6 +94,6 @@ In order to type along and do the exercises, please prepare your course environm
 1. Login to the system you are using (Tetralith, your own computer, other system)
 2. Create a directory to work in (``mkdir intro-linux``) and then switch to it (``cd intro-linux``)  
     - **NOTE** If you are working on Tetralith, first switch to your working directory: ``cd /proj/linux-intro/users/YOUR-USERNAME``
-3. Download the exercises with ``wget https://github.com/hpc2n/intro-linux/raw/refs/heads/main/exercises.tar.gz`` 
+3. Download the exercises with ``wget https://github.com/hpc2n/linux-command-line-101/raw/refs/heads/main/exercises.tar.gz`` 
 4. Extract the exercises with ``tar zxvf exercises.tar.gz``
 5. Enter the directory that was created: ``cd exercises``
