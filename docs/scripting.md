@@ -1,4 +1,4 @@
-# Patterns and scripting
+# Scripting
 
 This section will look at finding patterns ([grep](#grep), [awk](#awk), [wild cards](#wild__cards), [regular expressions](#regular__expressions)) and [scripting](#scripting).  
 
