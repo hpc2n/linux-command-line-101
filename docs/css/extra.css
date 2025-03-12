@@ -132,9 +132,6 @@ body {
 }
 
 /* Add a border and background for styling of the tabbed environment */
-.tabbed-set .tabbed-alternate {
-	border: 0.5px solid lightgrey;
-}
 
 div.tabbed-set.tabbed-alternate {
 	border-left: 0.5px solid lightgray;
