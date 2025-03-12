@@ -118,9 +118,9 @@ The most common reason for making a script is probably to avoid writing the same
     ./program.sh < file_filtered.dat > output.dat
     ```
 
-    This script can be executed with ``./analysis.sh`` (remember to check that the [permission](../filesystem/#chmod__-__change__permissions) for executing the script ``analysis.sh`` as user is set - you should also make sure ``program.sh`` has permissions set to execute as user). 
+    This script can be executed with ``./analysis.sh`` (remember to check that the [permission](#permissions) for executing the script ``analysis.sh`` as user is set - you should also make sure ``program.sh`` has permissions set to execute as user). 
 
-    To change the permissions to execute a script (here named analysis.sh), for just the user, you could do: 
+    To change the permissions to execute a script (here named ``analysis.sh``), for just the user, you could do: 
 
     ```bash
     $ chmod u+x analysis.sh
@@ -175,8 +175,5 @@ For more examples of (more useful) scripts, see for instance this <a href=https:
 !!! note "Keypoints" 
 
     - You change permissions for files and directories with ``chmod``   
-    - Finding files with specific patterns in their names or content can be done with ``grep`` and ``find``
-    - Wildcards are stand-ins for one or more character or number and are useful for when you are finding patterns or removing/copying/listing all files of a certain type 
-    - Regular Expressions are a type of globbing patterns that are used when you are working with text. They can be used with ``grep``, ``find``, and many many others 
     - Scripting is used to perform complex or repetitive tasks without user intervention. All Linux commands can be used in a script including wild cards. 
 
