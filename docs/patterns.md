@@ -18,6 +18,7 @@ This section will look at finding patterns ([grep](#grep), [awk](#awk), [wild ca
     - Learn to use wild cards
     - Learn to use regular expressions
     - Learn how to make a simple script 
+    - Get a brief introduction to **permissions**
 
 
 Here you will find descptions on how to search for files with specific patterns. 
