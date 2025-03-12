@@ -19,14 +19,6 @@ In this section we will look at redirection, pipes (for combining multiple comma
     - Learn to sort and filter the output 
     - Learn about variables and environment variables 
 
-## less, more, cat
-
-These are commands to see the content of a file, and now is a good time to introduce them: 
-
-- **more**: forward navigation and limited backward navigation in a file named FILE. Usage: ``more FILE``
-- **less**: forward and backward navigation and also has search options. Usage ``less FILE``
-- **cat**: a tool for file-related operations (view, concatenate, create, copy, merge, and manipulate file contents). Usage: ``cat [option] FILE`` where option is various optional options (hint: ``man cat`` for more info). 
-
 ## echo
 
 The echo command in Linux is a built-in command that allows users to display lines of text or strings that are passed as arguments. It is commonly used in shell scripts and batch files to output status text to the screen or a file.

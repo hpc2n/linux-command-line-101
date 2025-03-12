@@ -58,8 +58,7 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
 
 !!! warning
 
-    If you do not add the flag/option "-i" the file will be deleted without prompting. Be carefu
-l!
+    If you do not add the flag/option "-i" the file will be deleted without prompting. Be careful!
 
 !!! note "Examples"
 
@@ -266,7 +265,7 @@ ln -s real-file-or-lib link-name
 ```
 </div>
 
-!!! Example (on Tetralith)
+!!! note "Example (on Tetralith)"
 
     ```bash
     ln -s /proj/linux-intro/users/MYUSERNAME $HOME/myproj
