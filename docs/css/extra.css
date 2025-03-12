@@ -137,10 +137,13 @@ body {
 }
 
 div.tabbed-set.tabbed-alternate {
-	border-left: 0.5px solid lightgrey;
+	border-left: 0.5px solid lightgray;
+	border-right: 0.5px solid lightgray;
+	border-top: 0.5px solid lightgray;
+	border-bottom: 0.5px solid lightgray;
 }
 
-div.tabbed-content.tabbed-alternate {
+.tabbed-alternate .tabbed-content {
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
