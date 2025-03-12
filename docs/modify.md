@@ -14,56 +14,6 @@
     - Learn about paths
     - Be able to create and delete files and directories, as well as rename and copy them
 
-## chmod - change permissions 
-
-The command <code>chmod</code> is used to change permissions for files and directories.
-
-!!! Note "There are three types of permission groups"
-
-    - **owners**: these permissions will only apply to owners and will not affect other groups.
-    - **groups**: you can assign a group of users specific permissions, which will only impact users within the group. The members of your storage directory belongs here.
-    - **all users**: these permissions will apply to all users, so be careful with this.
-
-!!! Note "There are three kinds of file permissions"
-
-    - Read (r): This allows a user or a group to view a file (and so also to copy it).
-    - Write (w): This permits the user to write or modify a file or directory.
-    - Execute (x): A user or a group with execute permissions can execute a file. They can also view a subdirectory.
-
-The permissions for a file, directory, or symbolic link has 10 "bits" and looks similar to this:
-
-![Permissions](images/permissions.png){: style="width: 400px}
-
-As shown, the first bit can be "-" (a file), "d" (a directory), or "l" (a link).
-
-The following group of 3 bits are for the owner, then the next 3 for the group, and then the last 3 for all users. Each can have the r(ead), w(rite), and (e)x(ecute) permission set.
-
-!!! Note "To change permissions, here are some examples"
-
-    - owner
-        - **chmod +rwx FILE/DIR** to add all permissions of a file with name FILE or a directory with name DIR
-        - **chmod -rwx FILE/DIR** to remove all permissions from a file with name FILE or a directory with name DIR
-        - **chmod +x FILE** to add executable permissions
-        - **chmod -wx FILE** to remove write and executable permissions
-    - group
-        - **chmod g+rwx FILE** to add all permissions to FILE
-        - **chmod g-rwx FILE** to remove all permissions to FILE
-        - **chmod g+wx FILE** to give write and execute permissions to FILE
-        - **chmod g-x FILE** to remove execute permissions to FILE
-    - others
-        - **chmod o+rwx FILE** to add all permissions to FILE
-        - **chmod o-rwx FILE** to remove all permissions to FILE
-        - **chmod o+w FILE** to add write permissions to FILE
-        - **chmod o-rwx DIR** to remove all permissions to DIR
-    - all
-        - **chmod ugo+rwx FILE/DIR** to add all permissions for all users (owner, group, others) to file named FILE or directory named DIR
-        - **chmod a=rwx FILE/DIR** same as above
-        - **chmod a=r DIR** give read permissions to all for DIR
-
-!!! Note
-
-    It is also possible to change the ownership of a file or a directory. We are not going to cover this here, but you can read about the command <code>chown</code> and how to use it in the "[More commands](../more-commands)" section under EXTRAS.
-
 ## Create and remove directories/files 
 
 This section will show how to work with files and directories through command line interface.
@@ -73,9 +23,10 @@ This section will show how to work with files and directories through command li
 - **mkdir DIR**: Create a directory DIR
     - **mkdir -p DIR/SUBDIR**: create a directory DIR with the subdirectory SUBDIR
 - **rm -r DIR**: Remove a directory DIR. The flag "-r" means recursively
-    - You can also add "-f". This means do so without asking for each file and subdirectory. Useful, but dangerous. Be careful!
+    - You can also add "-f". This means ignore nonexistent files and arguments, and never prompt. 
+    - You can add the option "-i". This means it will prompt before every removal. 
 
-!!! note "Examples"
+!!! note "Examples, creating and removing directories"
 
     Create a directory called ``mynewdir``
 
@@ -103,7 +54,12 @@ To create files, you would normally use an editor (``nano``, ``vim``, ``emacs``,
 touch FILE
 ```
 
-You can remove files with ``rm``. Again, you can use the flag/option ``-f`` to force-remove a file (without asking).
+You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to prompt before removing a file.
+
+!!! warning
+
+    If you do not add the flag/option "-i" the file will be deleted without prompting. Be carefu
+l!
 
 !!! note "Examples"
 
@@ -133,6 +89,8 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-f`` to f
 - The command <code>pwd</code> tells you the current directory path.
 
 !!! Example "Creating directories, changing directories, removing directory and file"
+
+    This example will test some of the things we just learned, as well as the command ``cd`` from the previous section. 
 
     **HINT: Code-along!**
 
@@ -175,7 +133,11 @@ This command is used to copy files or directories.
 - **cp myfile.txt DIR/**: copy the file "myfile.txt" to the directory DIR
 - **cp DIR1/ DIR2/**: copy the directory DIR1 into the directory DIR2 (Note: overwrites existing files with same name)
 - **cp -R DIR1/ DIR2/**: copy the directory DIR1 and all subdirectories into the directory DIR2. 
-- **cp -i file.txt DIR/**: Interactive. It will ask before overwriting if there is a file with the same name.
+- **cp -i file.txt DIR/**: Interactive. It will ask before overwriting if there is a file with the same name. 
+
+!!! warning 
+
+    If you do not add the option "-i" you risk overwriting an existing file, if it is named the same. 
 
 !!! example "Code-along"
 
@@ -321,13 +283,6 @@ ln -s real-file-or-lib link-name
 
 !!! note "Keypoints"
 
-    - Your home directory is generally located in ``/home/USERNAME`` or ``/home/U/USERNAME``
-    - Your home directory can also be addressed with the environment variable ``$HOME``
-    - ``pwd`` is useful for determining your path and current location
-    - To change directory you use the command ``cd`` DIR
-    - Just giving the command ``cd`` takes you to your homedirectory
-    - ``ls`` is used to list files and directories
-    - You change permissions for files and directories with ``chmod``
     - You create a directory named DIR with ``mkdir DIR``
     - You remove a directory named DIR with ``rm -r DIR``
     - You can create an (empty) file named FILE with ``touch FILE``

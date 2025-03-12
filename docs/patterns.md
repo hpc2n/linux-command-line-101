@@ -28,6 +28,58 @@ Here you will find descptions on how to search for files with specific patterns.
 
     You can use the contents of the directory ``/exercises/patterns`` that you got from the downloaded tarball (<a href="https://github.com/hpc2n/intro-linux/raw/refs/heads/main/exercises.tar.gz">exercises.tar.gz</a>) to play with. If you have not done so already, right-click and save to download, or right-click and copy the url, then do ``wget THE-URL-YOU-COPIED`` in a terminal window to download it there. Then do <code>tar -zxvf patterns.tar.gz</code> to unpack.  
 
+## chmod - change permissions 
+
+The command <code>chmod</code> is used to change permissions for files and directories.
+
+!!! Note "There are three types of permission groups"
+
+    - **owners**: these permissions will only apply to owners and will not affect other groups.
+    - **groups**: you can assign a group of users specific permissions, which will only impact users within the group. The members of your storage directory belongs here.
+    - **all users**: these permissions will apply to all users, so be careful with this.
+
+!!! Note "There are three kinds of file permissions"
+
+    - Read (r): This allows a user or a group to view a file (and so also to copy it).
+    - Write (w): This permits the user to write or modify a file or directory.
+    - Execute (x): A user or a group with execute permissions can execute a file. They can also view a subdirectory.
+
+The permissions for a file, directory, or symbolic link has 10 "bits" and looks similar to this:
+
+![Permissions](images/permissions.png){: style="width: 400px}
+
+As shown, the first bit can be "-" (a file), "d" (a directory), or "l" (a link).
+
+The following group of 3 bits are for the owner, then the next 3 for the group, and then the last 3 for all users. Each can have the r(ead), w(rite), and (e)x(ecute) permission set.
+
+!!! Note "To change permissions, here are some examples"
+
+    - owner
+        - **chmod +rwx FILE/DIR** to add all permissions of a file with name FILE or a directory with name DIR
+        - **chmod -rwx FILE/DIR** to remove all permissions from a file with name FILE or a directory with name DIR
+        - **chmod +x FILE** to add executable permissions
+        - **chmod -wx FILE** to remove write and executable permissions
+    - group
+        - **chmod g+rwx FILE** to add all permissions to FILE
+        - **chmod g-rwx FILE** to remove all permissions to FILE
+        - **chmod g+wx FILE** to give write and execute permissions to FILE
+        - **chmod g-x FILE** to remove execute permissions to FILE
+    - others
+        - **chmod o+rwx FILE** to add all permissions to FILE
+        - **chmod o-rwx FILE** to remove all permissions to FILE
+        - **chmod o+w FILE** to add write permissions to FILE
+        - **chmod o-rwx DIR** to remove all permissions to DIR
+    - all
+        - **chmod ugo+rwx FILE/DIR** to add all permissions for all users (owner, group, others) to file named FILE or directory named DIR
+        - **chmod a=rwx FILE/DIR** same as above
+        - **chmod a=r DIR** give read permissions to all for DIR
+
+!!! Note
+
+    It is also possible to change the ownership of a file or a directory. We are not going to cover this here, but you can read about the command <code>chown</code> and how to use it in the "[More commands](../more-commands)" section under EXTRAS.
+
+
+
 ## grep 
 
 This command searches for patterns in text files. 
@@ -357,6 +409,7 @@ For more examples of (more useful) scripts, see for instance this <a href=https:
 
 !!! note "Keypoints" 
 
+    - You change permissions for files and directories with ``chmod``   
     - Finding files with specific patterns in their names or content can be done with ``grep`` and ``find``
     - Wildcards are stand-ins for one or more character or number and are useful for when you are finding patterns or removing/copying/listing all files of a certain type 
     - Regular Expressions are a type of globbing patterns that are used when you are working with text. They can be used with ``grep``, ``find``, and many many others 
