@@ -21,7 +21,7 @@ In this section we will look at redirection, pipes (for combining multiple comma
 
 ## echo
 
-The echo command in Linux is a built-in command that allows users to display lines of text or strings that are passed as arguments. It is commonly used in shell scripts and batch files to output status text to the screen or a file.
+The echo command in Linux is a built-in command that allows users to display lines of text or strings that are passed as arguments. It is commonly used in shell scripts and batch files to output status text to the screen or a file, but can also be used to see the content of an "environment variable" or as a means to quickly send text from the command line to a file.
 
 **Syntax**
 
@@ -33,11 +33,11 @@ You can find options with ``man echo``. ``string`` is the string that we want to
 
 **Example - try it!**
 
-Display the string "I am participating in the Introduction to Linux course": 
+Display the string "I am learning Linux": 
 
 ```bash
-bbrydsoe@defiant:~$ echo "I am participating in the Introduction to Linux course"
-I am participating in the Introduction to Linux course
+bbrydsoe@defiant:~$ echo "I am learning Linux"
+I am learning Linux 
 bbrydsoe@defiant:~$ 
 ```
 
@@ -119,7 +119,7 @@ And more text.
 And just a liiiitle more text. 
 ```
 
-!!!  tip "Try it"
+!!! tip "Try it"
 
      Try the two examples above. You can check with ``cat myfile3.txt`` that it is correct. 
 
@@ -442,7 +442,6 @@ You can create your own variables to use, for instance in scripts. More about th
 
 !!! note "Keypoints"
 
-    - ``less``, ``more``, ``cat`` are good commands for seeing the content of files
     - ``echo`` is used to print output of a string or an environment variable
     - redirection is used to redirect the output of a command
     - the output of one command can be passed to another command

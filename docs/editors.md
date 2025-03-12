@@ -43,28 +43,6 @@ If you just need to see the content of a file, one of the commands ``less``, ``m
 
     **Question**: Why is ``cat`` good for short files, but not for long files? 
 
-## echo
-
-The echo command in Linux is a built-in command that allows users to display lines of text or strings that are passed as arguments. It is commonly used in shell scripts and batch files to output status text to the screen or a file, but can also be used to see the content of an "environment variable" (more under "Piping") and to quickly send text from the command line to a file.
-
-**Syntax**
-
-```bash
-echo [option] [string]
-```
-
-You can find options with ``man echo``. ``string`` is the string that we want to display or do something with. 
-
-**Example - try it!**
-
-Display the string "I am learning Linux": 
-
-```bash
-bbrydsoe@defiant:~$ echo "I am learning Linux"
-I am learning Linux 
-bbrydsoe@defiant:~$
-``` 
-
 ## Command line editors 
 
 These are all good editors for using on the command line: 

@@ -40,8 +40,8 @@ nav:
   - Modifying the file tree: modify.md 
   - Editors: editors.md
   - Piping: pipesfilters.md
-  - Finding things: grepfind.md 
-  - Patterns and scripting: patterns.md
+  - Finding patterns: patterns.md 
+  - Scripting: scripting.md
   - Hints and tricks: hints.md
   - Summary: summary.md
   - Extras: 
