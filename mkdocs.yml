@@ -35,18 +35,18 @@ extra_css:
 nav:
   - Home: index.md
   - Introduction: intro.md
-    #  - Linux terminology: linux.md
   - The command line (CLI): cli.md
-  - Pipes and filters: pipesfilters.md
-  - The File System: filesystem.md
+  - Navigating the File System: filesystem.md
+  - Modifying the file tree: modify.md 
   - Editors: editors.md
+  - Piping: pipesfilters.md
+  - Finding things: grepfind.md 
   - Patterns and scripting: patterns.md
   - Hints and tricks: hints.md
   - Summary: summary.md
   - Extras: 
     - Install tree: tree.md
     - Linux system overview: connections.md
-      #    - More Linux terms: linux-terms.md
     - Linux terminology: linux-terminology.md
     - More commands: more-commands.md
     - Data handling: data.md
