@@ -135,3 +135,12 @@ body {
 .tabbed-set .tabbed-alternate {
 	border: 0.5px solid lightgrey;
 }
+
+div.tabbed-set.tabbed-alternate {
+	border: 0.5px solid lightgrey;
+}
+
+div.tabbed-content {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
