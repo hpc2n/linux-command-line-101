@@ -137,10 +137,10 @@ body {
 }
 
 div.tabbed-set.tabbed-alternate {
-	border: 0.5px solid lightgrey;
+	border-left: 0.5px solid lightgrey;
 }
 
-div.tabbed-content {
+div.tabbed-content.tabbed-alternate {
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
