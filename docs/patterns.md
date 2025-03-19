@@ -12,7 +12,7 @@ This section will look at finding patterns ([grep](#grep), [find](#find), [wild 
     **Objectives** 
 
     - Learn about finding patterns
-    - Learn to use ``grep``, ``find``, (and ``awk``)
+    - Learn to use ``grep`` and ``find``
     - Learn to use wild cards
     - Learn to use regular expressions
 
