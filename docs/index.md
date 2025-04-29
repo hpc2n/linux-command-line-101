@@ -15,7 +15,7 @@
 
     - You need access to a Linux system. 
     - You will use your own computer or any other computer (including computing access at computing centers) you have access to and that runs Linux. 
-    - The course project will be on Tetralith, for those that do not have other access to a computer that runs Linux.  
+    - The course project will be on Tetralith, for those that **do not have other access to a computer that runs Linux**.  
         - For those using Tetralith, there is a <a href="https://www.nsc.liu.se/support/getting-started/" target="_blank">Get started guide for NSC here</a>. 
 
 !!! note "Learning outcome"
