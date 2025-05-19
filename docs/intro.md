@@ -7,11 +7,11 @@
 
 !!! note 
 
-    Most of the commands you learn in this course are agnostic and should work on any Linux/Unix like system. MacOS is also a Unix-like OS, and the majority of the commands are the same. 
+    Most of the commands you learn in this course are agnostic and should work on any Linux/Unix like system. MacOS is also a Unix-like OS (operating system), and the majority of the commands are the same. 
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds.
 
-An operating system (often abbreviated OS) is the software that sits underneath all of the other software on a computer, managing the computer’s hardware (CPU, GPU, memory, storage...) and handling the connections between your other software and the hardware.
+An operating system kernel is the software that sits underneath all of the other software on a computer, managing the computer’s hardware (CPU, GPU, memory, storage...) and handling the connections between your other software and the hardware.
 
 Linux is typically packaged as a Linux distribution, which includes the kernel and supporting system software and libraries, many of which are provided by the GNU Project.
 
