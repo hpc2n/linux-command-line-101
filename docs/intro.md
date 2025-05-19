@@ -7,41 +7,40 @@
 
 !!! note 
 
-    Most of the commands you learn in this course is agnostic and works on any Linux/Unix like system. MacOS is also a Unix-like OS, and the majority of the commands are the same. 
+    Most of the commands you learn in this course are agnostic and should work on any Linux/Unix like system. MacOS is also a Unix-like OS, and the majority of the commands are the same. 
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds.
 
-An operating system is the software that sits underneath all of the other software on a computer, managing the computer’s hardware (CPU, GPU, memory, storage...) and taking care of the connections between your other software and the hardware. 
+An operating system (often abbreviated OS) is the software that sits underneath all of the other software on a computer, managing the computer’s hardware (CPU, GPU, memory, storage...) and handling the connections between your other software and the hardware.
 
 Linux is typically packaged as a Linux distribution, which includes the kernel and supporting system software and libraries, many of which are provided by the GNU Project.
 
-!!! Note "Distributions (distros)"
-
-    There are many Linux distribuitions, including Ubuntu, Debian, Fedora, Gentoo, and many others. Many distributions are free and open source, but there are also commercial distributions, like Red Hat Enterprise and SUSE.
-
-    Desktop Linux distributions include <a href="https://en.wikipedia.org/wiki/Desktop_environment" target="_blank">a desktop environment</a>, like GNOME, MATE, KDE Plasma, Xfce, Unity, or many others. A window manager together with applications written using a widget toolkit are generally responsible for most of what the user sees.
-
 In addition, a windowing system of some sort (X11, Wayland) interfaces directly with the underlying operating system and libraries, providing support for graphical hardware, pointing devices, and keyboards. The window manager generally runs on top of this windowing system.
 
-## Shell 
+!!! Note "Distributions (distros)"
 
-The shell is a special user program. It is an interface between the keyboard and the operating system (OS) I.e. it takes commands input the user give from the keyboard and sends it to the OS which then performs the actions requested. 
+    There are many Linux distribuitions, including Ubuntu, Debian, Fedora, Gentoo, and many others. Most distributions are free and open source, but there are also commercial distributions, like Red Hat Enterprise and SUSE.
 
-The shell we are looking at in this course is the Linux/Unix shell, which is a command-line interpreter providing a Command Line Interface (CLI) for Unix-like systems. More about that in the next part. 
+    Desktop Linux distributions include <a href="https://en.wikipedia.org/wiki/Desktop_environment" target="_blank">a desktop environment</a>, like GNOME, MATE, KDE Plasma, Xfce, Unity, or many others. Most of what the user sees is provided by a window manager and applications written using a widget toolkit.
+
+## Shells
+
+A shell is an interface between the keyboard and the operating system (OS), i.e., it takes commands input the user gives from the keyboard and sends it to the OS, which then performs the actions requested. The shell we will use today is one of several varieties of Linux/Unix shell.
 
 !!! Note
 
-    There are several shells, which has somewhat different properties: 
+    There are several shells designed to work with Linux/Unix systems, each of which has somewhat different properties and syntax: 
 
     - The Bourne Shell (sh)
     - The GNU Bourne-Again shell (bash)
     - The C shell (csh)
-    - The Korn Shell (ksh) 
-    - The Z Shell (zsh) 
+    - The TENEX C shell (tcsh)
+    - The Korn Shell (ksh)
+    - The Z Shell (zsh)
 
 !!! Important 
 
-    Most centers has ``bash`` as default. There are several reasons, but one is that it is what is compatible with SLURM - the batch scheduler used at most centers in Sweden. ``bash`` is also good for scripting. 
+    Most centers has ``bash`` as default. There are several reasons, but one is that it compatible with SLURM---the batch scheduler used at most centers in Sweden. The ``bash`` shell is also good for scripting. 
 
     For the majority of the material in this course, it does not matter which shell you are using, but there are some commands where it is relevant. We will therefore be using ``bash`` for this course. 
 
@@ -49,26 +48,25 @@ The shell we are looking at in this course is the Linux/Unix shell, which is a c
 
 The Linux/Unix shell has existed for a very long time (Thompson shell, 1971; Bourne shell, 1979). 
 
-- The reason it keeps being used is that it is a very powerful tool which lets users perform complex and powerful tasks. 
-- These tasks can often be done using a few keystrokes or maybe a few lines of code. 
-- It can be used to automate repetitive tasks or to combine smaller tasks into **scripts**, which helps the user work faster and be more effective. 
+It continues to be used because it is a very powerful tool that lets users perform complex tasks. These tasks can often be done using a few keystrokes or maybe a few lines of code. 
+
+It can be used to automate repetitive tasks or to combine smaller tasks into **scripts**, which helps the user work faster and more effectively. 
 
 Using the Linux/Unix shell is fundamental for a large number of advanced computing tasks, including in HPC (high-performance computing). 
 
-In addition: 
+In addition, most HPC centers supercomputers run some flavour of Linux because it:
 
-- Most HPC centers supercomputers run some flavour of Linux.
-- It is stable and reliable
-- Customizable
+- Is stable and reliable
+- Is customisable
+- Is lightweight
 - Runs on any hardware
-- Strong community
-- Many flavours are open source and free
-- Lots of applications
-- Lightweight
+- Has a strong support community
+- Has many flavours that are open-source and free
+- Has lots of applications
 
-While the use of Linux on desktop is only 2-3%, the vast majority of web servers (>96%), most mobile devices (Android is based on the Linux kernel), and all supercomputers on the <a href="https://en.wikipedia.org/wiki/TOP500" target="_blank">Top500</a> list run Linux.
+While Linux is only used on 2-3% of desktops, the vast majority of web servers (>96%), most mobile devices (Android is based on the Linux kernel), and all supercomputers on the <a href="https://en.wikipedia.org/wiki/TOP500" target="_blank">Top500 list</a> run Linux.
 
-For all of these reasons, and many more, it is a good idea to be more proficient in Linux. This course aims to help you with that. 
+For all of these reasons, and many more, it is a good idea to be proficient in Linux. This course aims to help you with that.
 
 ## More information 
 
