@@ -109,7 +109,7 @@ You can use this to find out which directory you are in.
      b-an01 [~]$ 
      ```
 
-== "On Cosmos"
+=== "On Cosmos"
 
      user ``bbrydsoe``: 
 
