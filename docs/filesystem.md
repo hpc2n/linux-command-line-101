@@ -69,6 +69,7 @@ The ``path`` to your home directory varies somewhat. Here are some examples for 
 
 - Tetralith: ``/home/x_birbr``
 - Kebnekaise: ``/home/b/bbrydsoe``
+- Cosmos: ``/home/bbrydsoe``
 - My laptop, ncc-1701: ``/home/bbrydsoe``
 - My home desktop, defiant: ``/home/bbrydsoe``
 
@@ -106,6 +107,16 @@ You can use this to find out which directory you are in.
      b-an01 [~]$ pwd
      /home/b/bbrydsoe
      b-an01 [~]$ 
+     ```
+
+== "On Cosmos"
+
+     user ``bbrydsoe``: 
+
+     ```bash
+     [bbrydsoe@cosmos1 ~]$ pwd
+     /home/bbrydsoe
+     [bbrydsoe@cosmos1 ~]$ 
      ```
 
 ### Example, in a directory named ``testdir``
