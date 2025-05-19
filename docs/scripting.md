@@ -103,7 +103,7 @@ The most common reason for making a script is probably to avoid writing the same
 
 !!! NOTE
 
-    If it is just a one-line command you want to do again and again, then ['alias'](../hints#alias) is more suited for this. 
+    If it is just a one-line command you want to do again and again, then ['alias'](../more-commands#alias) is more suited for this. 
 
 !!! hint "Type along!" 
 
