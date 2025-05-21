@@ -19,3 +19,7 @@ Date: 3 April 2025
 Time: 09:00-12:00
 
 Location: Online (ZOOM)
+
+## Evaluations 
+
+The evaluation surveys of previous instances of this course (it was called "Introduction to Linux" then) can be found in the folder "evaluations". 
