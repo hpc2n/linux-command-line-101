@@ -21,7 +21,7 @@ This section is going to be a high-level talk about the Linux filesystem concept
 
 The Linux filesystem directory structure starts with the top root directory, which is shown as <code>/</code>. Below this are several other standard directories. Of particular interest are <code>usr/bin</code>, <code>home</code>, <code>usr/lib</code>, and <code>usr/lib64</code>. A common directory which you will also often find is <code>usr/local/bin</code>. 
 
-The picture on the right shows typical subdirectories under <code>/</code> (note that the command 'tree' does not work at all HPC centres, though it does work on Tetralith - see the page [tree](../tree) under "Extras section for how to install if it is missing). Some of the directories have a **symbolic link** to a different name - this is often done to make it quicker to write, but can also be for compatibility reasons since some software have hardcoded paths.
+The picture on the right shows typical subdirectories under <code>/</code> (note that the command 'tree' does not work at all HPC centers, though it does work on Tetralith - see the page [tree](../tree) under "Extras section for how to install if it is missing). Some of the directories have a **symbolic link** to a different name - this is often done to make it quicker to write, but can also be for compatibility reasons since some software have hardcoded paths.
 
 !!! Note
 
@@ -50,9 +50,9 @@ The file system could also be illustrated like this:
 
 !!! note
 
-    If you are on a local cluster, on an HPC centre, etc. where you are not root, you will as default be in your home directory when you login. You can use ``cd ..`` a couple times to go to the root of the system and do ``tree`` there if you want, or do ``tree`` in your home directory (you can always return there with just ``cd``). 
+    If you are on a local cluster, on an HPC center, etc. where you are not root, you will as default be in your home directory when you login. You can use ``cd ..`` a couple times to go to the root of the system and do ``tree`` there if you want, or do ``tree`` in your home directory (you can always return there with just ``cd``). 
 
-    Running ``tree`` in ``/`` on a supercomputing centre will probably give a very large/long output! 
+    Running ``tree`` in ``/`` on a supercomputing center will probably give a very large/long output! 
 
 ### Home folders on Tetralith
 
@@ -256,13 +256,15 @@ To get more flags, type <code>ls \--help</code> or <code>man ls</code> in the te
 
 ## Wild cards
 
-Wild cards are useful 'stand-ins' for one or more character or number, that you can use for instance when finding patterns or when removing/listing all files of a certain type. 
+Wild cards are useful "stand-ins" for one or more character or number, that you can use for instance when finding patterns or when removing/listing all files of a certain type. 
 
 Wild cards are also called "glob" or "globbing" patterns. 
 
 ??? Globs
 
-    Globs, also known as glob (or globbing) patterns are patterns that can expand a wildcard pattern into a list of pathnames that match the given pattern. On the early versions of Linux, the command interpreters relied on a program that expanded these characters into unquoted arguments to a command: ``/etc/glob`` .
+    Globs, also known as glob (or globbing) patterns are patterns that can expand a wildcard pattern into a list of pathnames that match the given pattern. 
+    
+    On the early versions of Linux, the command interpreters relied on a program that expanded these characters into unquoted arguments to a command: ``/etc/glob`` .
 
 <br>
 
@@ -277,14 +279,14 @@ Wild cards are also called "glob" or "globbing" patterns.
 
 !!! Warning 
 
-    You may need quotation marks as well around some wildcards. 
+    You may need quotation marks around some wildcards as well. 
 
 !!! tip "Try some of the commands below" 
 
     Useful files for these examples are found in ``exercises/patterns`` 
 
 
-!!! Example "Some examples of use of wildcards"
+!!! Example "Some examples of the use of wildcards"
 
     ```bash
     myfile?.txt
@@ -333,9 +335,9 @@ Wild cards are also called "glob" or "globbing" patterns.
 The command ``cd`` is used to change directory. 
 
 - **cd**: Go to your home directory ($HOME)
-- **cd DIR**: Change directory to DIR
+- **cd DIR**: Change directory to DIR (whatever path you specify)
 - **cd ..**: Change directory to the parent directory of the current directory
-- **cd -**: go back to the previous directory
+- **cd -**: go back to the previous working directory
 
 !!! example
 
@@ -344,7 +346,7 @@ The command ``cd`` is used to change directory.
     ![folders of exercises directory structure](images/exercises-folders.png){: style="width: 500px;float: left"}
     <br><br style="clear: both;">
 
-    Remember, $HOME is an ``environment variable`` which gives a shortcut to your home directory.
+    Remember, ``$HOME`` is an *environment variable* which gives a shortcut to your home directory.
 
     **NOTE** if you are on Tetralith and placed the exercises under ``/proj/linux-intro/users/USERNAME`` then ``$HOME`` would be replaced by that path. 
 
@@ -375,18 +377,18 @@ The command ``cd`` is used to change directory.
 
 !!! info
 
-    You can use **full paths** (also know as **absolute paths**) or **relative paths** to give the location. 
+    You can use **full paths** (also known as **absolute paths**) or **relative paths** to give the location. 
 
-    An absolute path makes no assumptions about your current location in relation to the location of the file or directory you want to access. It specifies the location from the root of the file system. 
+    An absolute path makes no assumptions about your current location in relation to the location of the file or directory you want to access. It specifies the location from the root of the file system. Absolute paths are required if the file or directory you want to access is not in your current directory or any sub-directory therein.
 
-    The path with reference to your current directory is called the relative path. 
+    The path with reference to your current directory is called the relative path. A relative path only explicitly specifies sub-directories of your current directory, leaving the part of the path from the root to the current directory implicit.
 
 !!! note "Keypoints"
 
     - Your home directory is generally located in ``/home/USERNAME`` or ``/home/U/USERNAME``
-    - Your home directory can also be addressed with the environment variable ``$HOME``
-    - ``pwd`` is useful for determining your path and current location
-    - To change directory you use the command ``cd`` DIR
-    - Just giving the command ``cd`` takes you to your homedirectory 
+    - Your home directory is also stored as the environment variable ``$HOME``
+    - ``pwd`` displays your path and current location
+    - ``cd DIR`` changes your current working directory to DIR
+    - Using ``cd`` without providing a destination takes you to your home directory 
     - ``ls`` is used to list files and directories
 
