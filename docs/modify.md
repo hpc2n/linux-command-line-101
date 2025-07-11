@@ -16,17 +16,17 @@
 
 ## Create and remove directories/files 
 
-This section will show how to work with files and directories through command line interface.
+This section will show how to work with files and directories through the command line interface (CLI).
 
 ### Directories 
 
-- **mkdir DIR**: Create a directory DIR
-    - **mkdir -p DIR/SUBDIR**: create a directory DIR with the subdirectory SUBDIR
-- **rm -r DIR**: Remove a directory DIR. The flag "-r" means recursively
+- **mkdir DIR**: Creates a directory DIR
+    - **mkdir -p DIR/SUBDIR**: creates a directory DIR with the subdirectory SUBDIR
+- **rm -r DIR**: Removes a directory DIR. The flag "-r" means recursively
     - You can also add "-f". This means ignore nonexistent files and arguments, and never prompt. 
     - You can add the option "-i". This means it will prompt before every removal. 
 
-!!! note "Examples, creating and removing directories"
+!!! note "Examples: creating and removing directories"
 
     Create a directory called ``mynewdir``
 
@@ -54,12 +54,14 @@ To create files, you would normally use an editor (``nano``, ``vim``, ``emacs``,
 touch FILE
 ```
 
-You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to prompt before removing a file.
+You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to prompt before removing a file. Be aware that files removed with ``rm`` are deleted *permanently*---they generally cannot be restored (people have gotten lucky with system backup snapshots, but don't count on those).
 
 !!! warning
 
     If you do not add the flag/option "-i" the file will be deleted without prompting. Be careful!
 
+    Be **extra** careful using ``rm`` with glob patterns (see [Finding Patterns](https://hpc2n.github.io/linux-command-line-101/patterns/#find) )! It is strongly recommended that you always test a pattern with ``ls`` before using ``rm`` on that pattern to make sure you are only selecting what you intend to delete.
+    
 !!! note "Examples"
 
     Create a file called ``file.txt``
@@ -73,6 +75,7 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
     ```bash
     rm file.txt
     ```
+    
 ### Examples
 
 **Reminder**
@@ -82,7 +85,7 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
 - **cd**: Go to your home directory ($HOME)
 - **cd DIR**: Change directory to DIR
 - **cd ..**: Change directory to the parent directory of the current directory
-- **cd -**: go back to the previous directory
+- **cd -**: go back to the previous working directory
 - **touch FILE**: create an empty file with the name FILE
 - **rm FILE**: remove the file with the name FILE
 - The command <code>pwd</code> tells you the current directory path.
@@ -116,7 +119,6 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
 !!! Note
 
     This was done on Tetralith. You will notice that only the current (subdir) is shown in the prompt. At some other centres **all** the (sub)dirs would be shown.
-
     Example: HPC2N
 
     ```bash
@@ -181,6 +183,7 @@ The command <code>mv</code> is used to rename files and directories. It can also
 - **mv file1.txt file2.txt**: renames <code>file1.txt</code> to <code>file2.txt</code>
 - **mv DIR1/ DIR2/**: renames directory <code>DIR1</code> to directory <code>DIR2/</code>
 - **mv file1.txt DIR1/**: moves the file <code>file1.txt</code> into the directory <code>DIR1/</code>
+- **mv DIR1 DIR2/**: (note lack of forward slash after <code>DIR1</code>) moves directory <code>DIR1</code> into directory <code>DIR2/</code>.
 - **mv -i file1.txt file2.txt**: interactive. Asks before overwriting if there is already a file with the destination name.
 - **mv -i DIR1/ DIR2/**: interactive. Asks before overwriting if there is already a directory with that name.
 
@@ -251,11 +254,9 @@ The command <code>mv</code> is used to rename files and directories. It can also
 
 ## Symbolic links
 
-Symbolic links are also called soft links, or just symlinks. It is a pointer to another file or directory.
+A symbolic link is a pointer to another file or directory. Symbolic links are also called soft links, or just symlinks. 
 
-- It is useful both for ease
-    - you avoid using a long path each time you change to a directory, like your project directory
-    - as well as to avoid changing hard links within other scripts or programs. This is good if you for instance install a program or use a script that assumes the library it uses is called libcoolness.a and not libcoolness.2.0.a. You can then just update the symlink instead of renaming the library or updating potentially many instances where it is mentioned in the program.
+Symlinks are useful both for ease---you avoid using a long path each time you change to a directory, like your project directory---and to avoid changing hard links within other scripts or programs. It is good to avoid changing hardlinks if you, for instance, install a program or use a script that assumes the library it uses is called ``libcoolness.a`` and not ``libcoolness.2.0.a``. You can then just update the symlink instead of renaming the library or updating potentially many instances where it is mentioned in the program.
 
 Command:
 
@@ -271,7 +272,7 @@ ln -s real-file-or-lib link-name
     ln -s /proj/linux-intro/users/MYUSERNAME $HOME/myproj
     ```
 
-    This creates a symbolic link named "myproj" in your home directory, pointing to the location /proj/linux-intro/users/MYUSERNAME. The directory "linux-intro" is the project storage directory for this course project. For me, this would look like this:
+    This creates a symbolic link named "myproj" in your home directory, pointing to the location /proj/linux-intro/users/MYUSERNAME. The directory "linux-intro" is the project storage directory for this course project. For user ``x_birbr``, it would look like this:
 
     ```bash
     [x_birbr@tetralith1 ~]$ ls -l
@@ -282,8 +283,8 @@ ln -s real-file-or-lib link-name
 
 !!! note "Keypoints"
 
-    - You create a directory named DIR with ``mkdir DIR``
-    - You remove a directory named DIR with ``rm -r DIR``
+    - You can create a directory named DIR with ``mkdir DIR``
+    - You can remove a directory named DIR with ``rm -r DIR``
     - You can create an (empty) file named FILE with ``touch FILE``
     - You can remove a file named FILE with ``rm FILE``
     - The command to copy files and directories is ``cp``
