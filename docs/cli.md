@@ -43,7 +43,7 @@ Writing scripts in a shell allows you to automate repetitive tasks or combine se
 
     You will find that many/most commands in this course are prefaced with either <code>\$</code> or <code>[x_birbr@tetralith1 ~]\$</code>, or something like <code>[x_birbr@tetralith1 x_birbr]\$</code>. 
 
-    This is the prompt from the computer system, where <code>\$</code> just is the default (<code>bash</code>) prompt, and the others are an example of a prompt you would see when logged into a compute cluster (in this case Tetralith - my home directory versus my project storage directory.
+    This is the prompt from the computer system, where <code>\$</code> just is the default (<code>bash</code>) prompt, and the others are an example of a prompt you would see when logged into a compute cluster (in this case Tetralith - instructor's home directory versus a project storage directory).
 
     You can see an example of such a prompt in the picture a bit further up on the page, though that is from where the instructor is logged into "Kebnekaise" from the personal computer "defiant". 
 
