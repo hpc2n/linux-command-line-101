@@ -304,13 +304,13 @@ Wild cards are also called "glob" or "globbing" patterns.
     r[a,i,o]ck
     ```
 
-    This matches rack, rick, rock.
+    This matches rack, rick, and rock.
 
     ```bash
     a[d-j]a
     ```
 
-    This matches ada, afa, aja, ...  and any three letter word that starts with an a and ends with an a and has any character d to j in between. Try with ``ls a[d-j]a``. 
+    This matches ada, afa, aja, ...  and any three letter word that starts with an a, ends with an a, and has any character from d to j in between. Try with ``ls a[d-j]a``. 
    
     ```bash
     [0-9]
