@@ -4,15 +4,15 @@
 
     **Questions**
 
-    - How do create and remove files and directories?
-    - How do I copy/rename files and directories?
+    - How do I create or remove files and directories?
+    - How do I copy or rename files and directories? (You will see why these two operations are mentioned together.)
 
     **Learning objectives**
 
     - Learn how to navigate the Linux file system
     - Learn about files and directories
     - Learn about paths
-    - Be able to create and delete files and directories, as well as rename and copy them
+    - Be able to create, copy, rename, and delete files and directories
 
 ## Create and remove directories/files 
 
@@ -60,7 +60,7 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
 
     If you do not add the flag/option "-i" the file will be deleted without prompting. Be careful!
 
-    Be **extra** careful using ``rm`` with glob patterns (see [Finding Patterns](https://hpc2n.github.io/linux-command-line-101/patterns/#find) )! It is strongly recommended that you always test a pattern with ``ls`` before using ``rm`` on that pattern to make sure you are only selecting what you intend to delete.
+    Be **extra** careful using ``rm`` with glob patterns (see [Finding Patterns](https://hpc2n.github.io/linux-command-line-101/patterns/#find) )! It is strongly recommended that you always test a pattern with ``ls`` and check that the output is what you expect before using ``rm`` on that pattern.
     
 !!! note "Examples"
 
@@ -90,9 +90,9 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
 - **rm FILE**: remove the file with the name FILE
 - The command <code>pwd</code> tells you the current directory path.
 
-!!! Example "Creating directories, changing directories, removing directory and file"
+!!! Example "Creating directories, changing directories, removing directory and file, removing files by pattern"
 
-    This example will test some of the things we just learned, as well as the command ``cd`` from the previous section. 
+    This example will test some of the things we just learned, as well as the command ``cd`` and glob patterns from the previous section. 
 
     **HINT: Code-along!**
 
@@ -113,7 +113,12 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
     [x_birbr@tetralith1 testdir1]$
     [x_birbr@tetralith1 testdir1]$ cd ..
     [x_birbr@tetralith1 myowntestdir]$ cd testdir2/
-    [x_birbr@tetralith1 testdir2]$
+    [x_birbr@tetralith1 testdir2]$ touch meow.txt
+    [x_birbr@tetralith1 testdir2]$ touch catsmeow1.txt
+    [x_birbr@tetralith1 testdir2]$ touch homeowners_assoc.txt
+    [x_birbr@tetralith1 testdir2]$ ls *meow*.txt
+    [x_birbr@tetralith1 testdir2]$ rm -r *meow{,1}.txt
+    
     ```
 
 !!! Note
@@ -138,7 +143,7 @@ This command is used to copy files or directories.
 
 !!! warning 
 
-    If you do not add the option "-i" you risk overwriting an existing file, if it is named the same. 
+    If you do not add the option "-i", you risk overwriting any existing file with the same name. 
 
 !!! example "Code-along"
 
@@ -178,14 +183,14 @@ This command is used to copy files or directories.
 
 ## mv - rename files/directories
 
-The command <code>mv</code> is used to rename files and directories. It can also be used to **move** a file or directory to another location.
+The command <code>mv</code> is used to rename files and directories, and to **move** a file or directory to another location.
 
 - **mv file1.txt file2.txt**: renames <code>file1.txt</code> to <code>file2.txt</code>
 - **mv DIR1/ DIR2/**: renames directory <code>DIR1</code> to directory <code>DIR2/</code>
 - **mv file1.txt DIR1/**: moves the file <code>file1.txt</code> into the directory <code>DIR1/</code>
 - **mv DIR1 DIR2/**: (note lack of forward slash after <code>DIR1</code>) moves directory <code>DIR1</code> into directory <code>DIR2/</code>.
 - **mv -i file1.txt file2.txt**: interactive. Asks before overwriting if there is already a file with the destination name.
-- **mv -i DIR1/ DIR2/**: interactive. Asks before overwriting if there is already a directory with that name.
+- **mv -i DIR1/ DIR2/**: interactive. Asks before overwriting, if there is already a directory with that name.
 
 !!! Note
 
@@ -205,44 +210,45 @@ The command <code>mv</code> is used to rename files and directories. It can also
 
 ??? note "Solution - click to reveal"
 
-    1. I am randomly naming the files ``afile.txt``, ``bfile.txt``, ``cfile.txt``
+    1. I randomly name the files ``afile.txt``, ``bfile.txt``, ``cfile.txt``
+    
        ```bash
        touch afile.txt
        touch bfile.txt
        touch cfile.txt
        ```
-    2. I am naming the directory ``newdir`` and the subdirectory ``subdir``
+    2. I make the directory ``newdir`` and the subdirectory ``subdir``
 
        ```bash 
        mkdir newdir
        cd newdir
        mkdir subdir
        ```
-    3. I am creating a file named ``newfile.dat``
+    3. I create a file named ``newfile.dat``
 
        ```bash
        cd subdir
        touch newfile.dat
        ```
-    4. I am naming the file ``secondfile.txt``
+    4. I name the file ``secondfile.txt`` and move it into ``subdir``
 
        ```bash
        cd ..
        touch secondfile.txt
        mv secondfile.txt subdir
        ```
-    5. I will rename the first directory (top-level directory) I created, calling it ``fancydir``
+    5. I rename the first directory (top-level directory) I created, calling it ``fancydir``
 
        ```bash
        cd ..
        mv newdir fancydir
        ```
-    6. I will remove the file ``afile.txt`` while standing "above" the directory ``fancydir`` (previously called ``newdir``)
+    6. I remove the file ``afile.txt`` while working in the directory outside of ``fancydir`` (previously called ``newdir``)
 
        ```bash
        rm fancydir/afile.txt
        ```
-    7. I am removing the subdirectory ``subdir`` while standing above the directory ``fancydir``
+    7. I remove the subdirectory ``subdir`` while outside the directory ``fancydir``
 
        ```bash
        rm -r fancydir/subdir
@@ -250,11 +256,11 @@ The command <code>mv</code> is used to rename files and directories. It can also
 
 !!! tip
 
-    You can always check with ``pwd`` that you are standing in the directory you think you are!
+    You can always check with ``pwd`` which directory you are working in!
 
 ## Symbolic links
 
-A symbolic link is a pointer to another file or directory. Symbolic links are also called soft links, or just symlinks. 
+A symbolic link is a pointer to another file or directory. Symbolic links are also called soft links, or just symlinks.
 
 Symlinks are useful both for ease---you avoid using a long path each time you change to a directory, like your project directory---and to avoid changing hard links within other scripts or programs. It is good to avoid changing hardlinks if you, for instance, install a program or use a script that assumes the library it uses is called ``libcoolness.a`` and not ``libcoolness.2.0.a``. You can then just update the symlink instead of renaming the library or updating potentially many instances where it is mentioned in the program.
 
@@ -290,4 +296,5 @@ ln -s real-file-or-lib link-name
     - The command to copy files and directories is ``cp``
     - The command to rename files and directories is ``mv``
     - Symbolic links are pointers to another file or directory
+    - Always test glob patterns with ``ls`` before using the same patterns with ``rm -r`` to remove files in bulk.
 
