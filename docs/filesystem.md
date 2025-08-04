@@ -1,6 +1,6 @@
 # Navigating the File System
 
-This section is going to be a high-level talk about the Linux filesystem concepts, not a low-level description of filesystem types. 
+This section will be a basic overview of the Linux filesystem concepts, not an in-depth description of filesystem types. 
 
 !!! Note "Learning objectives" 
 
