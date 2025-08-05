@@ -16,7 +16,7 @@ Lecture recordings from a previous instance: https://www.youtube.com/watch?v=ScM
 
 **Lecture recordings from the current course will be posted to HPC2N's YouTube page:** https://www.youtube.com/user/HPC2N
 
-Date: 8 September 2025 
+Date: 22 September 2025 
 
 Time: 09:00-12:00
 
