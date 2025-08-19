@@ -13,7 +13,7 @@
     - You will learn about the shell and the CLI.
     - You will learn why and when you should use a CLI instead of a Graphical User Interface (GUI). 
     
-![Terminal](images/terminal.png){: style="width: 400px;float: right;padding: 3px;}
+![Terminal](images/terminal_tetralith.png){: style="width: 400px;float: right;padding: 3px;}
 
 The picture above shows a terminal window where an instructor is logged into Kebnekaise (from a desktop named defiant). 
 
