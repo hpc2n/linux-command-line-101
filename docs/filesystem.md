@@ -160,16 +160,16 @@ Some examples:
 
 !!! Note "Commonly used flags" 
 
-    - <code>-d */</code> lists only directories
+<!--    - <code>-d */</code> lists only directories-->
     - <code>-a</code> lists content including hidden files and directories
     - <code>-l</code> lists content in long table format (permissions, owners, size in bytes, modification date/time, file/directory name)
     - <code>-lh</code> adds an extra column to above representing size of each file/directory
     - <code>-t</code> lists content sorted by last modified date in descending order
     - <code>-tr</code> lists content sorted by last modified date in ascending order
-    - <code>-R</code> lists contents recursively in all subdirectories
+<!--    - <code>-R</code> lists contents recursively in all subdirectories -->
     - <code>-s</code> list files with their sizes
-    - <code>-S</code> sort files/directories by size in descending order
-    - <code>-Sr</code> sort files/directories by size in ascending order
+<!--    - <code>-S</code> sort files/directories by size in descending order
+    - <code>-Sr</code> sort files/directories by size in ascending order -->
 
 To get more flags, type <code>ls \--help</code> or <code>man ls</code> in the terminal to see the manual. 
 
