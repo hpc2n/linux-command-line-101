@@ -387,4 +387,4 @@ The command ``cd`` is used to change directory.
     - ``cd DIR`` changes your current working directory to DIR
     - Using ``cd`` without providing a destination takes you to your home directory 
     - ``ls`` is used to list files and directories
-
+    - Wildcards are metacharacters for one or more character or number and are useful when you are finding patterns or removing/copying/listing all files of a certain type 

@@ -60,7 +60,7 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
 
     If you do not add the flag/option "-i" the file will be deleted without prompting. Be careful!
 
-    Be **extra** careful using ``rm`` with glob patterns (see [Finding Patterns](https://hpc2n.github.io/linux-command-line-101/patterns/#find) )! It is strongly recommended that you always test a pattern with ``ls`` and check that the output is what you expect before using ``rm`` on that pattern.
+    Be **extra** careful using ``rm`` with glob patterns (see [Wild Cards under The File System](../filesystem/#wild__cards) )! It is strongly recommended that you always test a pattern with ``ls`` and check that the output is what you expect before using ``rm`` on that pattern.
     
 !!! note "Examples"
 
@@ -124,6 +124,7 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
 !!! Note
 
     This was done on Tetralith. You will notice that only the current (subdir) is shown in the prompt. At some other centres **all** the (sub)dirs would be shown.
+
     Example: HPC2N
 
     ```bash

@@ -1,6 +1,6 @@
 # Finding patterns
 
-This section will look at finding patterns ([grep](#grep), [find](#find), [wild cards](#wild__cards), and [regular expressions](#regular__expressions)).  
+This section will look at finding patterns ([grep](#grep), [find](#find), and [regular expressions](#regular__expressions)).  
 
 !!! note "Learning objectives"
 
@@ -13,7 +13,6 @@ This section will look at finding patterns ([grep](#grep), [find](#find), [wild 
 
     - Learn about finding patterns
     - Learn to use ``grep`` and ``find``
-    - Learn to use wild cards
     - Learn to use regular expressions
 
 Here you will find descptions on how to search for files with specific patterns. 
@@ -169,6 +168,5 @@ Some common examples of regular expressions:
 !!! note "Keypoints" 
 
     - Finding files with specific patterns in their names or content can be done with ``grep`` and ``find``
-    - Wildcards are stand-ins for one or more character or number and are useful for when you are finding patterns or removing/copying/listing all files of a certain type 
     - Regular Expressions are a type of globbing patterns that are used when you are working with text. They can be used with ``grep``, ``find``, and many many others 
 
