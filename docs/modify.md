@@ -1,6 +1,6 @@
 # Modifying the file tree 
 
-!!! important "Learning objectives"
+!!! note "Learning objectives"
 
     **Questions**
 
