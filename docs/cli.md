@@ -47,6 +47,7 @@ Writing scripts in a shell allows you to automate repetitive tasks or combine se
     You can see an example of such a prompt in the picture a bit further up on the page, when a user with the user-id  <code>x_joahe</code> is connected to NAISS' Tetralith system.
 
     ** IMPORTANT **
+    
     Do **NOT** copy this prompt if you are copying code snippets. It should **not** be included in the command. 
 
 ## Terminology
