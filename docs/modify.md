@@ -26,7 +26,7 @@ This section will show how to work with files and directories through the comman
     - You can also add "-f". This means ignore nonexistent files and arguments, and never prompt. 
     - You can add the option "-i". This means it will prompt before every removal. 
 
-!!! note "Examples: creating and removing directories"
+!!! example "Examples: creating and removing directories"
 
     Create a directory called ``mynewdir``
 
@@ -62,7 +62,7 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
 
     Be **extra** careful using ``rm`` with glob patterns (see [Wild Cards under The File System](../filesystem/#wild__cards) )! It is strongly recommended that you always test a pattern with ``ls`` and check that the output is what you expect before using ``rm`` on that pattern.
     
-!!! note "Examples"
+!!! example "Examples"
 
     Create a file called ``file.txt``
 
@@ -90,7 +90,7 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
 - **rm FILE**: remove the file with the name FILE
 - The command <code>pwd</code> tells you the current directory path.
 
-!!! Example "Creating directories, changing directories, removing directory and file, removing files by pattern"
+!!! example "Creating directories, changing directories, removing directory and file, removing files by pattern"
 
     This example will test some of the things we just learned, as well as the command ``cd`` and glob patterns from the previous section. 
 
@@ -193,13 +193,13 @@ The command <code>mv</code> is used to rename files and directories, and to **mo
 - **mv -i file1.txt file2.txt**: interactive. Asks before overwriting if there is already a file with the destination name.
 - **mv -i DIR1/ DIR2/**: interactive. Asks before overwriting, if there is already a directory with that name.
 
-!!! Note
+!!! tip
 
     <code>mv</code> complains if there is already a file/directory with the new name. You can force the renaming with "-f" at the cost of the disappearence of the file that previously held the name.
 
 ### Exercise 
 
-!!! Exercise "Exercise"
+!!! example "Exercise"
 
     1. Create three files (touch)
     2. Create a directory and then create a subdirectory of that directory (mkdir, cd)
@@ -273,7 +273,7 @@ ln -s real-file-or-lib link-name
 ```
 </div>
 
-!!! note "Example (on Tetralith)"
+!!! example "Example (on Tetralith)"
 
     ```bash
     ln -s /proj/linux-intro/users/MYUSERNAME $HOME/myproj
@@ -288,7 +288,7 @@ ln -s real-file-or-lib link-name
     drwxrwxr-x 4 x_birbr x_birbr 4096 Sep 11 11:43 mytestdir
     ```
 
-!!! note "Keypoints"
+!!! summary
 
     - You can create a directory named DIR with ``mkdir DIR``
     - You can remove a directory named DIR with ``rm -r DIR``
