@@ -15,7 +15,7 @@
     
 ![Terminal](images/terminal_tetralith.png){: style="width: 400px;float: right;padding: 3px;}
 
-The picture above shows a terminal window where a user is logged into NAISS' Tetralith system.  Inside the terminal there is a **shell** running and one can see the **prompt** waiting for user input.  
+The picture above shows a terminal window where a user is logged into NAISS' Tetralith system.  Inside the terminal there is a **shell** running. One can see the **prompt** waiting for user input.  
 
 This is an example for a command line interface (CLI).  It allows interacting with the computer system by directly typing commands. It is a user interface that is navigated with only a keyboard, instead of by clicking with a mouse or using a touchscreen.
  
@@ -46,9 +46,9 @@ Writing scripts in a shell allows you to automate repetitive tasks or combine se
 
     You can see an example of such a prompt in the picture a bit further up on the page, when a user with the user-id  <code>x_joahe</code> is connected to NAISS' Tetralith system.
 
-    ** IMPORTANT **
-    
-    Do **NOT** copy this prompt if you are copying code snippets. It should **not** be included in the command. 
+    **IMPORTANT**
+
+    Do **NOT** copy the prompt if you are copying code snippets. It should **not** be included in the command. 
 
 ## Terminology
 
