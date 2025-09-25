@@ -27,16 +27,14 @@ In addition, a windowing system of some sort (X11, Wayland) interfaces directly 
 
 A shell is an interface between the keyboard and the operating system (OS), i.e., it takes commands input the user gives from the keyboard and sends it to the OS, which then performs the actions requested. The shell we will use today is one of several varieties of Linux/Unix shell.
 
-!!! Note
+There are several shells designed to work with Linux/Unix systems, each of which has somewhat different properties and syntax: 
 
-    There are several shells designed to work with Linux/Unix systems, each of which has somewhat different properties and syntax: 
-
-    - The Bourne Shell (sh)
-    - The GNU Bourne-Again shell (bash)
-    - The C shell (csh)
-    - The TENEX C shell (tcsh)
-    - The Korn Shell (ksh)
-    - The Z Shell (zsh)
+- The Bourne Shell (sh)
+- The GNU Bourne-Again shell (bash)
+- The C shell (csh)
+- The TENEX C shell (tcsh)
+- The Korn Shell (ksh)
+- The Z Shell (zsh)
 
 !!! Important 
 
@@ -68,16 +66,16 @@ While Linux is only used on 2-3% of desktops, the vast majority of web servers (
 
 For all of these reasons, and many more, it is a good idea to be proficient in Linux. This course aims to help you with that.
 
-## More information 
+!!! seealso
 
-There is much more information about <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux on Wikipedia</a>.
-
-Some pages with guides and/or cheat sheets: 
-
-- <a href="https://linuxhandbook.com/" target="_blank">The Linux Handbook</a>
-- <a href="https://www.geeksforgeeks.org/linux-tutorial/" target="_blanks">https://www.geeksforgeeks.org/linux-tutorial/</a>
-- <a href="https://itsfoss.com/free-linux-training-courses/" target="_blank">14 Free Training Courses to Learn Linux Online</a>
-- <a href="https://tldp.org/LDP/intro-linux/intro-linux.pdf">Introduction to Linux - A Hands on Guide</a>
-- <a href="https://cloudacademy.com/course/linux-fundmentals-1346/the-linux-directory-structure/" target="_blank">Linux Fundamentals</a>
-- <a href="https://www.digitalocean.com/community/tutorials/linux-commands" target="_blank">Top 50+ Linux Commands You MUST Know</a>
+    There is much more information about <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux on Wikipedia</a>.
+    
+    Some pages with guides and/or cheat sheets: 
+    
+    - <a href="https://linuxhandbook.com/" target="_blank">The Linux Handbook</a>
+    - <a href="https://www.geeksforgeeks.org/linux-tutorial/" target="_blanks">https://www.geeksforgeeks.org/linux-tutorial/</a>
+    - <a href="https://itsfoss.com/free-linux-training-courses/" target="_blank">14 Free Training Courses to Learn Linux Online</a>
+    - <a href="https://tldp.org/LDP/intro-linux/intro-linux.pdf">Introduction to Linux - A Hands on Guide</a>
+    - <a href="https://cloudacademy.com/course/linux-fundmentals-1346/the-linux-directory-structure/" target="_blank">Linux Fundamentals</a>
+    - <a href="https://www.digitalocean.com/community/tutorials/linux-commands" target="_blank">Top 50+ Linux Commands You MUST Know</a>
  
