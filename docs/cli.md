@@ -15,38 +15,38 @@
     
 ![Terminal](images/terminal_tetralith.png){: style="width: 400px;float: right;padding: 3px;}
 
-The picture above shows a terminal window where an instructor is logged into Kebnekaise (from a desktop named defiant). 
+The picture above shows a terminal window where a user is logged into NAISS' Tetralith system.  Inside the terminal there is a **shell** running and one can see the **prompt** waiting for user input.  
 
-The command line is an interface for typing commands directly to a computer's operating system. It is a user interface that is navigated with only a keyboard, by typing commands at a prompt, instead of by clicking with a mouse or using a touchscreen.
+This is an example for a command line interface (CLI).  It allows interacting with the computer system by directly typing commands. It is a user interface that is navigated with only a keyboard, instead of by clicking with a mouse or using a touchscreen.
  
-The Command Line Interface (CLI) is available in all operating systems, including Windows, Linux and macOS, but it is most commonly associated with Linux. 
+A commandline interface is currently available in all major operating systems, including Windows, UNIX, Linux and macOS.
 
 !!! NOTE 
 
-    In Unix or Linux, the **prompt** may be shown as ``$``, ``%``, ``#``, or ``>`` depending on the shell and its associated coding language.
+    In Unix or Linux, the **prompt** may be shown as ``$``, ``%``, ``#``, or ``>`` depending on the shell used and the system's set-up.  In addition it may show details such as the user name, the name of the system or the position in the directory tree.  The late is commonly referred to as the ``PATH``.
 
     The prompt means the shell is waiting for input from you. 
    
-The opposite of a <code>CLI</code> is a <code>GUI</code> (Graphical User Interface), which generally uses a mouse or similar for navigating. 
-
-Command line interfaces often gives access to many more capabilities than the graphical user interface does, and it is also practical and normally faster in situations where you login with a terminal on a remote system, like Tetralith, or Kebnekaise as I did above. 
+A common alternative to a CLI is a **GUI** (Graphical User Interface), typically uses a mouse or similar for navigating.  While for a new user a GUI is often more intuitive the CLI is more powerful.  Command line interfaces often give access to more capabilities than the graphical user interface does.  Many repetive tasks, which can be tedious in a GUI, can be easily automated in a shell with a shell with command line interface.
 
 ## Shell 
 
-As mentioned in the intro, the shell is a special user program. It is an interface between the keyboard and the operating system (OS), i.e., it takes commands input the user give from the keyboard and sends it to the OS, which then performs the actions requested.
+As mentioned in the intro, the shell is a special user program. It is an interface between the keyboard and the computer's operating system (OS), i.e., it takes commands input the user give from the keyboard and sends it to the OS, which then performs the actions requested.  
 
-The shell used in this course is the Linux/Unix shell, which is both a command-line interpreter providing a Command Line Interface (CLI) for Unix-like systems, as well as a scripting language.
+In this course we will be focusing on **Bash** (**B**ourne **A**gain **SH**ell).   There are many alternatives and the commands can look quite different when using another shell than Bash.
+Bash is a command-line interpreter providing a Command Line Interface (CLI), as well as a scripting language.
 
 Writing scripts in a shell allows you to automate repetitive tasks or combine several tasks, making your workflow faster and more efficient. For example: if you want to iterate over many files, this can be done easily in the shell. 
 
 !!! Warning 
 
-    You will find that many/most commands in this course are prefaced with either <code>\$</code> or <code>[x_birbr@tetralith1 ~]\$</code>, or something like <code>[x_birbr@tetralith1 x_birbr]\$</code>. 
+    You will find that many/most commands in this course are prefaced with either <code>\$</code> or <code>[user@tetralith1 ~]\$</code>, or something like <code>[user@tetralith1 us]\$</code>. 
 
-    This is the prompt from the computer system, where <code>\$</code> just is the default (<code>bash</code>) prompt, and the others are an example of a prompt you would see when logged into a compute cluster (in this case Tetralith - instructor's home directory versus a project storage directory).
+    This is the prompt from the computer system, where <code>\$</code> just is the default (<code>bash</code>) prompt, and the others are examples of a prompt you may see when logged into a compute cluster (in this case Tetralith - home directory versus a project storage directory).
 
-    You can see an example of such a prompt in the picture a bit further up on the page, though that is from where the instructor is logged into "Kebnekaise" from the personal computer "defiant". 
+    You can see an example of such a prompt in the picture a bit further up on the page, when a user with the user-id  <code>x_joahe</code> is connected to NAISS' Tetralith system.
 
+    ** IMPORTANT **
     Do **NOT** copy this prompt if you are copying code snippets. It should **not** be included in the command. 
 
 ## Terminology
