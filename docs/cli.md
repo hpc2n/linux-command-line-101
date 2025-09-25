@@ -31,7 +31,7 @@ A common alternative to a CLI is a **GUI** (Graphical User Interface), typically
 
 ## Shell 
 
-As mentioned in the intro, the shell is a special user program. It is an interface between the keyboard and the computer's operating system (OS), i.e., it takes commands input the user give from the keyboard and sends it to the OS, which then performs the actions requested.  
+As mentioned in the intro, the shell is a special user program. It is an interface between the keyboard and the computer's operating system (OS), i.e., it takes input from the user via the keyboard and sends it to the OS, which then performs the actions requested.  
 
 In this course we will be focusing on **Bash** (**B**ourne **A**gain **SH**ell).   There are many alternatives and the commands can look quite different when using another shell than Bash.
 Bash is a command-line interpreter providing a Command Line Interface (CLI), as well as a scripting language.
