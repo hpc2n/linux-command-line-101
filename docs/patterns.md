@@ -21,7 +21,7 @@ Here you will find descptions on how to search for files with specific patterns.
 
     Try out / code along for some of these examples. 
 
-    You can use the contents of the directory ``/exercises/patterns`` that you got from the downloaded tarball (<a href="https://github.com/hpc2n/linux-command-line-101/raw/refs/heads/main/exercises.tar.gz">exercises.tar.gz</a>) to play with. If you have not done so already, right-click and save to download, or right-click and copy the url, then do ``wget THE-URL-YOU-COPIED`` in a terminal window to download it there. Then do <code>tar -zxvf patterns.tar.gz</code> to unpack.  
+    You can use the contents of the directory ``/exercises/patterns`` that you got from the downloaded tarball (<a href="https://github.com/hpc2n/intro-linux/raw/refs/heads/main/exercises.tar.gz">exercises.tar.gz</a>) to play with. If you have not done so already, right-click and save to download, or right-click and copy the url, then do ``wget THE-URL-YOU-COPIED`` in a terminal window to download it there. Then do <code>tar -zxvf patterns.tar.gz</code> to unpack.  
 
 ## grep 
 
@@ -39,7 +39,7 @@ Some commonly used options are:
 
 - **-i**: ignore case
 - **-o**: only output the instance of the pattern you search for, not the full line 
-- **-e**: use a regular expression as pattern for what you search for
+- **-e**: use a regular expression as pattern, can be used multiple times (OR operation), protects patterns starting with "-"
 - **-c**: do not output the line, just print a count of matching lines 
 - **-n**: Prefix  each  line of output with the 1-based line number within its input file.
 - **-r**: Read  all  files  under  each  directory, recursively. If no file operand is given, grep searches the working directory. 
@@ -71,7 +71,6 @@ See ``man grep`` for more options.
 ??? Solution "Click to reveal solution"
 
     ![grep string](images/grepstring.png){: style="width: 400px;float: right;padding: 3px;}
-<br>
      
 !!! Example "Find the instances of the word 'string' in file.txt and count them"
 
@@ -102,15 +101,15 @@ find [path] [options] [expression]
 ```
 
 - **path** is the starting directory for the search
-- **options** are settings or conditions for the search
-- **expression** is the criteria for filtering and locating files (for instance, only search ``txt```files or only files named ``docs``). 
+- **options** are settings or conditions that modify how the search is performed
+- **expression** is the criteria for filtering and locating files (for instance, only search for ``txt`` files or only files named ``docs``). 
 
 **Useful common options**
 
 - **-type f**: only search for files
 - **-type d**: only search for directories
 - **-name NAME**: only search for files with a specific name NAME or pattern
-- **-size [+/-]n**: Searches for files based on size. `+n` finds larger files, `-n` finds smaller files. ‘n‘ measures size in characters.
+- **-size [+/-]n**: Searches for files based on size. `+n` finds larger files, `-n` finds smaller files. `n` measures size in units of space.
 - **-mtime n**: Finds files based on modification time. `n` represents the number of days ago.
 - **-exec command {} \;**: Executes a command on each file found. 
  
@@ -122,28 +121,33 @@ For more options, check ``man find``
 
     You could do the searches inside ``exercises`` directory or inside ``exercises/patterns`` directory. 
 
-    Note that ``*`` is a wildcard that is useful here and means a string of 0 or more characters. You will hear more about it shortly. 
+    1. Find the file ``myfile.txt`` in the directory you are standing in and below: 
 
-1. Find all files with extension ``.txt`` in the directory you are standing in and below: 
+    ```bash
+    find . -type f -name "file.txt"
+    ```
 
-```bash
-find . -type f -name "*.txt"
-```
-2. Find all files with ``file`` as part of the name in the directory ``expressions/patterns`` while standing in ``exercises/script``
+    2. Find the files ``myfile.txt`` as part of the name in the directory ``expressions/patterns`` while standing in ``exercises/script``
 
-```bash
-find ../patterns/ -type f -name "*file*"
-```
+    ```bash
+    find ../patterns/ -type f -name "myfile0.txt"
+    ```
 
 ## Regular Expressions
 
-Regular Expressions are a type of globbing patterns that are used when you are working with text. 
+Regular Expressions are a type of patterns that are used when you are working with text. 
+Due to their convenience, regular expressions are commonly used in programming languages, though their syntax may vary between languages.
 
 Regular Expressions can be used with commands like ``grep``, ``find`` and many others. 
 
 !!! NOTE
 
-    If your regular expressions does not do as you expect, you may need to use single quotation marks around the sentence and you may also have to use backslashes on every single special character.
+    - If your regular expressions does not do as you expect, you may need to use single quotation marks around the sentence and you may also have to use backslashes on every single special character.
+
+    - There are online tools that allow you to test Regular Expressions, for instance, <a href="https://regex101.com/">regex101.com</a>. Different languages are supported. For not too complex 
+      Regular Expressions, most of the languages options could work for ``grep`` and ``find``. 
+    
+    - Make dry-runs (tests) before running commands with Regular Expressions that modify files.
 
 Some common examples of regular expressions: 
 
@@ -168,5 +172,5 @@ Some common examples of regular expressions:
 !!! note "Keypoints" 
 
     - Finding files with specific patterns in their names or content can be done with ``grep`` and ``find``
-    - Regular Expressions are a type of globbing patterns that are used when you are working with text. They can be used with ``grep``, ``find``, and many many others 
+    - Regular Expressions are a type of patterns that are used when you are working with text. They can be used with ``grep``, ``find``, and other programs 
 
