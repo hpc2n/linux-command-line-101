@@ -381,10 +381,10 @@ The variables can both be used in scripts and on the command line. Usually you r
 - **$OMP_NUM_THREADS** Number of OpenMP threads
 - **$PYTHONPATH** Path to the directory where your Python libraries and packages are installed 
 
-!!! Note "To see the content of an environment variable named ENVIRONMENT-VARIABLE"
+!!! Note "To see the content of an environment variable named ENVIRONMENT_VARIABLE"
 
     ```bash
-    echo $ENVIRONMENT-VARIABLE
+    echo $ENVIRONMENT_VARIABLE
     ```
 
 !!! Tip 
