@@ -67,6 +67,8 @@ See ``man grep`` for more options.
     grep -rine 'word' path/to/dir
     ```
 
+**Exercises**
+
 !!! Exercise "Try finding the pattern ``string`` in ``newfile.txt``"
 
     This file is also located in the ``exercises/patterns`` directory. 
@@ -138,7 +140,7 @@ For more options, check ``man find``
     find . -type f -name "file.txt"
     ```
 
-!!! "Find the files ``myfile.txt`` as part of the name in the directory ``expressions/patterns`` while standing in ``exercises/script``"
+!!! Exercise "Find the files ``myfile.txt`` as part of the name in the directory ``expressions/patterns`` while standing in ``exercises/script``"
 
 ??? Solution "Click to reveal solution"
 
@@ -173,6 +175,8 @@ Some common examples of regular expressions:
 - **[ ]** specifies a range. Same as for normal wildcards. This is an 'or' relationship (you only need one to match).
 - **|** This wildcard makes a logical OR relationship between wildcards. You can thus search something or something else. You may need to add a '\' before this command to avoid the shell thinking you want a pipe. 
 - **[^]** This is the equivalent of [!] in standard wildcards, i.e. it is a logical “not” and will match anything not listed within the square brackets. 
+
+**Exercises**
 
 !!! Exercise "Search the file myfile for lines starting with an "s" and ending with an "n", and prints them to the standard output"
 
