@@ -1,28 +1,68 @@
 # Scripting
 
-This section will look at scripting, but we start with a quick introduction to **permissions**.  
+This section will look at scripting. Scripting is used to perform complex or repetitive tasks without user intervention. All Linux commands which can be used on the commandlien can also be used inside a script, including wild cards. 
+
+The most common reason for making a script is probably to avoid writing the same command again and again.  On an HPC-sytem, such as the ones offered by NAISS, scripts are required to execute Linux commands and programs inside the batch system.
 
 !!! note "Learning objectives"
 
     **Questions** 
 
-    - What are file permissions?
-    - What is a script?
-    - How do I write a script? 
+    * What is a script?
+    * What are file permissions?
+    * How do I write a script? 
+    * How do I execute a script?
 
     **Objectives** 
 
-    - Learn how to make a simple script 
-    - Get a brief introduction to **permissions**
+    * Learn how to make a simple script 
+    * Get a brief introduction to **permissions**
 
 
 !!! Hint "Code along!" 
 
-    Try out / code along for some of these examples. 
+    Try out or code along for some of these examples. 
 
     You can use the contents of the directory ``/exercises/script`` that you got from the downloaded tarball (<a href="https://github.com/hpc2n/linux-command-line-101/raw/refs/heads/main/exercises.tar.gz">exercises.tar.gz</a>) to play with. If you have not done so already, right-click and save to download, or right-click and copy the url, then do ``wget THE-URL-YOU-COPIED`` in a terminal window to download it there. Then do <code>tar -zxvf patterns.tar.gz</code> to unpack.  
 
+## Starting with a motivational example
+We start scripting with a simple example.  The task at hand is to check how many lines of the file ``file.dat`` contain the string 'ABCD'.  This time we want to do this with a script.  
+
+!!! Example to code along
+
+    Use an editor, e.g. `nano` to create the file ``my_first.sh``. The file should contain the following:
+
+    ```bash
+    #!/bin/bash
+    grep 'ABCD' file.dat > file_filtered.dat 
+    wc -l < file_filtered.dat 
+    ``` 
+
+    With the following command, which will be explained in-depth further down, we can make the script executable 
+
+    ```bash
+    $ chmod u+x my_first.sh
+    ```
+
+    Now we can execute the script:
+
+    ```bash
+    $ ./my_first.sh
+    ```
+    
+    You should get the number 2 as a result.  Confirm this by looking into the file ``file.dat``.  With a single line we executed both commands `grep` and `wc`. 
+
+**What it does**
+
+    - First line of the script: telling the system it should be executed in the ``bash`` shell, since commands differ between shells (the program loader is told to run the program ``/bin/bash`` as first argument). ``#!`` are called "shebang" 
+    - second line: search for the string ``ABCD`` in the file ``file.dat``, then redirect the output to the file ``file_filtered.dat`` 
+    - third line: run the command ``wc -l`` with the file ``file_filtered.dat`` as input. It then redirects the output to the file ``output.dat``.  
+
+We can now execute two Linux commands with a single line.
+
 ## Permissions  
+
+We have used the command ``chmod`` in the above example.  
 
 !!! note 
 
@@ -32,19 +72,22 @@ Permissions are needed to, among other things, make a file executable.
 
 **Let us take a look at an example** 
 
+When running the command ``ls -la`` you should get an output similar to the below:
+
 ```bash
-bbrydsoe@defiant:~/HPC2N/courses/linux-command-line-101/exercises/script$ ls -lart
-total 28
--rwxr-xr-x 1 bbrydsoe folk    9 Feb 27 12:56 program.sh
--rwxr-xr-x 1 bbrydsoe folk  153 Feb 27 12:56 imagefind.sh
-drwxr-xr-x 2 bbrydsoe folk 4096 Feb 27 12:56 image
--rw-r--r-- 1 bbrydsoe folk  128 Feb 27 12:56 file.txt
--rw-r--r-- 1 bbrydsoe folk   54 Feb 27 12:56 file_filtered.dat
--rw-r--r-- 1 bbrydsoe folk  120 Feb 27 12:56 file.dat
--rwxr-xr-x 1 bbrydsoe folk   99 Feb 27 12:56 analysis.sh
-drwxr-xr-x 5 bbrydsoe folk   53 Feb 27 12:56 ..
-drwxr-xr-x 3 bbrydsoe folk  133 Feb 27 12:56 .
-bbrydsoe@defiant:~/HPC2N/courses/linux-command-line-101/exercises/script$ 
+$ ls -la  
+total 64
+drwxr-xr-x 11 joachim  staff  352 Sep 29 16:47 .
+drwxr-xr-x  6 joachim  staff  192 Sep 29 16:29 ..
+-rwxr-xr-x  1 joachim  staff   99 Sep 29 17:30 analysis.sh
+-rw-r--r--  1 joachim  staff  120 Sep 29 17:30 file.dat
+-rw-r--r--  1 joachim  staff  128 Sep 29 17:30 file.txt
+-rw-r--r--  1 joachim  staff  188 Sep 29 17:30 file2.dat
+-rw-r--r--  1 joachim  staff   54 Sep 29 17:30 filtered_file.dat
+drwxr-xr-x 13 joachim  staff  416 Sep 29 17:30 image
+-rwxr-xr-x  1 joachim  staff  153 Sep 29 17:30 imagefind.sh
+-rwxr--r--  1 joachim  staff   80 Sep 29 17:30 my_first.sh
+-rwxr-xr-x  1 joachim  staff    9 Sep 29 17:30 program.sh
 ```
 
 If you look at the left-most column, you see an example of **permissions**. 
@@ -71,11 +114,11 @@ The following group of 3 bits are for the owner, then the next 3 for the group, 
 
 !!! Note "To change permissions, here are some examples"
 
-    - owner
-        - **chmod +rwx FILE/DIR** to add all permissions of a file with name FILE or a directory with name DIR
-        - **chmod -rwx FILE/DIR** to remove all permissions from a file with name FILE or a directory with name DIR
-        - **chmod +x FILE** to add executable permissions
-        - **chmod -wx FILE** to remove write and executable permissions
+    - owner (user)
+        - **chmod u+rwx FILE/DIR** to add all permissions of a file with name FILE or a directory with name DIR
+        - **chmod u-rwx FILE/DIR** to remove all permissions from a file with name FILE or a directory with name DIR
+        - **chmod u+x FILE** to add executable permissions
+        - **chmod u-wx FILE** to remove write and executable permissions
     - group
         - **chmod g+rwx FILE** to add all permissions to FILE
         - **chmod g-rwx FILE** to remove all permissions to FILE
@@ -95,48 +138,99 @@ The following group of 3 bits are for the owner, then the next 3 for the group, 
 
     It is also possible to change the ownership of a file or a directory. We are not going to cover this here, but you can read about the command <code>chown</code> and how to use it in the "[More commands](../more-commands)" section under EXTRAS.
 
-## Scripting 
+## More scripting 
 
-Scripting is used to perform complex or repetitive tasks without user intervention. All Linux commands can be used in a script including wild cards. 
-
-The most common reason for making a script is probably to avoid writing the same command again and again. 
+Scripting is used to perform complex or repetitive tasks without user intervention.  All Linux commands can be used in a script including wild cards. 
 
 !!! NOTE
 
     If it is just a one-line command you want to do again and again, then ['alias'](../more-commands#alias) is more suited for this. 
 
-!!! hint "Type along!" 
+We go back to our example script ``my_first.sh``.  There is a second file named ``file2.dat`` which also needs to be processed by the script.   We could open an editor, change the contents of ``my_first.sh`` and re-run it.   This is not really convenient.  To create an improved script copy your script
 
-    The files ``analysis.sh``, ``program.sh``, and ``file.dat`` are all located in ``exercises/scripts``. 
+```bash
+$ cp my_first.sh count_ABCD.sh
+```
+and open the file ``count_ABCD.sh`` in an editor.  Change the argument of ``grep`` from ``file.dat`` to ``$1``
 
-!!! Example "Simple script 'analysis.sh'"
+```bash
+#!/bin/bash
+grep 'ABCD' $1 > file_filtered.dat 
+wc -l < file_filtered.dat 
+``` 
 
+Check that ``count_ABCD.sh`` has executable permissions and executed the script as follows:
+
+```bash
+$ ./count_ABCD.sh file.dat
+```
+
+This should give the same result of 2 as before.   When running the script ``count_ABCD`` the ``$1`` gets replaced with the first argument you write after the name of the script. The file ``file2.dat`` can now be processed without changing the script:
+
+```bash
+$ ./count_ABCD.sh file2.dat
+```
+You should get 3 for the result.    We now might want to upgrade that we can search for another string than "ABCD".  
+
+We copy
+```bash
+$ cp count_ABCD.sh count_string.sh
+```
+ and edit ``count_string.sh`` to become:
+
+```bash
+#!/bin/bash
+grep $2 $1 > file_filtered.dat 
+wc -l < file_filtered.dat 
+``` 
+
+We can now search for 'ABCD' in both files:
+
+```bash
+$ ./count_string.sh file.dat ABCD
+    2
+$ ./count_string.sh file2.dat ABCD
+    3
+```
+
+of for the word 'line' by changing the input at the prompt
+
+```bash
+$ ./count_string.sh file.dat line
+    1
+$ ./count_string.sh file2.dat line
+    3
+```
+
+## Commenting
+
+It is useful to write comments into your script, to make their actions more understandable when e.g. you need to understand them in the future or want to share the with someone else.
+
+!!! Note
+
+    Bash treats lines starting with a ``#`` as a comment.
+    
+Obviously this excludes the shebang in the first line of the script.
+
+Open ``count_string`` in an editor and add comments
+
+!!! Example "Commented version of count_string.sh"
 
     ```bash
     #!/bin/bash
-    grep 'ABCD' file.dat > file_filtered.dat
-    ./program.sh < file_filtered.dat > output.dat
-    ```
+    # return number of lines in a file containing a string
+    # usage: ./count_string file_name string
+    
+    # search for lines with the string in the file
+    grep $2 $1 > file_filtered.dat 
 
-    This script can be executed with ``./analysis.sh`` (remember to check that the [permission](#permissions) for executing the script ``analysis.sh`` as user is set - you should also make sure ``program.sh`` has permissions set to execute as user). 
+    # count the number of lines
+    wc -l < file_filtered.dat 
+    ``` 
 
-    To change the permissions to execute a script (here named ``analysis.sh``), for just the user, you could do: 
 
-    ```bash
-    $ chmod u+x analysis.sh
-    ```
+## More advanced examples
 
-    The above script can then be executed with
-
-    ```bash
-    $ ./analysis.sh
-    ```
-
-    **What it does**
-
-    - First line of the script: telling the system it should be executed in the ``bash`` shell, since commands differ between shells (the program loader is told to run the program ``/bin/bash`` as first argument). ``#!`` are called "shebang" 
-    - second line: search for the string ``ABCD`` in the file ``file.dat``, then redirect the output to the file ``file_filtered.dat`` 
-    - third line: run the program ``program.sh`` (which counts lines on the input file: ``wc -l $1``) with the file ``file_filtered.dat`` as input. It then redirects the output to the file ``output.dat``.  
 
 !!! Example "Execute a command on the output of find"
 
@@ -148,8 +242,6 @@ The most common reason for making a script is probably to avoid writing the same
     find $HOME/exercises/script/image -type f -name "*.png" -exec cp {} myimages \; 
     find myimages -type f -name "*er*" > someimagesfiles.txt
     ``` 
-
-### More advanced example
 
 !!! Example "Execute a command on output of find and loop over output files" 
 
