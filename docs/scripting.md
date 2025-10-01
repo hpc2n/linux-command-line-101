@@ -54,7 +54,7 @@ We start scripting with a simple example.  The task at hand is to check how many
 
 **What it does**
 
-- First line of the script: telling the system it should be executed in the ``bash`` shell, since commands differ between shells (the program loader is told to run the program ``/bin/bash`` as first argument). ``#!`` are called "shebang" 
+- First line of the script: telling the system it should be executed in the ``bash`` shell, since commands differ between shells (the program loader is told to run the program ``/bin/bash`` as first argument). ``#!`` are called **shebang**.  This has to be the first line. 
 - second line: search for the string ``ABCD`` in the file ``file.dat``, then redirect the output to the file ``file_filtered.dat`` 
 - third line: run the command ``wc -l`` with the file ``file_filtered.dat`` as input. It then redirects the output to the file ``output.dat``.  
 
