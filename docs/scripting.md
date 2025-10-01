@@ -54,9 +54,9 @@ We start scripting with a simple example.  The task at hand is to check how many
 
 **What it does**
 
-    - First line of the script: telling the system it should be executed in the ``bash`` shell, since commands differ between shells (the program loader is told to run the program ``/bin/bash`` as first argument). ``#!`` are called "shebang" 
-    - second line: search for the string ``ABCD`` in the file ``file.dat``, then redirect the output to the file ``file_filtered.dat`` 
-    - third line: run the command ``wc -l`` with the file ``file_filtered.dat`` as input. It then redirects the output to the file ``output.dat``.  
+- First line of the script: telling the system it should be executed in the ``bash`` shell, since commands differ between shells (the program loader is told to run the program ``/bin/bash`` as first argument). ``#!`` are called "shebang" 
+- second line: search for the string ``ABCD`` in the file ``file.dat``, then redirect the output to the file ``file_filtered.dat`` 
+- third line: run the command ``wc -l`` with the file ``file_filtered.dat`` as input. It then redirects the output to the file ``output.dat``.  
 
 We can now execute two Linux commands with a single line.
 
@@ -165,7 +165,7 @@ Check that ``count_ABCD.sh`` has executable permissions and executed the script 
 $ ./count_ABCD.sh file.dat
 ```
 
-This should give the same result of 2 as before.   When running the script ``count_ABCD`` the ``$1`` gets replaced with the first argument you write after the name of the script. The file ``file2.dat`` can now be processed without changing the script:
+This should give the same result of 2 as before.   When running the script ``count_ABCD.sh`` the ``$1`` gets replaced with the first argument you write after the name of the script. The file ``file2.dat`` can now be processed without changing the script:
 
 ```bash
 $ ./count_ABCD.sh file2.dat
@@ -193,7 +193,7 @@ $ ./count_string.sh file2.dat ABCD
     3
 ```
 
-of for the word 'line' by changing the input at the prompt
+alternatively you can search for the word 'line' by changing the input at the prompt
 
 ```bash
 $ ./count_string.sh file.dat line
@@ -212,7 +212,7 @@ It is useful to write comments into your script, to make their actions more unde
     
 Obviously this excludes the shebang in the first line of the script.
 
-Open ``count_string`` in an editor and add comments
+Open ``count_string.sh`` in an editor and add comments
 
 !!! Example "Commented version of count_string.sh"
 
