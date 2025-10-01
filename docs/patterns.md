@@ -52,6 +52,9 @@ See ``man grep`` for more options.
 
     A good file to use here is ``fil.txt`` in the ``exercises/patterns`` directory. You will also use ``newfile.txt`` and ``fil.txt`` in the same directory. 
 
+    In the following examples/exercises replace the string ``FILE`` with the file name (single search) or the path to the 
+    folder (recursive search).
+
 !!! Example "Find the pattern 'word' in FILE"
 
     ```bash
@@ -64,6 +67,8 @@ See ``man grep`` for more options.
     grep -rine 'word' path/to/dir
     ```
 
+**Exercises**
+
 !!! Exercise "Try finding the pattern ``string`` in ``newfile.txt``"
 
     This file is also located in the ``exercises/patterns`` directory. 
@@ -72,19 +77,25 @@ See ``man grep`` for more options.
 
     ![grep string](images/grepstring.png){: style="width: 400px;float: right;padding: 3px;}
      
-!!! Example "Find the instances of the word 'string' in file.txt and count them"
+!!! Exercise "Search for instances of the word 'string' in file.txt and count them"
+
+??? Solution "Click to reveal solution"
 
     ```bash
     grep -o -i string file.txt | wc -l
     ```
 
-!!! Example "Find the lines with instances of 'string' in file.txt and output them to file.out"
+!!! Exercise "Search for the lines with instances of 'string' in file.txt and output them to file.out"
+
+??? Solution "Click to reveal solution"
 
     ```bash
     grep string file.txt > file.out
     ```
 
-!!! Example "Find the lines with instances of 'string' in file.txt and append them to file.out"
+!!! Exercise "Search for the lines with instances of 'string' in file.txt and append them to file.out"
+
+??? Solution "Click to reveal solution"
 
     ```bash
     grep string file.txt >> file.out
@@ -115,19 +126,23 @@ find [path] [options] [expression]
  
 For more options, check ``man find``
 
-**Examples**
+**Exercises**
 
 !!! tip "Try yourself"
 
     You could do the searches inside ``exercises`` directory or inside ``exercises/patterns`` directory. 
 
-    1. Find the file ``myfile.txt`` in the directory you are standing in and below: 
+!!! Exercise "Find the file ``myfile.txt`` in the directory you are standing in and below"
+
+??? Solution "Click to reveal solution"
 
     ```bash
     find . -type f -name "file.txt"
     ```
 
-    2. Find the files ``myfile.txt`` as part of the name in the directory ``expressions/patterns`` while standing in ``exercises/script``
+!!! Exercise "Find the files ``myfile.txt`` as part of the name in the directory ``expressions/patterns`` while standing in ``exercises/script``"
+
+??? Solution "Click to reveal solution"
 
     ```bash
     find ../patterns/ -type f -name "myfile0.txt"
@@ -161,13 +176,17 @@ Some common examples of regular expressions:
 - **|** This wildcard makes a logical OR relationship between wildcards. You can thus search something or something else. You may need to add a '\' before this command to avoid the shell thinking you want a pipe. 
 - **[^]** This is the equivalent of [!] in standard wildcards, i.e. it is a logical “not” and will match anything not listed within the square brackets. 
 
-!!! Example 
+**Exercises**
+
+!!! Exercise "Search the file myfile for lines starting with an "s" and ending with an "n", and prints them to the standard output"
+
+??? Solution "Click to reveal solution"
 
     ```bash
     $ cat myfile | grep '^s.*n$'
     ```
 
-    This command searches the file myfile for lines starting with an "s" and ending with an "n", and prints them to the standard output. 
+
 
 !!! note "Keypoints" 
 

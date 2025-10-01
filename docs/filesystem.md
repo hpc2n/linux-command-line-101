@@ -21,12 +21,11 @@ This section will be a basic overview of the Linux filesystem concepts, not an i
 
 The Linux filesystem directory structure starts with the top root directory, which is shown as <code>/</code>. Below this are several other standard directories. Of particular interest are <code>usr/bin</code>, <code>home</code>, <code>usr/lib</code>, and <code>usr/lib64</code>. A common directory which you will also often find is <code>usr/local/bin</code>. 
 
-The picture on the right shows typical subdirectories under <code>/</code> (note that the command 'tree' does not work at all HPC centers, though it does work on Tetralith - see the page [tree](../tree) under "Extras section for how to install if it is missing). Some of the directories have a **symbolic link** to a different name - this is often done to make it quicker to write, but can also be for compatibility reasons since some software have hardcoded paths.
+The picture on the right shows typical subdirectories under <code>/</code> (note that the command `tree` does not work at all HPC centers, though it does work on Tetralith---see the page [tree](../tree) under the "Extras" section for how to install if it is missing). Some of the directories have a **symbolic link** to a different name---this is often done to make it quicker to write, but can also be for compatibility reasons since some software have hardcoded paths.
 
 !!! Note
 
-    The ``path`` or ``pathname`` is the representation of the location of a file or folder/directory on a computer file system.
- 
+    The `path` or `pathname` is the representation of the location of a file or folder/directory on a computer file system.
 
 - **/** is the root of the directory structure on a Linux filesystem 
 - **/usr/bin** contains (most) of the system-specific binaries
@@ -35,7 +34,7 @@ The picture on the right shows typical subdirectories under <code>/</code> (note
 - **/usr/lib** holds kernel modules and shared library images needed to boot the system and run commands in the root filesystem
 - **/usr/lib64** is the same as **/usr/lib**, just for 64-bit libraries 
 
-User-installed binaries are often located in **/opt**. 
+User installed binaries are often located in **/opt**. 
 
 The file system could also be illustrated like this: 
 
@@ -43,16 +42,18 @@ The file system could also be illustrated like this:
 
 !!! warning "Note"
 
-    The character ``/`` can be 
+    The character `/` can be 
 
     1. the root directory, if it is at the front of a file or directory name 
     2. a separator if it appears inside a path. 
 
 !!! note
 
-    If you are on a local cluster, on an HPC center, etc. where you are not root, you will as default be in your home directory when you login. You can use ``cd ..`` a couple times to go to the root of the system and do ``tree`` there if you want, or do ``tree`` in your home directory (you can always return there with just ``cd``). 
+    If you are on a local cluster, on an HPC center, etc. where you are not root, you will as default be in your home directory when you login. You can use `cd ..` a couple times to go to the root of the system and do `tree` there if you want, or do `tree` in your home directory (you can always return there with just `cd`). 
 
-    Running ``tree`` in ``/`` on a supercomputing center will probably give a very large/long output! 
+!!! caution
+
+    Running `tree` in `/` on a supercomputing center will probably give a very large/long output! 
 
 ### Home folders on Tetralith
 
@@ -63,23 +64,23 @@ The above shows an illustration where the home folders are emphasized.
 
 ## Your home directory
 
-When you login to the computer (as a non root user), you will end up in your home directory. 
+When you login to the computer (as a non root user), you will end up in your home directory. At most HPC centers, your home directory will appear as `~` in the terminal prompt, and can also be used in commands instead of having to type out `/home/YOUR_USERNAME`.
 
-The ``path`` to your home directory varies somewhat. Here are some examples for me: 
+The `path` to your home directory varies somewhat. Here are some examples for me: 
 
-- Tetralith: ``/home/x_birbr``
-- Kebnekaise: ``/home/b/bbrydsoe``
-- Cosmos: ``/home/bbrydsoe``
-- My laptop, ncc-1701: ``/home/bbrydsoe``
-- My home desktop, defiant: ``/home/bbrydsoe``
+- Tetralith: `/home/x_birbr`
+- Kebnekaise: `/home/b/bbrydsoe`
+- Cosmos: `/home/bbrydsoe`
+- My laptop, ncc-1701: `/home/bbrydsoe`
+- My home desktop, defiant: `/home/bbrydsoe`
 
 !!! note 
 
-    You can always use the command ``pwd`` to see the actualy path! 
+    You can always use the command `pwd` to see the path to your current working directory! 
 
-    You will always return to your home directory by giving the command ``cd`` and pressing enter. 
+    You can also always return to your home directory by giving the command `cd` and pressing `enter`. 
 
-There are is also an "environment variable" that can be used as shortcut for the path: ``$HOME``. We will talk more about (environment) variables later. 
+There are is also an "environment variable" that can be used as shortcut for the path: `$HOME`. We will talk more about (environment) variables later. 
 
 ## pwd
 
@@ -119,7 +120,7 @@ You can use this to find out which directory you are in.
      [bbrydsoe@cosmos1 ~]$ 
      ```
 
-### Example, in a directory named ``testdir``
+### Example, in a directory named `testdir`
 
 On Tetralith, user ``x_birbr``:
 
@@ -129,7 +130,7 @@ On Tetralith, user ``x_birbr``:
 [x_birbr@tetralith3 testdir]$
 ```
 
-### Example, in subdirectory ``mydir`` under directory ``testdir``
+### Example, in subdirectory `mydir` under directory `testdir`
 
 On Tetralith, user ``x_birbr``: 
 
@@ -141,7 +142,7 @@ On Tetralith, user ``x_birbr``:
 
 ## ls - listing files/directories
 
-The ls command is used to list files. If you just give the command "ls" with no flags it will list all files in the current directory except for hidden files.
+The `ls` command is used to list files. If you just give the command `ls` with no flags it will list all files in the current directory except for hidden files.
 
 <div>
 ```bash
@@ -260,27 +261,32 @@ Wild cards are also called "glob" or "globbing" patterns.
 
     Globs, also known as glob (or globbing) patterns are patterns that can expand a wildcard pattern into a list of pathnames that match the given pattern. 
     
-    On the early versions of Linux, the command interpreters relied on a program that expanded these characters into unquoted arguments to a command: ``/etc/glob`` .
+    On the early versions of Linux, the command interpreters relied on a program that expanded these characters into unquoted arguments to a command: `/etc/glob`.
 
 <br>
 
 **Common wildcards**
 
-- **?** represents a single character
-- **\*** represents a string of characters (0 or more)
-- **[ ]** represents a range
-- **{ }** the terms are separated by commas and each term must be a wildcard or exact name
-- **[!]**  matches any character that is NOT listed between the [ and ]. This is a logical NOT.
-- **\** specifies an "escape" character, when using a subsequent special character. 
+- **`?`** represents a single character.
+- **`*`** represents a string of characters (0 or more).
+- **`[ ]`** represents a range of alphanumeric characters in ascending order.
+- **`{ }`** the terms are separated by commas and each term must be a wildcard or exact name.
+- **`[!]`**  matches any character that is NOT listed between `[!` and `]`. This is a logical NOT.
+- **`\`** specifies an "escape" character, when using a subsequent special character. 
 
 !!! Warning 
 
     You may need quotation marks around some wildcards as well. 
 
+!!! Warning
+
+    Wildcards are typically case-sensitive by default. The `[]` expression in particular treats the set of all uppercase characters as preceding the set of all lowercase characters. For example `[T-g]` will match all uppercase letters from "T" through "Z" and all lowercase letters from "a" through "g", but will not include uppercase "G" or lowercase "t".
+
+    Many relevant commands, like `ls`, have an `-i` flag to ignore case.
+
 !!! tip "Try some of the commands below" 
 
     Useful files for these examples are found in ``exercises/patterns`` 
-
 
 !!! Example "Some examples of the use of wildcards"
 
@@ -288,7 +294,7 @@ Wild cards are also called "glob" or "globbing" patterns.
     myfile?.txt
     ``` 
 
-    This matches myfile0.txt, myfile1.txt,... for all letters between a-z and numbers between 0-9. Try with ``ls myfile?.txt``. 
+    This matches myfile0.txt, myfile1.txt,... for all letters from A to z and numbers from 0 through 9. Try with ``ls myfile?.txt``. 
 
     ```bash
     r*d
@@ -306,34 +312,34 @@ Wild cards are also called "glob" or "globbing" patterns.
     a[d-j]a
     ```
 
-    This matches ada, afa, aja, ...  and any three letter word that starts with an a, ends with an a, and has any character from d to j in between. Try with ``ls a[d-j]a``. 
+    This matches ada, afa, aja, ...  and any three letter word that starts with an a, ends with an a, and has any character from d to j in between (but no capital letters). Try with ``ls a[d-j]a``. 
    
     ```bash
     [0-9]
     ``` 
   
-    This matches a range of numbers from 0 to 9. 
+    This matches a range of numbers from 0 through 9. 
 
     ```bash
     cp {*.dat,*.c,*.pdf} ~
     ```
 
-    This specifies to copy any files ending in .dat, .c, and .pdf to the user's homedirectory. No spaces are allowed between the commas, etc. You could test it by creating a matched file in ``patterns`` directory with ``touch file.c`` and running the above command to see it only copies that one from the ``patterns`` directory. 
+    This command copies any files ending in .dat, .c, and .pdf to the user's home directory. No spaces are allowed between the commas, etc. You could test it by creating a matching file in the `patterns` directory with `touch file.c` and running the above command to see it only copies that one from the `patterns` directory. 
 
     ```bash
     rm thisfile[!8]*
     ```
 
-    This will remove all files named thisfile*, except those that has an 8 at that position in it's name. Try running it in the ``patterns`` directory! Do ``ls`` before and after to see the change. Remember, you can always recreate the directory ``patterns`` by untar'ing it again.  
+    This will remove all files named `thisfile*`, except those that have an 8 at that position in their name. Try running it in the `patterns` directory! Do `ls` before and after to see the change. Remember, you can always recreate the directory `patterns` by untarring it again.  
 
 ## cd - changing directory 
 
-The command ``cd`` is used to change directory. 
+The command `cd` is used to change directory. 
 
-- **cd**: Go to your home directory ($HOME)
-- **cd DIR**: Change directory to DIR (whatever path you specify)
-- **cd ..**: Change directory to the parent directory of the current directory
-- **cd -**: go back to the previous working directory
+- **`cd`** or **`cd ~`**: Go to your home directory ($HOME)
+- **`cd DIR`**: Change directory to DIR (whatever path you specify)
+- **`cd ..`**: Change directory to the parent directory of the current directory
+- **`cd -`**: go back to the previous working directory
 
 !!! example
 
@@ -342,16 +348,16 @@ The command ``cd`` is used to change directory.
     ![folders of exercises directory structure](images/exercises-folders.png){: style="width: 500px;float: left"}
     <br><br style="clear: both;">
 
-    Remember, ``$HOME`` is an *environment variable* which gives a shortcut to your home directory.
+    Remember, `$HOME` is an *environment variable* which gives a shortcut to your home directory.
 
-    **NOTE** if you are on Tetralith and placed the exercises under ``/proj/linux-intro/users/USERNAME`` then ``$HOME`` would be replaced by that path. 
+    **NOTE** if you are on Tetralith and placed the exercises under `/proj/linux-intro/users/USERNAME` then `$HOME` would be replaced by that path. 
 
-    To change to the directory ``exercises`` when you are in your home directory, you do
+    To change to the directory `exercises` when you are in your home directory, you do
     ```bash
     cd exercises
     ```
 
-    To then change to the directory ``testdir1`` you do
+    To then change to the directory `testdir1` you do
     ```bash
     cd testdir1
     ```
@@ -379,7 +385,7 @@ The command ``cd`` is used to change directory.
 
     The path with reference to your current directory is called the relative path. A relative path only explicitly specifies sub-directories of your current directory, leaving the part of the path from the root to the current directory implicit.
 
-!!! note "Keypoints"
+!!! summary
 
     - Your home directory is generally located in ``/home/USERNAME`` or ``/home/U/USERNAME``
     - Your home directory is also stored as the environment variable ``$HOME``
