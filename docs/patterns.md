@@ -148,7 +148,7 @@ For more options, check ``man find``
     find ../patterns/ -type f -name "myfile0.txt"
     ```
 
-## Regular Expressions
+## \* Advanced Material - Regular Expressions
 
 Regular Expressions are a type of patterns that are used when you are working with text. 
 Due to their convenience, regular expressions are commonly used in programming languages, though their syntax may vary between languages.
@@ -175,18 +175,6 @@ Some common examples of regular expressions:
 - **[ ]** specifies a range. Same as for normal wildcards. This is an 'or' relationship (you only need one to match).
 - **|** This wildcard makes a logical OR relationship between wildcards. You can thus search something or something else. You may need to add a '\' before this command to avoid the shell thinking you want a pipe. 
 - **[^]** This is the equivalent of [!] in standard wildcards, i.e. it is a logical “not” and will match anything not listed within the square brackets. 
-
-**Exercises**
-
-!!! Exercise "Search the file myfile for lines starting with an "s" and ending with an "n", and prints them to the standard output"
-
-??? Solution "Click to reveal solution"
-
-    ```bash
-    $ cat myfile | grep '^s.*n$'
-    ```
-
-
 
 !!! note "Keypoints" 
 
