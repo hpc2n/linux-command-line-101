@@ -34,6 +34,4 @@ where COMMAND is the Linux command you want information about, like ``ls``, ``mk
 - write 'history' to see a list of the most recent commands written in the terminal
     - You can change the number of saved commands by setting the environment variable HISTSIZE in your <code>.bashrc file</code> in your home directory. 
     - Example: Open <code>.bashrc</code> with <code>nano</code>. Somewhere (at the end for instance) add: <code>export HISTSIZE=NUMBER"</code> where <code>NUMBER</code> is the number of commands to save, for instance 10000. 
-- <code>man PROGRAM</code> will give you the manual for a specific program or command, if it exists
-    - Example: <code>man gcc</code> will give open manual/help for the compiler <code>gcc</code>, containing flags to the compiler etc. **Note** that you need to first load a module that has gcc in. 
 
