@@ -41,7 +41,7 @@
 
     - This course will consist of lectures and type-alongs, as well as a few exercises where you get to try out what you have just learned.    
 
-- This is the third instance of this course, and it has been somewhat reworked based on previous participant input. We would be grateful if you will fill the evaluation survey so we can further improve the course: <a href="https://forms.office.com/e/0a97qf9A3t" target="_blank">https://forms.office.com/e/0a97qf9A3t</a> 
+- This is the fourth instance of this course, and it has been somewhat reworked based on previous participant input. We would be grateful if you will fill the evaluation survey so we can further improve the course: <a href="https://forms.office.com/e/8UuxePqVci" target="_blank">https://forms.office.com/e/8UuxePqVci</a> 
 
 !!! admonition "Cluster-specific approaches"
 
@@ -59,32 +59,32 @@
     Verification code:
     ```
     - The verification code it asks about is a 2FA that you need to set. See here: <a href="https://www.nsc.liu.se/support/2fa/" target="_blank">https://www.nsc.liu.se/support/2fa/</a>.
-    - You will probably not need it for the course, but the compute project ID is: naiss2024-22-1676 
-    - The project storage for the course project is in ``/proj/linux-intro/users/YOUR-USERNAME`` 
-        - Example, for the user ``x_birbr``, this would be: ``/proj/linux-intro/users/x_birbr``
+    - You will probably not need it for the course, but the compute project ID is: naiss2025-22-934 
+    - The project storage for the course project is in ``/proj/courses-fall-2025/users/YOUR-USERNAME`` 
+        - Example, for the user ``x_birbr``, this would be: ``/proj/courses-fall-2025/users/x_birbr``
 
 ## Important info
 
-- There is an "important info" page for this course, containing info on the course project, login info for Tetralith, etc. It can be found here: <a href="https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EVoQLj_qpDROmwcJiy-ZmBYBrsS4etjGAsJawMuGsgjAwQ?e=prrP8f" target="_blank">https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EVoQLj_qpDROmwcJiy-ZmBYBrsS4etjGAsJawMuGsgjAwQ?e=prrP8f</a>
-- There is a Q/A page for use during the lectures. Since the lectures are recorded, you may get recorded if you ask questions in the Zoom, but you can always write questions on the Q/A and get answers there. It also has the advantage that you can go back and look at the answers later. The Q/A page can be found here: <a href="https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EfQFzUvKVelJgDl213GEO9MBOU6Vx_aWRbbygwzkDzkt7w?e=M4H6fz" target="_blank">https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EfQFzUvKVelJgDl213GEO9MBOU6Vx_aWRbbygwzkDzkt7w?e=M4H6fz</a> 
+- There is an "important info" page for this course, containing info on the course project, login info for Tetralith, etc. It can be found here: <a href="https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EdrR1siiThVNpuXKoSZXSeMBIZU71joLKZ-bf4sykjk0aA" target="_blank">https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EdrR1siiThVNpuXKoSZXSeMBIZU71joLKZ-bf4sykjk0aA</a>
+- There is a Q/A page for use during the lectures. Since the lectures are recorded, you may get recorded if you ask questions in the Zoom, but you can always write questions on the Q/A and get answers there. It also has the advantage that you can go back and look at the answers later. The Q/A page can be found here: <a href="https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EccgkyKcHzhFqMVCq50yyA8BqZUF5Bre8r1bw_koAU4dvw" target="_blank">https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EccgkyKcHzhFqMVCq50yyA8BqZUF5Bre8r1bw_koAU4dvw</a> 
 
 ## Preliminary schedule
 
-| Time | Topic | Activity | 
-| ---- | ----- | -------- |
-| 9:00 | Welcome+Syllabus | |
-| 9:10 | Introduction to Linux, motivation | Lecture | 
-| 9:25 | The command line (CLI) | Lecture+code along | 
-| 9:40 | Navigating the File System | Lecture+code along+exercise |
-| 10:05 | Modifying the file tree | Lecture+code along+exercise | 
-| 10:25 | BREAK | | 
-| 10:40 | Editors | Lecture+code along | 
-| 10:50 | Piping and filters | Lecture+code along+exercise |  
-| 11:10 | Finding patterns | Lecture+code along+exercises | 
-| 11:25 | Scripting | Lecture+code along | 
-| 11:40 | Hints and tricks | Lecture+code along | 
-| 11:55 | Summary   | | 
-| 12:00 | END | |  
+| Time | Topic | Activity | Teacher |
+| ---- | ----- | -------- | ------- | 
+| 9:00 | Welcome+Syllabus | | Birgitte | 
+| 9:10 | What is Linux? <br>Why should you use it? | Lecture | Rebecca | 
+| 9:25 | The command line (CLI) | Lecture+code along | Birgitte |
+| 9:35 | Navigating the File System | Lecture+code along+exercise | Birgitte |
+| 10:05 | Modifying the file tree | Lecture+code along+exercise | Rebecca | 
+| 10:30 | BREAK | | |
+| 10:45 | Editors | Lecture+code along | Sahar | 
+| 10:55 | Piping and filters | Lecture+code along+exercise | Sahar |
+| 11:15 | Finding patterns | Lecture+code along+exercises | Pedro | 
+| 11:25 | Scripting | Lecture+code along | Pedro | 
+| 11:40 | Hints and tricks | Lecture+code along | Joachim |
+| 11:50 | Summary   | | Joachim |
+| 12:00 | END of course | | | 
 
 ## Preparations 
 
@@ -92,7 +92,7 @@ In order to type along and do the exercises, please prepare your course environm
 
 1. Login to the system you are using (Tetralith, your own computer, other system)
 2. Create a directory to work in (``mkdir intro-linux``) and then switch to it (``cd intro-linux``)  
-    - **NOTE** If you are working on Tetralith, first switch to your working directory: ``cd /proj/linux-intro/users/YOUR-USERNAME``
+    - **NOTE** If you are working on Tetralith, first switch to your working directory: ``cd /proj/courses-fall-2025/users/YOUR-USERNAME``
 3. Download the exercises with ``wget https://github.com/hpc2n/linux-command-line-101/raw/refs/heads/main/exercises.tar.gz`` 
 4. Extract the exercises with ``tar zxvf exercises.tar.gz``
 5. Enter the directory that was created: ``cd exercises``
