@@ -62,11 +62,11 @@ In addition, most HPC centers supercomputers run some flavour of Linux because i
 - Has many flavours that are open-source and free
 - Has lots of applications
 
-While Linux is only used on 2-3% of desktops, the vast majority of web servers (>96%), most mobile devices (Android is based on the Linux kernel), and all supercomputers on the <a href="https://en.wikipedia.org/wiki/TOP500" target="_blank">Top500 list</a> run Linux.
+While Linux is only used on about 3% of desktops, the vast majority of web servers (>96%), most mobile devices (Android is based on the Linux kernel), and all supercomputers on the <a href="https://en.wikipedia.org/wiki/TOP500" target="_blank">Top500 list</a> run Linux.
 
 For all of these reasons, and many more, it is a good idea to be proficient in Linux. This course aims to help you with that.
 
-!!! seealso
+!!! seealso "See also"
 
     There is much more information about <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux on Wikipedia</a>.
     
