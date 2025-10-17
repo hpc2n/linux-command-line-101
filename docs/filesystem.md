@@ -17,11 +17,11 @@ This section will be a basic overview of the Linux filesystem concepts, not an i
     - Learn about options (flags) and arguments to shell commands 
     - Learn about the **tab completion**
      
-![Tree of dir structure](images/tree.png){: style="width: 500px;float: right"}
+![Tree of dir structure](images/tree.png){: style="width: 400px;float: right"}
 
-The Linux filesystem directory structure starts with the top root directory, which is shown as <code>/</code>. Below this are several other standard directories. Of particular interest are <code>usr/bin</code>, <code>home</code>, <code>usr/lib</code>, and <code>usr/lib64</code>. A common directory which you will also often find is <code>usr/local/bin</code>. 
+The Linux filesystem directory structure starts with the top root directory, which is shown as `/`. Below this are several other standard directories. Of particular interest are `usr/bin`, `home`, `usr/lib`, and `usr/lib64`. A common directory which you will also often find is `usr/local/bin`. 
 
-The picture on the right shows typical subdirectories under <code>/</code> (note that the command `tree` does not work at all HPC centers, though it does work on Tetralith---see the page [tree](../tree) under the "Extras" section for how to install if it is missing). Some of the directories have a **symbolic link** to a different name---this is often done to make it quicker to write, but can also be for compatibility reasons since some software have hardcoded paths.
+The picture on the right shows typical subdirectories under `/` (note that the command `tree` does not work at all HPC centers, though it does work on Tetralith---see the page [tree](../tree) under the "Extras" section for how to install if it is missing). Some of the directories have a **symbolic link** to a different name---this is often done to make it quicker to write, but can also be for compatibility reasons since some software have hardcoded paths.
 
 !!! Note
 
@@ -40,16 +40,16 @@ The file system could also be illustrated like this:
 
 ![folders of filesystem structure](images/filesystem-folders.png){: style="width: 500px;float: left"}
 
-!!! warning "Note"
+!!! important "Note about `/`"
 
     The character `/` can be 
 
-    1. the root directory, if it is at the front of a file or directory name 
-    2. a separator if it appears inside a path. 
+    1. the root directory, if it appears alone or at the front of a file or directory name 
+    2. a separator if it appears in other positions within the path.
 
 !!! note
 
-    If you are on a local cluster, on an HPC center, etc. where you are not root, you will as default be in your home directory when you login. You can use `cd ..` a couple times to go to the root of the system and do `tree` there if you want, or do `tree` in your home directory (you can always return there with just `cd`). 
+    If you are on a local cluster, on an HPC center, etc. where you are not root, you will be in your home directory by default when you login. You can use `cd ..` a couple times to go to the root of the system and do `tree` there if you want, or do `tree` in your home directory (you can always return there with just `cd`).
 
 !!! caution
 
@@ -84,7 +84,7 @@ There are is also an "environment variable" that can be used as shortcut for the
 
 ## pwd
 
-The command ``pwd`` (print working directory) will print out the full pathname of the working directory to the screen. 
+The command `pwd` (**p**rint **w**orking **d**irectory) will print out the full pathname of the working directory to the screen. 
 
 You can use this to find out which directory you are in.
 
@@ -142,7 +142,7 @@ On Tetralith, user ``x_birbr``:
 
 ## ls - listing files/directories
 
-The `ls` command is used to list files. If you just give the command `ls` with no flags it will list all files in the current directory except for hidden files.
+The `ls` command is used to list files and/or directories. If you just give the command `ls` with no flags, it will list all files and subdirectories in the current directory except for hidden files.
 
 <div>
 ```bash
@@ -154,30 +154,30 @@ This way you can to list files/subdirectories for any directory, but the default
 
 Some examples: 
 
-- <code>ls /</code> lists contents of the root directory
-- <code>ls ..</code> lists the contents of the parent directory of the current
-- <code>ls ~</code> lists the contents of your user home directory
-- <code>ls *</code> lists contents of current directory and subdirectories
+- `ls /` lists contents of the root directory
+- `ls ..` lists the contents of the parent directory of the current
+- `ls ~` lists the contents of your user home directory
+- `ls *` lists contents of current directory and subdirectories
 
 !!! Note "Commonly used flags" 
 
-    - <code>-a</code> lists content including hidden files and directories
-    - <code>-l</code> lists content in long table format (permissions, owners, size in bytes, modification date/time, file/directory name)
-    - <code>-lh</code> adds an extra column to above representing size of each file/directory
-    - <code>-t</code> lists content sorted by last modified date in descending order
-    - <code>-tr</code> lists content sorted by last modified date in ascending order
-    - <code>-s</code> list files with their sizes
+    - `-a` lists content including hidden files and directories
+    - `-l` lists content in long table format (permissions, owners, size in bytes, modification date/time, file/directory name)
+    - `-lh` adds an extra column to above representing size of each file/directory
+    - `-t` lists content sorted by last modified date in descending order
+    - `-tr` lists content sorted by last modified date in ascending order
+    - `-s` list files with their sizes
 
-To get more flags, type <code>ls \--help</code> or <code>man ls</code> in the terminal to see the manual. 
+To get more flags, type `ls --help` or `man ls` in the terminal to see the manual. 
 
 !!! tip
 
     You can often get more info on flags/options and usage for a Linux command with 
 
-    - <code>COMMAND \--help</code>
-    - <code>man COMMAND</code>
+    - `COMMAND --help`
+    - `man COMMAND`
 
-    where COMMAND is the Linux command you want information about, like <code>ls</code>, <code>mkdir</code>, etc. 
+    where COMMAND is the Linux command you want information about, like `ls`, `mkdir`, etc. 
 
 !!! Example "The output for a few of the flags, for a directory with two subdirectories and some files" 
 
@@ -253,13 +253,13 @@ To get more flags, type <code>ls \--help</code> or <code>man ls</code> in the te
 
 ## Wild cards
 
-Wild cards are useful "stand-ins" for one or more character or number, that you can use for instance when finding patterns or when removing/listing all files of a certain type. 
+Wild cards are useful "stand-ins" for one or more characters or numbers, that you can use for instance when finding patterns or when removing/listing all files of a certain type.
 
 Wild cards are also called "glob" or "globbing" patterns. 
 
 ??? Globs
 
-    Globs, also known as glob (or globbing) patterns are patterns that can expand a wildcard pattern into a list of pathnames that match the given pattern. 
+    Globs, also known as glob (or globbing) patterns are special characters that can expand a wildcard pattern into a list of pathnames that match the given pattern.
     
     On the early versions of Linux, the command interpreters relied on a program that expanded these characters into unquoted arguments to a command: `/etc/glob`.
 
@@ -272,11 +272,11 @@ Wild cards are also called "glob" or "globbing" patterns.
 - **`[ ]`** represents a range of alphanumeric characters in ascending order.
 - **`{ }`** the terms are separated by commas and each term must be a wildcard or exact name.
 - **`[!]`**  matches any character that is NOT listed between `[!` and `]`. This is a logical NOT.
-- **`\`** specifies an "escape" character, when using a subsequent special character. 
+- **`\`** specifies an "escape" character, when using a subsequent special character.
 
 !!! Warning 
 
-    You may need quotation marks around some wildcards as well. 
+    You may need quotation marks around some wildcards as well.
 
 !!! Warning
 
@@ -286,7 +286,7 @@ Wild cards are also called "glob" or "globbing" patterns.
 
 !!! tip "Try some of the commands below" 
 
-    Useful files for these examples are found in ``exercises/patterns`` 
+    Useful files for these examples are found in `exercises/patterns`. 
 
 !!! Example "Some examples of the use of wildcards"
 
@@ -387,10 +387,10 @@ The command `cd` is used to change directory.
 
 !!! summary
 
-    - Your home directory is generally located in ``/home/USERNAME`` or ``/home/U/USERNAME``
+    - Your home directory is generally located in `/home/USERNAME` or `/home/U/USERNAME`
     - Your home directory is also stored as the environment variable ``$HOME``
-    - ``pwd`` displays your path and current location
-    - ``cd DIR`` changes your current working directory to DIR
-    - Using ``cd`` without providing a destination takes you to your home directory 
-    - ``ls`` is used to list files and directories
-    - Wildcards are metacharacters for one or more character or number and are useful when you are finding patterns or removing/copying/listing all files of a certain type 
+    - `pwd` displays your path and current location
+    - `cd DIR` changes your current working directory to DIR
+    - Using `cd` without providing a destination takes you to your home directory 
+    - `ls` is used to list files and directories
+    - Wildcards are metacharacters for one or more character or number, and are useful when you are finding patterns or removing/copying/listing all files of a certain type 
