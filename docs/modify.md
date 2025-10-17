@@ -5,14 +5,13 @@
     **Questions**
 
     - How do I create or remove files and directories?
-    - How do I copy or rename files and directories? (You will see why these two operations are mentioned together.)
+    - How do I copy or rename files and directories? (You will see why these two operations are mentioned together shortly.)
 
     **Learning objectives**
 
-    - Learn how to navigate the Linux file system
-    - Learn about files and directories
-    - Learn about paths
-    - Be able to create, copy, rename, and delete files and directories
+    - Learn how to create and remove files and directories.
+    - Learn how to copy and rename/move files and directories.
+    - Learn to avoid a few common pitfalls that could cause files to be deleted or overwritten by mistake.
 
 ## Create and remove directories/files 
 
@@ -54,13 +53,15 @@ To create files, you would normally use an editor (``nano``, ``vim``, ``emacs``,
 touch FILE
 ```
 
-You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to prompt before removing a file. Be aware that files removed with ``rm`` are deleted *permanently*---they generally cannot be restored (people have gotten lucky with system backup snapshots, but don't count on those).
+(The `touch` command is more often used to update the timestamps (specifically the latest access and modification times) of existing files.)
+
+You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to prompt before removing a file. Be aware that files removed with ``rm`` are deleted *permanently*---they generally cannot be restored (people have gotten lucky with system backup snapshots, but do not assume that those will be available).
 
 !!! warning
 
     If you do not add the flag/option "-i" the file will be deleted without prompting. Be careful!
 
-    Be **extra** careful using ``rm`` with glob patterns (see [Wild Cards under The File System](../filesystem/#wild__cards) )! It is strongly recommended that you always test a pattern with ``ls`` and check that the output is what you expect before using ``rm`` on that pattern.
+    Be **extra** careful using `rm -rf` with glob patterns (see [Wild Cards under The File System](../filesystem/#wild__cards) )! It is strongly recommended that you always test a pattern with `ls` and check that the output is what you expect before using `rm -rf` on that pattern.
     
 !!! example "Examples"
 
@@ -78,46 +79,46 @@ You can remove files with ``rm``. Again, you can use the flag/option ``-i`` to p
     
 ### Examples
 
-**Reminder**
+???+ faq "Reminder"
 
-- **mkdir DIR**: Create a directory DIR
-- **rm -rf DIR**: Remove a directory DIR. The flag “-r” means recursively and “-f” means do so without asking for each file and subdirectory. Useful, but dangerous. Be careful!
-- **cd**: Go to your home directory ($HOME)
-- **cd DIR**: Change directory to DIR
-- **cd ..**: Change directory to the parent directory of the current directory
-- **cd -**: go back to the previous working directory
-- **touch FILE**: create an empty file with the name FILE
-- **rm FILE**: remove the file with the name FILE
-- The command <code>pwd</code> tells you the current directory path.
+     - **mkdir DIR**: Create a directory DIR
+     - **rm -rf DIR**: Remove a directory DIR. The flag "-r" means recursively and "-f" means do so without asking for each file and subdirectory. Useful, but dangerous. Be careful!
+     - **cd**: Go to your home directory ($HOME)
+     - **cd DIR**: Change directory to DIR
+     - **cd ..**: Change directory to the parent directory of the current directory
+     - **cd -**: go back to the previous working directory
+     - **touch FILE**: create an empty file with the name FILE
+     - **rm FILE**: remove the file with the name FILE
+     - The command `pwd` tells you the current directory path.
 
 !!! example "Creating directories, changing directories, removing directory and file, removing files by pattern"
 
-    This example will test some of the things we just learned, as well as the command ``cd`` and glob patterns from the previous section. 
+    This example sequence will demonstrate some of the things we just learned, as well as the command `cd` and glob patterns from the previous section. 
 
     **HINT: Code-along!**
 
     ```bash
-    [x_birbr@tetralith1 ~]$ mkdir myowntestdir
-    [x_birbr@tetralith1 ~]$ cd myowntestdir/
-    [x_birbr@tetralith1 myowntestdir]$ mkdir testdir1
-    [x_birbr@tetralith1 myowntestdir]$ mkdir testdir2
-    [x_birbr@tetralith1 myowntestdir]$ mkdir testdir3
-    [x_birbr@tetralith1 myowntestdir]$ rm -rf testdir3
-    [x_birbr@tetralith1 myowntestdir]$ cd testdir1
-    [x_birbr@tetralith1 testdir1]$ touch file1.txt
-    [x_birbr@tetralith1 testdir1]$ touch file2.sh
-    [x_birbr@tetralith1 testdir1]$ touch file3.c
-    [x_birbr@tetralith1 testdir1]$ touch file4.dat
-    [x_birbr@tetralith1 testdir1]$ touch file5.txt
-    [x_birbr@tetralith1 testdir1]$ rm file5.txt
-    [x_birbr@tetralith1 testdir1]$
-    [x_birbr@tetralith1 testdir1]$ cd ..
-    [x_birbr@tetralith1 myowntestdir]$ cd testdir2/
-    [x_birbr@tetralith1 testdir2]$ touch meow.txt
-    [x_birbr@tetralith1 testdir2]$ touch catsmeow1.txt
-    [x_birbr@tetralith1 testdir2]$ touch homeowners_assoc.txt
-    [x_birbr@tetralith1 testdir2]$ ls *meow*.txt
-    [x_birbr@tetralith1 testdir2]$ rm -r *meow{,1}.txt
+    [x_rebpi@tetralith1 ~]$ mkdir mytestdir
+    [x_rebpi@tetralith1 ~]$ cd mytestdir/
+    [x_rebpi@tetralith1 mytestdir]$ mkdir testdir1
+    [x_rebpi@tetralith1 mytestdir]$ mkdir testdir2
+    [x_rebpi@tetralith1 mytestdir]$ mkdir testdir3
+    [x_rebpi@tetralith1 mytestdir]$ rm -rf testdir3
+    [x_rebpi@tetralith1 mytestdir]$ cd testdir1
+    [x_rebpi@tetralith1 testdir1]$ touch file1.txt
+    [x_rebpi@tetralith1 testdir1]$ touch file2.sh
+    [x_rebpi@tetralith1 testdir1]$ touch file3.c
+    [x_rebpi@tetralith1 testdir1]$ touch file4.dat
+    [x_rebpi@tetralith1 testdir1]$ touch file5.txt
+    [x_rebpi@tetralith1 testdir1]$ rm file5.txt
+    [x_rebpi@tetralith1 testdir1]$
+    [x_rebpi@tetralith1 testdir1]$ cd ..
+    [x_rebpi@tetralith1 mytestdir]$ cd testdir2/
+    [x_rebpi@tetralith1 testdir2]$ touch meow.txt
+    [x_rebpi@tetralith1 testdir2]$ touch catsmeow1.txt
+    [x_rebpi@tetralith1 testdir2]$ touch homeowners_assoc.txt
+    [x_rebpi@tetralith1 testdir2]$ ls *meow*.txt
+    [x_rebpi@tetralith1 testdir2]$ rm -r *meow{,1}.txt
     
     ```
 
@@ -279,13 +280,13 @@ ln -s real-file-or-lib link-name
     ln -s /proj/linux-intro/users/MYUSERNAME $HOME/myproj
     ```
 
-    This creates a symbolic link named "myproj" in your home directory, pointing to the location /proj/linux-intro/users/MYUSERNAME. The directory "linux-intro" is the project storage directory for this course project. For user ``x_birbr``, it would look like this:
+    This creates a symbolic link named "myproj" in your home directory, pointing to the location /proj/linux-intro/users/MYUSERNAME. The directory "linux-intro" is the project storage directory for this course project. For user ``x_rebpi``, it would look like this:
 
     ```bash
-    [x_birbr@tetralith1 ~]$ ls -l
+    [x_rebpi@tetralith1 ~]$ ls -l
     total 2
-    lrwxrwxrwx 1 x_birbr x_birbr   31 Sep 11 12:01 myproj -> /proj/linux-intro/users/x_birbr
-    drwxrwxr-x 4 x_birbr x_birbr 4096 Sep 11 11:43 mytestdir
+    lrwxrwxrwx 1 x_rebpi x_rebpi   31 Sep 11 12:01 myproj -> /proj/linux-intro/users/x_rebpi
+    drwxrwxr-x 4 x_rebpi x_rebpi 4096 Sep 11 11:43 mytestdir
     ```
 
 !!! summary
