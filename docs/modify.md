@@ -178,32 +178,27 @@ This command is used to copy files or directories.
        cd exercises
        cd mytestdir
        ```
-       
     2. Copy the file ``myfile.txt`` to the subdirectory ``testdir1``:
 
        ```bash
        cp myfile.txt testdir1
        ```
-       
     3. Create a new directory called ``testdir3`` inside ``testdir1``
 
        ```bash
        cd testdir1
        mkdir testdir3
        ```
-       
     4. Copy the new subdirectory ``testdir3`` to the directory ``testdir2``. Remember, "testdir2" is located outside "testdir1" and at the same "level". This can be done in more than one way. Remember you need the option ``-r`` (for recursive) when copying directories:
         a) "Go up one" and then copy:
            ```bash
            cd ..
            cp -r testdir1/testdir3 testdir2/
            ```
-           
         b) Copy will standing inside ``testdir1``
            ```bash
            cp -r testdir3 ../testdir2
            ```
-           
     5. If you give the full path while copying, this can be done from anywhere.
 
 ## mv - rename files/directories
