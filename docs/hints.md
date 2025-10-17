@@ -17,11 +17,11 @@ Examples:
 - **CTRL-l**: Clear the terminal
 - **TAB**: Auto-complete (i.e. start write a command or file name and then press TAB to auto-complete, if possible)
 - **ARROW-UP**: Pressing the arrow-up key repeatedly will let you cycle through recent commands
-- **CTRL-r**: you will get a prompt to write text to search in the list of recent commands. The list is saved in <code>.bash.history</code> in your $HOME. 
+- **CTRL-r**: you will get a prompt to write text to search in the list of recent commands. The list is saved in <code>.bash_history</code> in your $HOME. On some systems it might be called <code>.bash.history</code>
 
 ## Finding help 
 
-You can often get more info on flags/options and usage for a Linux command with
+You can often get more info on the usage of a Linux command.  This includes options and flags. Depending on the setup of your system either or both of the following should succeed:
 
 - ``COMMAND --help``
 - ``man COMMAND``
@@ -30,8 +30,8 @@ where COMMAND is the Linux command you want information about, like ``ls``, ``mk
 
 ## Misc
 
-- Write 'clear' to clear the terminal
-- write 'history' to see a list of the most recent commands written in the terminal
-    - You can change the number of saved commands by setting the environment variable HISTSIZE in your <code>.bashrc file</code> in your home directory. 
-    - Example: Open <code>.bashrc</code> with <code>nano</code>. Somewhere (at the end for instance) add: <code>export HISTSIZE=NUMBER"</code> where <code>NUMBER</code> is the number of commands to save, for instance 10000. 
+- Type ``clear`` to clear the terminal
+- Type ``history'`` to see a list of the recent commands used in the terminal
+    - You can change the number of saved commands by setting the environment variable HISTSIZE in your <code>.bashrc</code> file in your home directory. 
+    - Example: Open <code>.bashrc</code> with <code>nano</code>. Somewhere (at the end for instance) add: <code>export HISTSIZE=NUMBER"</code> where <code>NUMBER</code> is the number of commands to save, for instance 500. 
 
