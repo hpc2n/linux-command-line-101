@@ -43,7 +43,7 @@ You can remove files with ``rm``. You can use the flag/option ``-i`` to prompt b
 
 !!! warning
 
-    If you do not add the flag/option "-i" the file will be deleted without prompting. Be careful!
+    If you do not add the flag/option `-i` the file will be deleted without prompting. Be careful!
 
     Be **extra** careful using `rm -rf` with glob patterns (see [Wild Cards under The File System](../filesystem/#wild__cards) )! It is strongly recommended that you always test a pattern with `ls` and check that the output is what you expect before using `rm -rf` on that pattern.
 
@@ -197,7 +197,7 @@ This command is used to copy files or directories.
            cp -r testdir1/testdir3 testdir2/
            ```
            
-        b) Copy will standing inside ``testdir1``
+        b) Copy from inside ``testdir1``
            ```bash
            cp -r testdir3 ../testdir2
            ```
