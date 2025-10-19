@@ -16,7 +16,8 @@
             - mkdir: create directory
             - rm: remove files or directories
             - cp: copy files or directories
-            - mv: move or rename files or directories      
+            - mv: move or rename files or directories
+            - **IMPORTANT** remember the **-i** option of rm, cp and mv to avoid loosing contents
         - symbolic link: pointer to another file or directory
     - Pipes and filters
         - less, more, cat
