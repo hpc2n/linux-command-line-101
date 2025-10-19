@@ -8,7 +8,7 @@
         - practical and normally faster in situations where you login with a terminal on a remote system. 
     - The File System
         - directory structure starts with the top root directory, shown as <code>/</code>.
-        - several standard subdirectories: <code>usr/bin</code>, <code>home</code>, <code>usr/lib</code>, <code>usr/lib64</code>, and <code>usr/local/bin</code>.
+        - several standard subdirectories: <code>/usr/bin</code>, <code>/home</code>, <code>/usr/lib</code>, <code>/usr/lib64</code>, and <code>/usr/local/bin</code>.
         - important commands:
             - ls: lists files/directories
             - cd: change directory
@@ -31,28 +31,18 @@
     - Patterns and scripting 
         - finding patterns
             - grep, find
-            - awk
             - wild cards
             - regular expressions
         - scripting
-    - Data Handling 
-        - compressing and decompressing 
-            - gzip/gunzip 
-            - bzip/bunzip
-            - zip
-        - archiving
-            - tar, tarballs 
-        - file transfer and syncing 
-            - scp
-            - sftp
-            - rsync
-        - connecting
-            - ssh
     - Hints and tricks 
         - auto-complete
         - short-cuts
         - alias 
         - finding help 
+
+!!! Extra Material
+
+    We have some advanced material in **EXTRAS**, for you to study on your own.
 
 !!! Questions 
 
