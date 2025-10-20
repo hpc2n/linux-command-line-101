@@ -38,6 +38,5 @@ where COMMAND is the Linux command you want information about, like ``ls``, ``mk
 !!! warning
 
     **Passwords in the history file**
-
-    If you enter a password (e.g. login password for a computer or website) at the command prompt and hit return the password will be included into the <code>.bash_history</code> file.  This is not encrypted in any way.  In particular when using a shared system such as offered by NAISS, it is best to reset the password to a new value on the computer or website where you have been using it.
+    If you enter a password (e.g. login password for a computer or website) at the command prompt and hit return, the password will be included into the <code>.bash_history</code> file once you log off.  This is not encrypted in any way.  In particular when using a shared system such as offered by NAISS, it is best to reset the password to a new value on the computer or website where you have been using it.
 
