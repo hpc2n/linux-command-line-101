@@ -77,28 +77,28 @@ See ``man grep`` for more options.
 
     ![grep string](images/grepstring.png){: style="width: 400px;float: right;padding: 3px;}
      
-!!! Exercise "Search for instances of the word 'string' in file.txt and count them"
+!!! Exercise "Search for instances of the word 'contains' in fil.txt and count them"
 
 ??? Solution "Click to reveal solution"
 
     ```bash
-    grep -o -i string file.txt | wc -l
+    grep -o -i contains fil.txt | wc -l
     ```
 
-!!! Exercise "Search for the lines with instances of 'string' in file.txt and output them to file.out"
+!!! Exercise "Search for the lines with instances of 'word' in fil.txt and output them to file.out"
 
 ??? Solution "Click to reveal solution"
 
     ```bash
-    grep string file.txt > file.out
+    grep word fil.txt > file.out
     ```
 
-!!! Exercise "Search for the lines with instances of 'string' in file.txt and append them to file.out"
+!!! Exercise "Search for the lines with instances of 'string' in newfile.txt and append them to file.out"
 
 ??? Solution "Click to reveal solution"
 
     ```bash
-    grep string file.txt >> file.out
+    grep string newfile.txt >> file.out
     ```
 
 ## find 
