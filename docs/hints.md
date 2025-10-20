@@ -35,7 +35,9 @@ where COMMAND is the Linux command you want information about, like ``ls``, ``mk
     - You can change the number of saved commands by setting the environment variable HISTSIZE in your <code>.bashrc</code> file in your home directory. 
     - Example: Open <code>.bashrc</code> with <code>nano</code>. Somewhere (at the end for instance) add: <code>export HISTSIZE=NUMBER</code> where <code>NUMBER</code> is the number of commands to save, for instance 500. 
 
-!!! warning Passwords in the history file
+!!! warning
 
-    If you enter a password (e.g. login for a computer or website) at the command prompt and hit returnm the password will be included into the <code>.bash_history</code> file.  This is not encrypted in any way.  In particular when using a shared system as offered by NAISS, it is best to reset the password to a new, save value on the computer or website where you have been using it.
+    **Passwords in the history file**
+
+    If you enter a password (e.g. login password for a computer or website) at the command prompt and hit return the password will be included into the <code>.bash_history</code> file.  This is not encrypted in any way.  In particular when using a shared system such as offered by NAISS, it is best to reset the password to a new value on the computer or website where you have been using it.
 
