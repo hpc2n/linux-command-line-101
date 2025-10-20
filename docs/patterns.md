@@ -7,13 +7,13 @@ This section will look at finding patterns ([grep](#grep), [find](#find), and [r
     **Questions** 
 
     - How do I find out if a specific pattern is in a file?
-    - What are regular expressions?
+    - What are regular expressions? (advanced)
 
     **Objectives** 
 
     - Learn about finding patterns
     - Learn to use ``grep`` and ``find``
-    - Learn to use regular expressions
+    - Learn to use regular expressions (advanced)
 
 Here you will find descptions on how to search for files with specific patterns. 
 
