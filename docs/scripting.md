@@ -1,6 +1,6 @@
 # Scripting
 
-This section will look at scripting. Scripting is used to perform complex or repetitive tasks without user intervention. All Linux commands which can be used on the commandlien can also be used inside a script, including wild cards. 
+This section will look at scripting. Scripting is used to perform complex or repetitive tasks without user intervention. All Linux commands which can be used on the commandline can also be used inside a script, including wild cards. 
 
 The most common reason for making a script is probably to avoid writing the same command again and again.  On an HPC-sytem, such as the ones offered by NAISS, scripts are required to execute Linux commands and programs inside the batch system.
 
@@ -35,7 +35,7 @@ We start scripting with a simple example.  The task at hand is to check how many
     ```bash
     #!/bin/bash
     grep 'ABCD' file.dat > file_filtered.dat 
-    wc -l < file_filtered.dat 
+    wc -l < file_filtered.dat > output.dat
     ``` 
 
     With the following command, which will be explained in-depth further down, we can make the script executable 
