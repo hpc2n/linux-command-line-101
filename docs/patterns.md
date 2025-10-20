@@ -132,15 +132,15 @@ For more options, check ``man find``
 
     You could do the searches inside ``exercises`` directory or inside ``exercises/patterns`` directory. 
 
-!!! Exercise "Find the file ``myfile.txt`` in the directory you are standing in and below"
+!!! Exercise "Find the file ``fil4.txt`` in the directory you are standing in and below"
 
 ??? Solution "Click to reveal solution"
 
     ```bash
-    find . -type f -name "file.txt"
+    find . -type f -name "fil4.txt"
     ```
 
-!!! Exercise "Find the files ``myfile.txt`` as part of the name in the directory ``expressions/patterns`` while standing in ``exercises/script``"
+!!! Exercise "Find the file ``myfile0.txt`` which is part of the name in the directory ``expressions/patterns`` while standing in ``exercises/script``"
 
 ??? Solution "Click to reveal solution"
 
