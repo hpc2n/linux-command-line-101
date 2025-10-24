@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://hpc2n.github.io/linux-command-line-101/cli/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>The command line (CLI) - Linux Command Line 101</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_markdown_exec_pyodide.css" rel="stylesheet" />
+        <link href="../assets/_markdown_exec_ansi.css" rel="stylesheet" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "The command line (CLI)";
+        var mkdocs_page_input_path = "cli.md";
+        var mkdocs_page_url = "/linux-command-line-101/cli/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../images/logo-cli-naiss.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">The command line (CLI)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#shell">Shell</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#terminology">Terminology</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#try__it__out">Try it out</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#error__messages">Error messages</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../filesystem/">Navigating the File System</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../modify/">Modifying the file tree</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../editors/">Editors</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../pipesfilters/">Piping</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../patterns/">Finding patterns</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../scripting/">Scripting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../hints/">Hints and tricks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extras</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tree/">Install tree</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../connections/">Linux system overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linux-terminology/">Linux terminology</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../more-commands/">More commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data/">Data handling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cheat/">Linux cheat sheet</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Linux Command Line 101</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">The command line (CLI)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="the__command__line__interface__and__the__shell">The command line interface and the shell<a class="headerlink" href="#the__command__line__interface__and__the__shell" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Learning objectives</p>
+<p><strong>Questions</strong></p>
+<ul>
+<li>What is a Command Line Interface (CLI)?</li>
+<li>What is a shell?</li>
+<li>Why/when should I use it?</li>
+</ul>
+<p><strong>Objectives</strong></p>
+<ul>
+<li>You will learn about the shell and the CLI.</li>
+<li>You will learn why and when you should use a CLI instead of a Graphical User Interface (GUI). </li>
+</ul>
+</div>
+<p><img 3px_="3px;" 400px_float:="400px;float:" alt="Terminal" right_padding:="right;padding:" src="../images/terminal_tetralith.png" style="&quot;width:" /></p>
+<p>The picture above shows a terminal window where a user is logged into NAISS&rsquo;s Tetralith system.  Inside the terminal there is a <strong>shell</strong> running. One can see the <strong>prompt</strong> waiting for user input.  </p>
+<p>This is an example of a command line interface (CLI).  It allows a user to interact with the computer system by typing in commands directly. It is a user interface that is navigated with only a keyboard, instead of by clicking with a mouse or using a touchscreen.</p>
+<p>A commandline interface is currently available in all major operating systems, including Windows, UNIX, Linux, and macOS.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Unix or Linux, the <strong>prompt</strong> may be shown as <code>$</code>, <code>%</code>, <code>#</code>, or <code>&gt;</code> depending on the shell used and the system&rsquo;s set-up.  In addition it may show details such as the user name, the name of the system, or the position in the directory tree.  The position in the file tree is commonly referred to as the <code>PATH</code>.</p>
+<p>The prompt means the shell is waiting for input from you. </p>
+</div>
+<p>A common alternative to a CLI is a <strong>GUI</strong> (Graphical User Interface), which typically uses a mouse or similar for navigating.  While a GUI is often more intuitive for a new user, the CLI is more powerful.  Command line interfaces often give access to more capabilities than graphical user interfaces do.  Many repetive tasks, which can be tedious in a GUI, can be easily automated in a shell with a CLI.</p>
+<h2 id="shell">Shell<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h2>
+<p>As mentioned in the intro, the shell is an interface between the keyboard and the computer&rsquo;s operating system (OS), i.e., it takes input from the user via the keyboard and sends it to the OS, which then performs the actions requested.</p>
+<p>In this course we will focus on the <strong>Bash</strong> (<strong>B</strong>ourne <strong>A</strong>gain <strong>SH</strong>ell).  There are many alternatives and the commands can look quite different when using another shell than Bash.  Bash is both a command-line interpreter providing a Command Line Interface (CLI) and a scripting language.</p>
+<p>Writing scripts in a shell allows you to automate repetitive tasks or combine several tasks, making your workflow faster and more efficient. For example, if you want to iterate over many files, this can be done easily in the shell. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You will find that many/most commands in this course are prefaced with either <code>$</code> or <code>[user@tetralith1 ~]</code>, or something like <code>[user@tetralith1 us]$</code>. </p>
+<p>This is the prompt from the computer system, where <code>$</code> just is the default (<code>bash</code>) prompt, and the others are examples of a prompt you may see when logged into a compute cluster (in this case Tetralith - home directory versus a project storage directory).</p>
+<p>You can see an example of such a prompt in the picture a bit further up on the page, when a user with the user-id  <code>x_joahe</code> is connected to NAISS&rsquo;s Tetralith system.</p>
+<p><strong>IMPORTANT</strong></p>
+<p>Do <strong>NOT</strong> copy the prompt if you are copying code snippets. It should <strong>not</strong> be included in the command. </p>
+</div>
+<h2 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
+<p>You may hear words such as shell, terminal, console, and command line interface. So what are the differences? Are they the interchangeable? </p>
+<p>Short answer:</p>
+<ul>
+<li>terminal = text input/output environment</li>
+<li>console = physical terminal</li>
+<li>shell = command line interpreter</li>
+</ul>
+<details class="info">
+<summary>Slightly longer answer (CLICK to read)</summary>
+<ul>
+<li>Console and terminal both originally referred to a device similar to a typewriter which was used to interact with the computer. It was sometimes called a teletypewriter (tty) or teleprinter.</li>
+<li>A <strong>terminal</strong> in Linux/Unix terminology is a device file (interface to a device driver) which implements some commands (read, write, and some more). Some terminal emulators (a.k.a. terminal applications): Xterm, Gnome terminal, Konsole, SSH, &hellip;</li>
+<li>A <strong>console</strong> is generally a terminal in the physical sense, i.e., often the primary terminal directly connected to a machine. On Linux the console appears as several terminals that can be switched between, and each of these can be named console, virtual console, virtual terminal, etc.</li>
+<li>A <strong>Command Line Interface</strong> (CLI) is an interface where the user types a command and then presses RETURN/ENTER to execute the command.</li>
+<li>A <strong>shell</strong> is the main interface seen by the user when they login. It is used to start other programs. It is a command-line shell, and there are many different ones, as mentioned earlier. Command-line shells include flow control constructs to combine commands. In addition to typing commands at an interactive prompt, users can write scripts.</li>
+</ul>
+</details>
+<h2 id="try__it__out">Try it out<a class="headerlink" href="#try__it__out" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Exercise: Open a terminal</p>
+<p>Do <strong>one</strong> of the following: </p>
+<ol>
+<li>Open a terminal on Tetralith.<ul>
+<li>Use an SSH client of your choice or <a href="http://www.cendio.com/thinlinc/what-is-thinlinc">ThinLinc</a>.  The server name is the same for both interfaces (at most HPC centres, the server name varies slightly between these interfaces).</li>
+<li>Log in with your USERNAME: 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh<span class="w"> </span>USERNAME@tetralith.nsc.liu.se
+</span></code></pre></div></li>
+<li>If you logged in with ThinLinc, open a terminal.</li>
+</ul>
+</li>
+<li>Open a terminal on any other HPC system where you have an account.</li>
+<li>Open a terminal on your own computer.</li>
+</ol>
+</div>
+<div class="admonition exercises">
+<p class="admonition-title">Code-along: try a few commands</p>
+<p>NOTE: These commands will all be described in more depth in the next section on <a href="../filesystem/">Navigating the File System</a> </p>
+<p>List some files and directories:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ls
+</span></code></pre></div></p>
+<p>Create a file (name it anything - MYFILE.txt is just a placeholder):
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>touch<span class="w"> </span>MYFILE.txt
+</span></code></pre></div></p>
+<p>Create a directory (name it anything you want - MYDIR is just a placeholder):
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdir<span class="w"> </span>MYDIR
+</span></code></pre></div></p>
+<p>List your files and directories again: 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ls
+</span></code></pre></div></p>
+</div>
+<h2 id="error__messages">Error messages<a class="headerlink" href="#error__messages" title="Permanent link">&para;</a></h2>
+<div class="admonition error">
+<p class="admonition-title">Error messages</p>
+<p>If you mistype a command, or the program/script is not available, you will get an error message like the following (on Tetralith where username is <code>x_birbr</code>): </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">[</span>x_birbr@tetralith3<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>ks
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>-bash:<span class="w"> </span>ks:<span class="w"> </span><span class="nb">command</span><span class="w"> </span>not<span class="w"> </span>found
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="o">[</span>x_birbr@tetralith3<span class="w"> </span>~<span class="o">]</span>$<span class="w">  </span>
+</span></code></pre></div>
+<p>it may look a little different depending on the system (e.g., on <code>defiant</code> where username is <code>bbrydsoe</code>): </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>bbrydsoe@defiant:~$<span class="w"> </span>ks
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ks:<span class="w"> </span><span class="nb">command</span><span class="w"> </span>not<span class="w"> </span>found
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>bbrydsoe@defiant:~$<span class="w"> </span>
+</span></code></pre></div>
+<p>If you instead execute a command on a file which is not available (or not accessible, due to <strong>permissions</strong>), it will look something like this (you can also use <code>ls</code> to list a specific file):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">[</span>x_birbr@tetralith3<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>ls<span class="w"> </span>myfile.c
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>ls:<span class="w"> </span>cannot<span class="w"> </span>access<span class="w"> </span><span class="s1">&#39;myfile.c&#39;</span>:<span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="o">[</span>x_birbr@tetralith3<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>
+</span></code></pre></div>
+<p>If you do not have permission to open or modify a file, the error message will include the phrase <code>Permission denied</code>.</p>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">Keypoints</p>
+<ul>
+<li>A shell is a special user program. It is an interface between the keyboard and the operating system that takes input from the user and sends it to the OS, which then performs the actions requested.</li>
+<li>We will use <code>bash</code> in this course.</li>
+<li>You can run programs from the shell by entering commands at the command-line interface, or CLI.</li>
+<li>There are many advantages to using the shell, particularly the ability to automate repetitive tasks and combine smaller tasks in a script, as well as the speed of executing commands compared with the more resource-intensive GUI. The shell is also easier to use remotely.</li>
+<li>A difficulty with the shell can be finding out which commands exist and how to run them.</li>
+</ul>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../intro/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../filesystem/" class="btn btn-neutral float-right" title="Navigating the File System">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../intro/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../filesystem/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../assets/_markdown_exec_pyodide.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
