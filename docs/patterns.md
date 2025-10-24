@@ -176,6 +176,16 @@ Some common examples of regular expressions:
 - **|** This wildcard makes a logical OR relationship between wildcards. You can thus search something or something else. You may need to add a '\' before this command to avoid the shell thinking you want a pipe. 
 - **[^]** This is the equivalent of [!] in standard wildcards, i.e. it is a logical “not” and will match anything not listed within the square brackets. 
 
+!!! note "Advanced example"
+
+    This command searches the file `myfile` for lines starting with an “s” and ending with an “n”, and prints them to the standard output. 
+
+    ```bash
+    $ cat myfile | grep '^s.*n$'
+    ```
+
+    Remember to not include the first `$` if you copy the command! It is the prompt! 
+
 !!! note "Keypoints" 
 
     - Finding files with specific patterns in their names or content can be done with ``grep`` and ``find``
