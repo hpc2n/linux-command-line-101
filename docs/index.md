@@ -72,15 +72,15 @@
 
 | Time | Topic | Activity | Teacher |
 | ---- | ----- | -------- | ------- | 
-| 9:00 | Welcome+Syllabus | | Birgitte | 
-| 9:10 | What is Linux? <br>Why should you use it? | Lecture | Rebecca | 
-| 9:25 | The command line (CLI) | Lecture+code along | Birgitte |
-| 9:35 | Navigating the File System | Lecture+code along+exercise | Birgitte |
-| 10:05 | Modifying the file tree | Lecture+code along+exercise | Rebecca | 
-| 10:30 | BREAK | | |
-| 10:45 | Editors | Lecture+code along | Sahar | 
-| 10:55 | Piping and filters | Lecture+code along+exercise | Sahar |
-| 11:15 | Finding patterns | Lecture+code along+exercises | Pedro | 
+| 9:00 | Welcome+Syllabus | | Joachim | 
+| 9:10 | What is Linux? <br>Why should you use it? | Lecture | Joachim | 
+| 9:20 | The command line (CLI) | Lecture+code along | Sahar |
+| 9:30 | Navigating the File System | Lecture+code along+exercise | Sahar |
+| 10:00 | Modifying the file tree | Lecture+code along+exercise | Sahar | 
+| 10:25 | BREAK | | |
+| 10:40 | Editors | Lecture+code along | Pedro | 
+| 10:50 | Piping and filters | Lecture+code along+exercise | Pedro |
+| 11:10 | Finding patterns | Lecture+code along+exercises | Pedro | 
 | 11:25 | Scripting | Lecture+code along | Pedro | 
 | 11:40 | Hints and tricks | Lecture+code along | Joachim |
 | 11:50 | Summary   | | Joachim |
