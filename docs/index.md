@@ -15,7 +15,7 @@
 
     - You need access to a Linux system. 
     - You will use your own computer or any other computer (including computing access at computing centers) you have access to and that runs Linux. 
-    - The course project will be on Tetralith, for those that **do not have other access to a computer that runs Linux**.  
+    - The course project will be on Tetralith, ONLY for those that **do not have other access to a computer that runs Linux**.  
         - For those using Tetralith, there is a <a href="https://www.nsc.liu.se/support/getting-started/" target="_blank">Get started guide for NSC here</a>. 
 
 !!! note "Learning outcome"
@@ -41,11 +41,11 @@
 
     - This course will consist of lectures and type-alongs, as well as a few exercises where you get to try out what you have just learned.    
 
-- This is the fourth instance of this course, and it has been somewhat reworked based on previous participant input. We would be grateful if you will fill the evaluation survey so we can further improve the course: <a href="https://forms.office.com/e/8UuxePqVci" target="_blank">https://forms.office.com/e/8UuxePqVci</a> 
+- This is the fourth instance of this course, and it has been somewhat reworked based on previous participant input. We would be grateful if you will fill the evaluation survey so we can further improve the course: <a href="https://forms.office.com/e/NFR7fyhc3i" target="_blank">https://forms.office.com/e/NFR7fyhc3i</a> 
 
 !!! admonition "Cluster-specific approaches"
 
-    The course is given by HPC2N (Kebnekaise), but will be done under NAISS on the NAISS system "Tetralith". There is a <a href="https://www.nsc.liu.se/support/getting-started/" target="_blank">Get started guide for NSC here</a>.   
+    The course is given by application experts from several NAISS branches. It is agnostic, but the course project for those who do not have their own Linux access will the NAISS system "Tetralith". There is a <a href="https://www.nsc.liu.se/support/getting-started/" target="_blank">Get started guide for NSC here</a>.   
 
     - The login node for Tetralith is ``tetralith.nsc.liu.se``.
     - It looks like this when I (``x_birbr`` on "Tetralith") login the first time from my computer "defiant":
@@ -65,8 +65,8 @@
 
 ## Important info
 
-- There is an "important info" page for this course, containing info on the course project, login info for Tetralith, etc. It can be found here: <a href="https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EdrR1siiThVNpuXKoSZXSeMBIZU71joLKZ-bf4sykjk0aA" target="_blank">https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EdrR1siiThVNpuXKoSZXSeMBIZU71joLKZ-bf4sykjk0aA</a>
-- There is a Q/A page for use during the lectures. Since the lectures are recorded, you may get recorded if you ask questions in the Zoom, but you can always write questions on the Q/A and get answers there. It also has the advantage that you can go back and look at the answers later. The Q/A page can be found here: <a href="https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EccgkyKcHzhFqMVCq50yyA8BqZUF5Bre8r1bw_koAU4dvw" target="_blank">https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/EccgkyKcHzhFqMVCq50yyA8BqZUF5Bre8r1bw_koAU4dvw</a> 
+- There is an "important info" page for this course, containing info on the course project, login info for Tetralith, etc. It can be found here: <a href="https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/IQBsH-Pe_wARRZXveB6zeM63AffGTwAMlQolvDfpaNaZJJk?e=EpDuCE" target="_blank">https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/IQBsH-Pe_wARRZXveB6zeM63AffGTwAMlQolvDfpaNaZJJk?e=EpDuCE</a>
+- There is a Q/A page for use during the lectures. Since the lectures are recorded, you may get recorded if you ask questions in the Zoom, but you can always write questions on the Q/A and get answers there. It also has the advantage that you can go back and look at the answers later. The Q/A page can be found here: <a href="https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/IQCI0r5NQ-gWQJI4oBi6trbXAWlznFWAQaBab_i5erb9VME?e=HyfiWp" target="_blank">https://umeauniversity.sharepoint.com/:w:/s/HPC2N630/IQCI0r5NQ-gWQJI4oBi6trbXAWlznFWAQaBab_i5erb9VME?e=HyfiWp</a> 
 
 ## Preliminary schedule
 
