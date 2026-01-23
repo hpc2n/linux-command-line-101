@@ -100,6 +100,26 @@ You can use this to find out which directory you are in.
      [x_birbr@tetralith3 ~]$ 
      ```
 
+=== "On Dardel" 
+
+    user ``bbrydsoe``: 
+
+    ```bash
+    bbrydsoe@login1:~> pwd
+    /cfs/klemming/home/b/bbrydsoe
+    bbrydsoe@login1:~> 
+    ```
+
+=== "On Alvis" 
+
+    user ``brydso``:
+
+    ```bash
+    [brydso@alvis2 ~]$ pwd
+    /cephyr/users/brydso/Alvis
+    [brydso@alvis2 ~]$
+    ```
+
 === "On Kebnekaise"
 
      user ``bbrydsoe``: 
