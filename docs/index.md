@@ -59,9 +59,6 @@
     Verification code:
     ```
     - The verification code it asks about is a 2FA that you need to set. See here: <a href="https://www.nsc.liu.se/support/2fa/" target="_blank">https://www.nsc.liu.se/support/2fa/</a>.
-    - You will probably not need it for the course, but the compute project ID is: naiss2025-22-934 
-    - The project storage for the course project is in ``/proj/courses-fall-2025/users/YOUR-USERNAME`` 
-        - Example, for the user ``x_birbr``, this would be: ``/proj/courses-fall-2025/users/x_birbr``
 
 ## Important info
 
