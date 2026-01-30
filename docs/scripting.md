@@ -1,8 +1,5 @@
 # Scripting
 
-This section will look at scripting. Scripting is used to perform complex or repetitive tasks without user intervention. All Linux commands which can be used on the commandline can also be used inside a script, including wild cards. 
-
-The most common reason for making a script is probably to avoid writing the same command again and again.  On an HPC-sytem, such as the ones offered by NAISS, scripts are required to execute Linux commands and programs inside the batch system.
 
 !!! note "Learning objectives"
 
@@ -18,6 +15,9 @@ The most common reason for making a script is probably to avoid writing the same
     * Learn how to make a simple script 
     * Get a brief introduction to **permissions**
 
+This section will look at scripting. Scripting is used to perform complex or repetitive tasks without user intervention. All Linux commands which can be used on the commandline can also be used inside a script, including wild cards. 
+
+The most common reason for making a script is probably to avoid writing the same command again and again.  On an HPC-sytem, such as the ones offered by NAISS, scripts are required to execute Linux commands and programs inside the batch system.
 
 !!! Hint "Code along!" 
 
