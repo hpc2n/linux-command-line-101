@@ -1,13 +1,13 @@
 # Introduction to Linux
 
-- Welcome page and syllabus: <a href="https://hpc2n.github.io/intro-linux/index.html">https://hpc2n.github.io/intro-linux/index.html</a>
-    - Also link at the House symbol at the top of the page. 
+- Welcome page and syllabus: <a href="https://hpc2n.github.io/linux-command-line-101/intro/">https://hpc2n.github.io/linux-command-line-101/intro/</a>
+    - Also linked at the mini terminal on the top left of the page. 
 
 ## What is Linux
 
 !!! note 
 
-    Most of the commands you learn in this course are agnostic and should work on any Linux/Unix like system. MacOS is also a Unix-like OS (operating system), and the majority of the commands are the same. 
+    Most of the commands you learn in this course are agnostic and should work on any Linux/Unix like system. macOS is a Unix based operating system, and the majority of the commands are the same. 
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds.
 
