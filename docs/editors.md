@@ -18,7 +18,6 @@ Some editors are more suited for a GUI environment and some are more suited for 
 
 ## less, more, cat  
 
-If you just need to see the content of a file, one of the commands ``less``, ``more``, or ``cat`` are probably the best, since there is no risk of you making changes to the file if you are just looking in it.
 
 !!! note "less, more, cat - if you just need to see the content"
 
@@ -38,14 +37,14 @@ If you just need to see the content of a file, one of the commands ``less``, ``m
 
 !!! note "Try out ``less`` and ``cat``!" 
 
-    - Go to the ``exercises`` directory (that you got from the tarball at the beginning of the course) and change directory to one of the subdirectories. 
-    - Use ``less`` on one of the files. Use ``cat`` on one of the files. 
+    - Go to the ``exercises/mytestdir`` directory (that you got from the tarball at the beginning of the course). 
+    - Use ``less`` on the file ``myfile.txt``. Use ``cat`` on the same file. 
 
     **Question**: Why is ``cat`` good for short files, but not for long files? 
 
 ## Command line editors 
 
-These are all good editors for using on the command line: 
+These are all good editors available on the command line: 
 
 - <a href="https://www.nano-editor.org/" target="_blank">nano</a>
 - <a href="https://en.wikipedia.org/wiki/Vi" target="_blank">vi</a>, <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank">vim</a>
@@ -57,7 +56,7 @@ Of these, <code>vi/vim</code> as well as <code>emacs</code> are probably the mos
 
     **HINT: code-along!** 
 
-    1. Starting "nano": Type <code>nano</code> FILENAME on the command line and press <code>Enter</code>. FILENAME is whatever you want to call your file. 
+    1. Starting ``nano``: Type <code>nano</code> FILENAME on the command line and press <code>Enter</code>. FILENAME is whatever you want to call your file. 
     2. If FILENAME is a file that already exists, <code>nano</code> will open the file. If it dows not exist, it will be created.
     3. You now get an editor that looks like this: <br>
     ![nano editor](images/nano.png){: style="width: 500px"}
@@ -82,7 +81,7 @@ Examples to open terminal:
 To choose editors from the menu: 
 
 - HPC2N: "Applications -> Accessories". 
-- NSC: "Applications" -> Accessories" and "Applications" -> "Development". 
+- NSC: "Applications" -> Accessories" -> "Applications" or  "Development" -> Several choices:  "Gvim", "Emacs", "Nedit", ... 
 
 Regardless, this gives several editor options, of which these have a graphical interface:  
 
@@ -93,9 +92,9 @@ t just an editor, but an <a href="https://en.wikipedia.org/wiki/Integrated_devel
 - HPC2N/NSC: <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs (GUI)</a>
 - HPC2N/NSC (under "Applications" -> "Development"): <a href="https://en.wikipedia.org/wiki/NEdit" target="_blank">NEdit "Nirvana Text Editor"</a>
 
-If you are not familiar with any of these, a good recommendation would be to use <code>Text Editor/gedit</code>. 
+If you are not familiar with any of these, a good recommendation would be to use <code>Text Editor: gedit</code>. 
 
-!!! Example "Text Editor/gedit"
+!!! Example "Text Editor: gedit"
 
     1. Starting "gedit": From the menu, choose Applications -> Accessories -> Text Editor.
     2. You then get a window that looks similar to this: <br> 
