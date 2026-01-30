@@ -303,15 +303,15 @@ ln -s real-file-or-lib link-name
 !!! example "Example (on Tetralith)"
 
     ```bash
-    ln -s /proj/linux-intro/users/MYUSERNAME $HOME/myproj
+    ln -s /proj/spring-courses-naiss/users/MYUSERNAME $HOME/myproj
     ```
 
-    This creates a symbolic link named "myproj" in your home directory, pointing to the location /proj/linux-intro/users/MYUSERNAME. The directory "linux-intro" is the project storage directory for this course project. For user ``x_rebpi``, it would look like this:
+    This creates a symbolic link named "myproj" in your home directory, pointing to the location /proj/spring-courses-naiss/users/MYUSERNAME. The directory "spring-courses-naiss" is the project storage directory for this course project. For user ``x_rebpi``, it would look like this:
 
     ```bash
     [x_rebpi@tetralith1 ~]$ ls -l
     total 2
-    lrwxrwxrwx 1 x_rebpi x_rebpi   31 Sep 11 12:01 myproj -> /proj/linux-intro/users/x_rebpi
+    lrwxrwxrwx 1 x_rebpi x_rebpi   31 Sep 11 12:01 myproj -> /proj/spring-courses-naiss/users/x_rebpi
     drwxrwxr-x 4 x_rebpi x_rebpi 4096 Sep 11 11:43 mytestdir
     ```
 

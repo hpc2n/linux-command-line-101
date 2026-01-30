@@ -370,7 +370,7 @@ The command `cd` is used to change directory.
 
     Remember, `$HOME` is an *environment variable* which gives a shortcut to your home directory.
 
-    **NOTE** if you are on Tetralith and placed the exercises under `/proj/linux-intro/users/USERNAME` then `$HOME` would be replaced by that path. 
+    **NOTE** if you are on Tetralith and placed the exercises under `/proj/spring-courses-naiss/users/USERNAME` then `$HOME` would be replaced by that path. 
 
     To change to the directory `exercises` when you are in your home directory, you do
     ```bash

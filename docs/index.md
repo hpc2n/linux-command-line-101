@@ -89,7 +89,7 @@ In order to type along and do the exercises, please prepare your course environm
 
 1. Login to the system you are using (Tetralith, your own computer, other system)
 2. Create a directory to work in (``mkdir intro-linux``) and then switch to it (``cd intro-linux``)  
-    - **NOTE** If you are working on Tetralith, first switch to your working directory: ``cd /proj/courses-fall-2025/users/YOUR-USERNAME``
+    - **NOTE** If you are working on Tetralith, first switch to your working directory: ``cd /proj/spring-courses-naiss/users/YOUR-USERNAME``
 3. Download the exercises with ``wget https://github.com/hpc2n/linux-command-line-101/raw/refs/heads/main/exercises.tar.gz`` 
 4. Extract the exercises with ``tar zxvf exercises.tar.gz``
 5. Enter the directory that was created: ``cd exercises``
