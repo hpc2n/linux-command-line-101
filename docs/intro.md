@@ -14,6 +14,7 @@ Linux is a family of open-source Unix-like operating systems based on the Linux 
 An operating system kernel is the software that sits underneath all of the other software on a computer, managing the computer’s hardware (CPU, GPU, memory, storage...) and handling the connections between your other software and the hardware.
 
 Linux is:
+
 * Multitasking capable
 * Multi user system
 * Open source
