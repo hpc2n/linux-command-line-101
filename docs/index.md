@@ -91,5 +91,9 @@ In order to type along and do the exercises, please prepare your course environm
 2. Create a directory to work in (``mkdir intro-linux``) and then switch to it (``cd intro-linux``)  
     - **NOTE** If you are working on Tetralith, first switch to your working directory: ``cd /proj/spring-courses-naiss/users/YOUR-USERNAME``
 3. Download the exercises with ``wget https://github.com/hpc2n/linux-command-line-101/raw/refs/heads/main/exercises.tar.gz`` 
-4. Extract the exercises with ``tar zxvf exercises.tar.gz``
-5. Enter the directory that was created: ``cd exercises``
+4. Check the contents of the file ``tar tzvf exercises.tar.gz``
+5. Extract the exercises with ``tar xzvf exercises.tar.gz``
+6. Enter the directory that was created: ``cd exercises``
+
+**Remark:** By default the utility `wget` is not installed on a Mac.  You can download from the website: [https://github.com/hpc2n/linux-command-line-101/blob/main/exercises.tar.gz](https://github.com/hpc2n/linux-command-line-101/blob/main/exercises.tar.gz) and move the 
+file: `mv ~/Downloads/exercises.tar.gz .` instead of s
