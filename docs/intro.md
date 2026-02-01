@@ -32,12 +32,12 @@ In addition, a windowing system of some sort (X11, Wayland) interfaces directly 
 
 ## Shells
 
-A shell is an interface between the keyboard and the operating system (OS), i.e., it takes commands input the user gives from the keyboard and sends it to the OS, which then performs the actions requested. The shell we will use today is one of several varieties of Linux/Unix shell.
+A shell is an interface between the keyboard and the operating system (OS), i.e., it takes commands the user gives via the keyboard and sends it to the OS. The OS then performs the actions requested. 
 
 There are several shells designed to work with Linux/Unix systems, each of which has somewhat different properties and syntax: 
 
 - The Bourne Shell (sh)
-- The GNU Bourne-Again shell (bash)
+- **The GNU Bourne-Again shell (bash)**
 - The C shell (csh)
 - The TENEX C shell (tcsh)
 - The Korn Shell (ksh)
@@ -45,9 +45,9 @@ There are several shells designed to work with Linux/Unix systems, each of which
 
 !!! Important 
 
-    Most centers has ``bash`` as default. There are several reasons, but one is that it compatible with SLURM---the batch scheduler used at most centers in Sweden. The ``bash`` shell is also good for scripting. 
+    Most centers have ``bash`` as default. There are several reasons, but one is that it compatible with SLURM---the batch scheduler used at most centers in Sweden. The ``bash`` shell is also good for scripting.
 
-    For the majority of the material in this course, it does not matter which shell you are using, but there are some commands where it is relevant. We will therefore be using ``bash`` for this course. 
+    For the majority of the material in this course, it does not matter which shell you are using, but there are some commands where it is relevant. We will therefore be using ``bash`` for this course.
 
 ## Why Linux/Unix (shell) 
 
