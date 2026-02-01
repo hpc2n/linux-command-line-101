@@ -1,6 +1,6 @@
 # Finding patterns
 
-This section will look at finding patterns ([grep](#grep), [find](#find), and [regular expressions](#regular__expressions)).  
+  
 
 !!! note "Learning objectives"
 
@@ -14,6 +14,8 @@ This section will look at finding patterns ([grep](#grep), [find](#find), and [r
     - Learn about finding patterns
     - Learn to use ``grep`` and ``find``
     - Learn to use regular expressions (advanced)
+
+This section will look at finding patterns ([grep](#grep), [find](#find), and [regular expressions](#regular__expressions)).
 
 Here you will find descptions on how to search for files with specific patterns. 
 
@@ -178,10 +180,10 @@ Some common examples of regular expressions:
 
 !!! note "Advanced example"
 
-    This command searches the file `myfile` for lines starting with an “s” and ending with an “n”, and prints them to the standard output. 
+    This command searches the file `myfile` for lines starting with an “p” and ending with an “e”, and prints them to the standard output. 
 
     ```bash
-    $ cat myfile | grep '^s.*n$'
+    $ cat myfile | grep '^p.*e$'
     ```
 
     Remember to not include the first `$` if you copy the command! It is the prompt! 
