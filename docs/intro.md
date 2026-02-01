@@ -13,6 +13,12 @@ Linux is a family of open-source Unix-like operating systems based on the Linux 
 
 An operating system kernel is the software that sits underneath all of the other software on a computer, managing the computer’s hardware (CPU, GPU, memory, storage...) and handling the connections between your other software and the hardware.
 
+Linux is:
+* Multitasking capable
+* Multi user system
+* Open source
+* Free of charge
+
 Linux is typically packaged as a Linux distribution, which includes the kernel and supporting system software and libraries, many of which are provided by the GNU Project.
 
 In addition, a windowing system of some sort (X11, Wayland) interfaces directly with the underlying operating system and libraries, providing support for graphical hardware, pointing devices, and keyboards. The window manager generally runs on top of this windowing system.
@@ -52,7 +58,7 @@ It can be used to automate repetitive tasks or to combine smaller tasks into **s
 
 Using the Linux/Unix shell is fundamental for a large number of advanced computing tasks, including in HPC (high-performance computing). 
 
-In addition, most HPC centers supercomputers run some flavour of Linux because it:
+In addition, most HPC clusters run some flavour of Linux because it:
 
 - Is stable and reliable
 - Is customisable
@@ -62,7 +68,7 @@ In addition, most HPC centers supercomputers run some flavour of Linux because i
 - Has many flavours that are open-source and free
 - Has lots of applications
 
-While Linux is only used on about 3% of desktops, the vast majority of web servers (>96%), most mobile devices (Android is based on the Linux kernel), and all supercomputers on the <a href="https://en.wikipedia.org/wiki/TOP500" target="_blank">Top500 list</a> run Linux.
+While Linux is only used on about 3% of desktops, the vast majority of web servers (>96%), most mobile devices (Android is based on the Linux kernel), and all supercomputers on the <a href="https://en.wikipedia.org/wiki/TOP500" target="_blank">Top500 list</a> run Linux. In line with this: **NAISS services use Linux**.  
 
 For all of these reasons, and many more, it is a good idea to be proficient in Linux. This course aims to help you with that.
 
