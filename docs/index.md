@@ -96,4 +96,4 @@ In order to type along and do the exercises, please prepare your course environm
 6. Enter the directory that was created: ``cd exercises``
 
 **Remark:** By default the utility `wget` is not installed on a Mac.  You can download from the website: [https://github.com/hpc2n/linux-command-line-101/blob/main/exercises.tar.gz](https://github.com/hpc2n/linux-command-line-101/blob/main/exercises.tar.gz) and move the 
-file: `mv ~/Downloads/exercises.tar.gz .` instead of s
+file: `mv ~/Downloads/exercises.tar.gz .` instead of step 3.
