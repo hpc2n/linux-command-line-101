@@ -62,7 +62,7 @@ I/O redirection: Usually, standard input comes from the keyboard etc. and the st
     **HINT: code-along!** 
 
     ```bash 
-    cat file >> file2
+    cat fil.txt >> file2
     ```
 
     Append the contents of file 1 to file2
