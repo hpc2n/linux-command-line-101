@@ -17,7 +17,7 @@
 
 This section will look at finding patterns ([grep](#grep), [find](#find), and [regular expressions](#regular__expressions)).
 
-Here you will find descptions on how to search for files with specific patterns. 
+Here you will find descriptions on how to search for files with specific patterns. 
 
 !!! Hint "Code along!" 
 

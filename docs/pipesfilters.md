@@ -1,6 +1,6 @@
 # Pipes and filters 
 
-In this section we will look at redirection, pipes (for combining multiple commands), filtering output, and variables and environment variables. 
+
 
 !!! Note "Learning objectives" 
 
@@ -18,6 +18,8 @@ In this section we will look at redirection, pipes (for combining multiple comma
     - Learn how to pass output from one command to another and combine multiple commands 
     - Learn to sort and filter the output 
     - Learn about variables and environment variables 
+
+In this section we will look at redirection, pipes (for combining multiple commands), filtering output, and variables and environment variables. 
 
 ## echo
 
