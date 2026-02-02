@@ -35,13 +35,15 @@ where COMMAND is the Linux command you want information about, like ``ls``, ``mk
     - You can change the number of saved commands by setting the environment variable HISTSIZE in your <code>.bashrc</code> file in your home directory. 
     - Example: Open <code>.bashrc</code> with <code>nano</code>. Somewhere (at the end for instance) add: <code>export HISTSIZE=NUMBER</code> where <code>NUMBER</code> is the number of commands to save, for instance 500. 
 
-## Which shell am I using?
+## What is my default shell?
 
-If you are uncertain, which shell you are using query the environment variable `SHELL`:
+If you are uncertain, which shell you are using by default, query the environment variable `SHELL`:
 
 ```
 echo $SHELL
 ```
+
+You can switch to the bash shell by typing `bash`on the commandline.
 
 !!! warning
 
