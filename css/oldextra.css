@@ -1,0 +1,131 @@
+/* CSS for getting Code tabs to work */
+
+/* General environment setup */
+html {
+  background-color: black;
+  height: 100%;
+}
+body {
+  font-size: 120%;
+  width: 100%;
+  padding: 1em 2em;
+  margin: 0 auto;
+  background-color: white;
+  height: 100%;
+}
+
+/* Tab style starts here */
+.tabbed-set {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0;
+  border-radius: 0.1rem;
+}
+
+.tabbed-set > input {
+  display: none;
+}
+
+.tabbed-set label {
+  width: auto;
+  padding: 0.9375em 1.25em 0.78125em;
+  font-weight: 700;
+  font-size: 0.84em;
+  white-space: nowrap;
+  border-bottom: 0.15rem solid transparent;
+  border-top-left-radius: 0.1rem;
+  border-top-right-radius: 0.1rem;
+  cursor: pointer;
+  transition: background-color 250ms, color 250ms;
+}
+
+.tabbed-set .tabbed-content {
+  width: 100%;
+  display: none;
+  box-shadow: 0 -.05rem #ddd;
+}
+
+.tabbed-set input {
+  position: absolute;
+  opacity: 0;
+}
+
+.tabbed-set input:checked:nth-child(n+1) + label {
+  color: red;
+  border-color: red;
+}
+
+@media screen {
+  .tabbed-set input:nth-child(n+1):checked + label + .tabbed-content {
+    order: 99;
+    display: block;
+  }
+}
+
+@media print {
+  .tabbed-content {
+    display: contents;
+  }
+}
+
+
+
+
+.md-typeset .admonition>.tabbed-set:only-child,
+.md-typeset details>.tabbed-set:only-child {
+  margin-top:0
+}
+html .md-typeset .admonition>:last-child,
+html .md-typeset details>:last-child {
+  margin-bottom:.6rem
+}
+
+#__tabbed_1_1 .radio {
+	color: red;
+}
+
+.md-fenced-code-tabs * {
+    box-sizing: border-box;
+}
+
+.md-fenced-code-tabs {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.md-fenced-code-tabs input {
+    position: absolute;
+    opacity: 0;
+}
+
+.md-fenced-code-tabs label {
+    width: auto;
+    padding: 4px;
+    margin: 0 8px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.md-fenced-code-tabs input:checked + label {
+    color: #333;
+}
+
+.md-fenced-code-tabs .code-tabpanel {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    order: 99;
+}
+
+.md-fenced-code-tabs input:checked + label + .code-tabpanel {
+    display: block;
+}
+
+.md-fenced-code-tabs pre,
+.md-fenced-code-tabs .codehilite {
+    width: 100%;
+    margin: 0px;
+}
