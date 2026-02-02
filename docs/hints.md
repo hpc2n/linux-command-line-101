@@ -37,7 +37,11 @@ where COMMAND is the Linux command you want information about, like ``ls``, ``mk
 
 ## Which shell am I using?
 
-If you are uncertain, which shell you are us
+If you are uncertain, which shell you are using query the environment variable `SHELL`:
+
+```
+echo $SHELL
+```
 
 !!! warning
 
